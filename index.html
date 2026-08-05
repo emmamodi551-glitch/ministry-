@@ -1,0 +1,660 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Survive. Heal. Rise. | 6-Month Community Series & Ministry Outreach</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Cinzel:wght@600;700;800&display=swap" rel="stylesheet">
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
+        section {
+            scroll-margin-top: 90px;
+        }
+
+        :root {
+            --bg-dark: #0a0e1a;
+            --card-bg: #111827;
+            --primary-violet: #6366f1;
+            --violet-hover: #4f46e5;
+            --accent-fire: #d97706;
+            --text-light: #ffffff;
+            --text-muted: #94a3b8;
+            --border-color: #1e293b;
+            --accent-glow: rgba(99, 102, 241, 0.25);
+            --radius: 14px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            color: var(--text-light);
+            background-color: var(--bg-dark);
+            line-height: 1.6;
+        }
+
+        .brand-font {
+            font-family: 'Cinzel', serif;
+            letter-spacing: -0.02em;
+        }
+
+        /* HEADER & NAVBAR */
+        header {
+            background-color: rgba(10, 14, 26, 0.95);
+            backdrop-filter: blur(10px);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .navbar {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1.2rem 2rem;
+        }
+
+        .logo {
+            color: #ffffff;
+            font-size: 1.35rem;
+            font-weight: 800;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            letter-spacing: -0.02em;
+        }
+
+        .logo span {
+            color: var(--primary-violet);
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 1.8rem;
+            align-items: center;
+        }
+
+        .nav-links a {
+            color: var(--text-muted);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.92rem;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: var(--text-light);
+        }
+
+        .cta-btn {
+            background-color: var(--primary-violet);
+            color: #ffffff !important;
+            padding: 0.65rem 1.4rem;
+            border-radius: 8px;
+            font-weight: 600 !important;
+            transition: all 0.3s ease !important;
+            box-shadow: 0 4px 14px var(--accent-glow);
+        }
+
+        .cta-btn:hover {
+            background-color: var(--violet-hover) !important;
+            transform: translateY(-1px);
+        }
+
+        .ecosystem-link {
+            color: #a5b4fc !important;
+            border: 1px solid var(--border-color);
+            padding: 0.4rem 0.8rem;
+            border-radius: 6px;
+            background: rgba(255,255,255,0.02);
+            transition: all 0.3s ease;
+        }
+
+        .ecosystem-link:hover {
+            border-color: var(--primary-violet) !important;
+            color: #ffffff !important;
+        }
+
+        /* HERO SECTION */
+        .hero {
+            padding: 6rem 2rem 5rem 2rem;
+            text-align: center;
+            background: radial-gradient(circle at top, rgba(99, 102, 241, 0.18) 0%, rgba(10, 14, 26, 1) 75%);
+        }
+
+        .hero-content {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .hero-tag {
+            background: rgba(217, 119, 6, 0.15);
+            color: #fcd34d;
+            border: 1px solid rgba(217, 119, 6, 0.4);
+            padding: 0.4rem 1.2rem;
+            border-radius: 50px;
+            font-size: 0.85rem;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+            display: inline-block;
+            margin-bottom: 1.8rem;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            font-weight: 800;
+            line-height: 1.1;
+            margin-bottom: 0.8rem;
+            letter-spacing: -0.03em;
+        }
+
+        .hero h1 span.highlight {
+            background: linear-gradient(135deg, #fcd34d 0%, #d97706 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .hero h2.subtitle {
+            font-size: 1.6rem;
+            color: #a5b4fc;
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+        }
+
+        .hero p.tagline {
+            font-size: 1.15rem;
+            color: var(--text-muted);
+            margin-bottom: 2.5rem;
+            max-width: 750px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .hero-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 1.2rem;
+            flex-wrap: wrap;
+        }
+
+        .btn-primary {
+            background-color: var(--primary-violet);
+            color: #ffffff;
+            padding: 0.9rem 2.2rem;
+            border-radius: 10px;
+            text-decoration: none;
+            font-weight: 700;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 20px var(--accent-glow);
+        }
+
+        .btn-primary:hover {
+            background-color: var(--violet-hover);
+            transform: translateY(-2px);
+        }
+
+        .btn-secondary {
+            background-color: #161e2e;
+            color: #ffffff;
+            border: 1px solid var(--border-color);
+            padding: 0.9rem 2.2rem;
+            border-radius: 10px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .btn-secondary:hover {
+            background-color: #1e293b;
+            border-color: #334155;
+        }
+
+        /* SECTION LAYOUT */
+        .section {
+            padding: 5rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-header {
+            text-align: center;
+            max-width: 750px;
+            margin: 0 auto 3.5rem auto;
+        }
+
+        .section-header h2 {
+            font-size: 2.4rem;
+            font-weight: 800;
+            margin-bottom: 0.8rem;
+            letter-spacing: -0.02em;
+        }
+
+        .section-header p {
+            color: var(--text-muted);
+            font-size: 1.1rem;
+        }
+
+        /* 6-MONTH CURRICULUM GRID */
+        .timeline-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+            gap: 1.8rem;
+        }
+
+        .month-card {
+            background-color: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius);
+            padding: 2rem;
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            transition: all 0.3s ease;
+        }
+
+        .month-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--primary-violet);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+        }
+
+        .month-badge {
+            align-self: flex-start;
+            background: rgba(99, 102, 241, 0.15);
+            color: #a5b4fc;
+            border: 1px solid rgba(99, 102, 241, 0.3);
+            padding: 0.3rem 0.8rem;
+            border-radius: 6px;
+            font-size: 0.8rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 1rem;
+        }
+
+        .month-card h3 {
+            font-size: 1.35rem;
+            font-weight: 800;
+            color: #ffffff;
+            margin-bottom: 0.2rem;
+        }
+
+        .month-card h4.theme-sub {
+            font-size: 0.85rem;
+            color: #fcd34d;
+            font-weight: 700;
+            text-transform: uppercase;
+            margin-bottom: 1rem;
+            letter-spacing: 0.5px;
+        }
+
+        .month-card p.description {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            margin-bottom: 1.5rem;
+            flex-grow: 1;
+            line-height: 1.6;
+        }
+
+        .scripture-box {
+            background: rgba(0, 0, 0, 0.25);
+            border-left: 3px solid var(--primary-violet);
+            padding: 0.9rem 1.1rem;
+            border-radius: 0 8px 8px 0;
+            font-size: 0.88rem;
+            color: #e2e8f0;
+            font-style: italic;
+        }
+
+        .scripture-box span.ref {
+            display: block;
+            margin-top: 0.4rem;
+            font-style: normal;
+            font-weight: 700;
+            color: #a5b4fc;
+            font-size: 0.82rem;
+        }
+
+        /* WHAT TO EXPECT SECTION */
+        .expect-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .expect-card {
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius);
+            padding: 1.8rem;
+            text-align: center;
+        }
+
+        .expect-card i {
+            font-size: 2.2rem;
+            color: var(--primary-violet);
+            margin-bottom: 1rem;
+        }
+
+        .expect-card h4 {
+            font-size: 1.1rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+
+        .expect-card p {
+            font-size: 0.88rem;
+            color: var(--text-muted);
+        }
+
+        .duration-tag {
+            display: inline-block;
+            background: rgba(217, 119, 6, 0.2);
+            color: #fcd34d;
+            font-weight: 700;
+            font-size: 0.75rem;
+            padding: 0.2rem 0.6rem;
+            border-radius: 4px;
+            margin-bottom: 0.6rem;
+            text-transform: uppercase;
+        }
+
+        /* EVENT & VENUE DETAILS */
+        .event-box {
+            background: linear-gradient(135deg, #0f172a 0%, #111827 100%);
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius);
+            padding: 3.5rem 2.5rem;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.4);
+            display: grid;
+            grid-template-columns: 1.5fr 1fr;
+            gap: 3rem;
+            align-items: center;
+        }
+
+        @media (max-width: 850px) {
+            .event-box {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+                padding: 2rem 1.5rem;
+            }
+        }
+
+        .event-details h3 {
+            font-size: 2rem;
+            font-weight: 800;
+            margin-bottom: 1rem;
+        }
+
+        .event-list {
+            list-style: none;
+            margin-top: 1.5rem;
+        }
+
+        .event-list li {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            margin-bottom: 1rem;
+            font-size: 0.98rem;
+            color: #e2e8f0;
+        }
+
+        .event-list li i {
+            color: var(--primary-violet);
+            font-size: 1.2rem;
+            margin-top: 3px;
+        }
+
+        .attend-box {
+            background: rgba(0,0,0,0.3);
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius);
+            padding: 2rem;
+            text-align: center;
+        }
+
+        .attend-box h4 {
+            font-size: 1.2rem;
+            font-weight: 800;
+            margin-bottom: 1rem;
+            color: #ffffff;
+        }
+
+        .attend-list {
+            text-align: left;
+            list-style: none;
+            margin-bottom: 1.5rem;
+        }
+
+        .attend-list li {
+            font-size: 0.88rem;
+            color: var(--text-muted);
+            margin-bottom: 0.6rem;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .attend-list li i {
+            color: #fcd34d;
+            font-size: 0.8rem;
+        }
+
+        .admission-badge {
+            background: var(--primary-violet);
+            color: #ffffff;
+            font-weight: 800;
+            padding: 0.8rem;
+            border-radius: 8px;
+            font-size: 1.1rem;
+            margin-bottom: 1rem;
+            letter-spacing: 0.5px;
+        }
+
+        /* ABOUT SPEAKER */
+        .speaker-card {
+            background-color: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius);
+            padding: 3rem;
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 3rem;
+            align-items: center;
+        }
+
+        @media (max-width: 850px) {
+            .speaker-card {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .speaker-avatar {
+            width: 100%;
+            height: 280px;
+            background: linear-gradient(135deg, rgba(99, 102, 241, 0.25) 0%, #111827 100%);
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 1.5rem;
+        }
+
+        .speaker-avatar i {
+            font-size: 3.5rem;
+            color: var(--primary-violet);
+            margin-bottom: 1rem;
+        }
+
+        .speaker-info h3 {
+            font-size: 1.8rem;
+            font-weight: 800;
+            margin-bottom: 0.3rem;
+        }
+
+        .speaker-role {
+            color: #a5b4fc;
+            font-weight: 600;
+            margin-bottom: 1.2rem;
+            font-size: 0.95rem;
+        }
+
+        .speaker-info p {
+            color: var(--text-muted);
+            font-size: 0.98rem;
+            margin-bottom: 1.2rem;
+            line-height: 1.7;
+        }
+
+        /* QUOTE & FOOTER */
+        .quote-banner {
+            text-align: center;
+            padding: 3rem 2rem;
+            background: rgba(255,255,255,0.02);
+            border-top: 1px solid var(--border-color);
+            border-bottom: 1px solid var(--border-color);
+            margin: 4rem 0;
+        }
+
+        .quote-banner blockquote {
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: #e2e8f0;
+            max-width: 800px;
+            margin: 0 auto;
+            font-style: italic;
+        }
+
+        footer {
+            background-color: #050811;
+            color: var(--text-muted);
+            text-align: center;
+            padding: 2.5rem 2rem;
+            font-size: 0.9rem;
+            border-top: 1px solid var(--border-color);
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 1.2rem;
+            flex-wrap: wrap;
+            margin-top: 1.2rem;
+        }
+
+        .footer-btn {
+            font-size: 0.85rem;
+            color: #a5b4fc;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            border: 1px solid var(--border-color);
+            padding: 0.5rem 1rem;
+            border-radius: 6px;
+            background: rgba(255,255,255,0.02);
+            transition: all 0.3s ease;
+        }
+
+        .footer-btn:hover {
+            border-color: var(--primary-violet);
+            color: #ffffff;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- NAVBAR -->
+    <header>
+        <nav class="navbar">
+            <a href="#" class="logo brand-font">
+                SURVIVE. <span>HEAL. RISE.</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="#curriculum">6-Month Series</a></li>
+                <li><a href="#expect">Schedule</a></li>
+                <li><a href="#venue">Venue & Access</a></li>
+                <li><a href="#speaker">Speaker</a></li>
+                <li><a href="https://digital.nuelpropertyservices.com" class="ecosystem-link"><i class="fa-solid fa-cubes"></i> Nuel Digital</a></li>
+                <li><a href="https://nuelpropertyservices.com" class="ecosystem-link"><i class="fa-solid fa-broom"></i> Property Services</a></li>
+                <li><a href="mailto:emmamodi551@gmail.com?subject=Survive%20Heal%20Rise%20Registration" class="cta-btn">Join Series</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section class="hero">
+        <div class="hero-content">
+            <span class="hero-tag">A 6-Month Community Series • March to August</span>
+            <h1 class="brand-font">SURVIVE. HEAL. <span class="highlight">RISE.</span></h1>
+            <h2 class="subtitle">Your Story Has Purpose.</h2>
+            <p class="tagline">From Trauma to Triumph. From Silence to Purpose. A monthly devotional workshop and community gathering held in Downtown St. Cloud, drawing from the memoir <em>"Sudan Fire USA ICE"</em> by Emmanuel Modi.</p>
+            <div class="hero-buttons">
+                <a href="#curriculum" class="btn-primary">Explore 6-Month Themes</a>
+                <a href="mailto:emmamodi551@gmail.com?subject=Inquiry%3A%20Survive%20Heal%20Rise%20Community%20Series" class="btn-secondary">Contact & Registration</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 6-MONTH CURRICULUM SECTION -->
+    <section class="section" id="curriculum">
+        <div class="section-header">
+            <h2>The 6-Month Curriculum Roadmap</h2>
+            <p>Each month focuses on a core theme designed to equip individuals, youth, and families with spiritual anchors, emotional wisdom, and practical habits.</p>
+        </div>
+
+        <div class="timeline-container">
+            <!-- MARCH -->
+            <div class="month-card">
+                <span class="month-badge">March • Month 1</span>
+                <h3>Reclaiming Your Story</h3>
+                <h4 class="theme-sub">Identity & Overcoming Stigma</h4>
+                <p class="description">Breaking the silence of trauma and mental health battles. Discovering that a diagnosis or past failure does not define your future.</p>
+                <div class="scripture-box">
+                    "For I know the plans I have for you... plans to give you hope and a future."
+                    <span class="ref">— Jeremiah 29:11</span>
+                </div>
+            </div>
+
+            <!-- APRIL -->
+            <div class="month-card">
+                <span class="month-badge">April • Month 2</span>
+                <h3>Resilience Through the Seasons</h3>
+                <h4 class="theme-sub">Faith in Hardship</h4>
+                <p class="description">How to keep your spiritual and emotional anchor steady when external circumstances, health, or environments shift drastically.</p>
+                <div class="scripture-box">
+                    "The Lord will guide you always; he will satisfy your needs in a sun-scorched land."
+                    <span class="ref">— Isaiah 58:11</span>
+                </div>
+            </div>
+
+            <!-- MAY -->
+            <div class="month-card">
+                <span class="month-badge">May • Month 3</span>
+                <h3>The Power of Creative Renewal</h3>
+                <h4 class="theme-sub">Art, Music & Outlets</h4>
+                <p class="description">Harnessing visual art, song creation, and quiet writing as divine tools for processing deep trauma a
