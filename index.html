@@ -530,6 +530,78 @@
             line-height: 1.7;
         }
 
+        /* NEWSLETTER SECTION */
+        .newsletter-section {
+            background: linear-gradient(135deg, #0f172a 0%, #111827 100%);
+            border-top: 1px solid var(--border-color);
+            border-bottom: 1px solid var(--border-color);
+            padding: 5rem 2rem;
+            text-align: center;
+        }
+
+        .newsletter-container {
+            max-width: 700px;
+            margin: 0 auto;
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius);
+            padding: 3rem 2.5rem;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.4);
+        }
+
+        .newsletter-container h3 {
+            font-size: 2rem;
+            font-weight: 800;
+            margin-bottom: 0.8rem;
+        }
+
+        .newsletter-container p {
+            color: var(--text-muted);
+            font-size: 1rem;
+            margin-bottom: 2rem;
+        }
+
+        .newsletter-form {
+            display: flex;
+            gap: 0.8rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .newsletter-input {
+            flex: 1;
+            min-width: 260px;
+            padding: 0.9rem 1.2rem;
+            background: rgba(0, 0, 0, 0.3);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            color: #ffffff;
+            font-size: 0.95rem;
+            outline: none;
+            transition: border-color 0.3s ease;
+        }
+
+        .newsletter-input:focus {
+            border-color: var(--primary-violet);
+        }
+
+        .newsletter-btn {
+            background-color: var(--primary-violet);
+            color: #ffffff;
+            padding: 0.9rem 1.8rem;
+            border: none;
+            border-radius: 8px;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 14px var(--accent-glow);
+        }
+
+        .newsletter-btn:hover {
+            background-color: var(--violet-hover);
+            transform: translateY(-1px);
+        }
+
         /* QUOTE & FOOTER */
         .quote-banner {
             text-align: center;
@@ -596,8 +668,6 @@
                 <span style="font-size: 0.8rem; font-weight: 800; color: #fff; white-space: nowrap; letter-spacing: -0.5px;">SURVIVE. HEAL. RISE.</span>
             </a>
             <ul class="nav-links">
-                
-            <ul class="nav-links">
                 <li><a href="#curriculum">6-Month Series</a></li>
                 <li><a href="#expect">Schedule</a></li>
                 <li><a href="#venue">Venue & Access</a></li>
@@ -606,8 +676,6 @@
                 <li><a href="https://digital.nuelpropertyservices.com" class="ecosystem-link"><i class="fa-solid fa-cubes"></i> Nuel Digital</a></li>
                 <li><a href="https://nuelpropertyservices.com" class="ecosystem-link"><i class="fa-solid fa-broom"></i> Property Services</a></li>
                 <li><a href="mailto:emmamodi551@gmail.com?subject=Survive%20Heal%20Rise%20Registration" class="cta-btn">Join Series</a></li> 
-                
-                
             </ul>
         </nav>
     </header>
@@ -618,372 +686,4 @@
             <span class="hero-tag">A 6-Month Community Series • March to August</span>
             <h1 class="brand-font">SURVIVE. HEAL. <span class="highlight">RISE.</span></h1>
             <h2 class="subtitle">Your Story Has Purpose.</h2>
-            <p class="tagline">From Trauma to Triumph. From Silence to Purpose. A monthly devotional workshop and community gathering held in Downtown St. Cloud, drawing from the memoir <em>"Sudan Fire USA ICE"</em> by Emmanuel Modi.</p>
-            <div class="hero-buttons">
-                <a href="#curriculum" class="btn-primary">Explore 6-Month Themes</a>
-                <a href="mailto:emmamodi551@gmail.com?subject=Inquiry%3A%20Survive%20Heal%20Rise%20Community%20Series" class="btn-secondary">Contact & Registration</a>
-            </div>
-        </div>
-    </section>
-        <!-- COMMUNITY OUTREACH MINISTRY SUMMER SERIES SECTION -->
-    <section id="outreach-series" class="section" style="background: linear-gradient(180deg, #0a0e1a 0%, #111827 100%);">
-        <div class="section-header">
-            <span class="hero-tag">Community Outreach Ministry</span>
-            <h2 class="brand-font">NEIGHBORHOOD <span class="highlight" style="background: linear-gradient(135deg, #fcd34d 0%, #d97706 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">SUMMER SERIES</span></h2>
-            <p>Join us for free food, fun, fellowship, and supportive community events designed to uplift families and individuals in St. Cloud.</p>
-        </div>
-
-        <!-- 4-GRID EVENT CARDS -->
-        <div class="expect-grid" style="margin-bottom: 3.5rem;">
-            <!-- Card 1: Community Cookout -->
-            <div class="expect-card" style="text-align: left; display: flex; flex-direction: column; justify-content: space-between;">
-                <div>
-                    <div style="font-size: 2rem; color: #d97706; margin-bottom: 1rem;"><i class="fa-solid fa-fire-burner"></i></div>
-                    <h4 style="font-size: 1.25rem; font-weight: 800; color: #ffffff; margin-bottom: 1rem;">Community Cookout</h4>
-                    <ul class="attend-list" style="margin-bottom: 1.5rem;">
-                        <li><i class="fa-solid fa-check"></i> Free BBQ & Food</li>
-                        <li><i class="fa-solid fa-check"></i> Games for All Ages</li>
-                        <li><i class="fa-solid fa-check"></i> Live Music & Entertainment</li>
-                        <li><i class="fa-solid fa-check"></i> Exciting Giveaways</li>
-                    </ul>
-                </div>
-                <div style="background: rgba(217, 119, 6, 0.15); border: 1px solid rgba(217, 119, 6, 0.3); border-radius: 8px; padding: 0.75rem; text-align: center; font-size: 0.85rem; font-weight: 700; color: #fcd34d;">
-                    Fellowship & Food
-                </div>
-            </div>
-
-            <!-- Card 2: Back-to-School Resource Drive -->
-            <div class="expect-card" style="text-align: left; display: flex; flex-direction: column; justify-content: space-between;">
-                <div>
-                    <div style="font-size: 2rem; color: var(--primary-violet); margin-bottom: 1rem;"><i class="fa-solid fa-backpack"></i></div>
-                    <h4 style="font-size: 1.25rem; font-weight: 800; color: #ffffff; margin-bottom: 1rem;">Back-to-School Resource Drive</h4>
-                    <ul class="attend-list" style="margin-bottom: 1.5rem;">
-                        <li><i class="fa-solid fa-check"></i> Free School Supplies</li>
-                        <li><i class="fa-solid fa-check"></i> Backpack Distribution</li>
-                        <li><i class="fa-solid fa-check"></i> Community Resource Fair</li>
-                        <li><i class="fa-solid fa-check"></i> Inspiring Guest Speakers</li>
-                    </ul>
-                </div>
-                <div style="background: rgba(99, 102, 241, 0.15); border: 1px solid rgba(99, 102, 241, 0.3); border-radius: 8px; padding: 0.75rem; text-align: center; font-size: 0.85rem; font-weight: 700; color: #a5b4fc;">
-                    Equipping Youth
-                </div>
-            </div>
-
-            <!-- Card 3: Fitness & Wellness Jam -->
-            <div class="expect-card" style="text-align: left; display: flex; flex-direction: column; justify-content: space-between;">
-                <div>
-                    <div style="font-size: 2rem; color: #10b981; margin-bottom: 1rem;"><i class="fa-solid fa-person-running"></i></div>
-                    <h4 style="font-size: 1.25rem; font-weight: 800; color: #ffffff; margin-bottom: 1rem;">Fitness & Wellness Jam</h4>
-                    <ul class="attend-list" style="margin-bottom: 1.5rem;">
-                        <li><i class="fa-solid fa-check"></i> Zumba & Line Dancing</li>
-                        <li><i class="fa-solid fa-check"></i> Health Screenings</li>
-                        <li><i class="fa-solid fa-check"></i> Fresh Smoothies</li>
-                        <li><i class="fa-solid fa-check"></i> Group Workouts</li>
-                    </ul>
-                </div>
-                <div style="background: rgba(16, 185, 129, 0.15); border: 1px solid rgba(16, 185, 129, 0.3); border-radius: 8px; padding: 0.75rem; text-align: center; font-size: 0.85rem; font-weight: 700; color: #34d399;">
-                    Health & Vitality
-                </div>
-            </div>
-
-            <!-- Card 4: Family Fun Day -->
-            <div class="expect-card" style="text-align: left; display: flex; flex-direction: column; justify-content: space-between;">
-                <div>
-                    <div style="font-size: 2rem; color: #ec4899; margin-bottom: 1rem;"><i class="fa-solid fa-people-group"></i></div>
-                    <h4 style="font-size: 1.25rem; font-weight: 800; color: #ffffff; margin-bottom: 1rem;">Family Fun Day</h4>
-                    <ul class="attend-list" style="margin-bottom: 1.5rem;">
-                        <li><i class="fa-solid fa-check"></i> Bounce Houses</li>
-                        <li><i class="fa-solid fa-check"></i> Face Painting</li>
-                        <li><i class="fa-solid fa-check"></i> Crafts & Games</li>
-                        <li><i class="fa-solid fa-check"></i> Local Food Trucks</li>
-                    </ul>
-                </div>
-                <div style="background: rgba(236, 72, 153, 0.15); border: 1px solid rgba(236, 72, 153, 0.3); border-radius: 8px; padding: 0.75rem; text-align: center; font-size: 0.85rem; font-weight: 700; color: #f472b6;">
-                    Family Joy
-                </div>
-            </div>
-        </div>
-
-        <!-- EVENT QUICK INFO FOOTER BAR -->
-        <div style="background-color: var(--card-bg); border: 1px solid var(--border-color); border-radius: var(--radius); padding: 2rem; display: flex; justify-content: space-around; align-items: center; flex-wrap: wrap; gap: 2rem; text-align: center;">
-            <div>
-                <span style="display: block; font-size: 0.8rem; text-transform: uppercase; color: var(--text-muted); font-weight: 700; margin-bottom: 0.3rem;"><i class="fa-regular fa-calendar-days" style="color: #fcd34d; margin-right: 6px;"></i> Schedule</span>
-                <span style="font-size: 1.1rem; font-weight: 800; color: #ffffff;">All Events: 11:00 AM – 3:00 PM</span>
-            </div>
-            <div style="width: 1px; height: 40px; background-color: var(--border-color); display: none; @media(min-width: 768px){display:block;}"></div>
-            <div>
-                <span style="display: block; font-size: 0.8rem; text-transform: uppercase; color: var(--text-muted); font-weight: 700; margin-bottom: 0.3rem;"><i class="fa-solid fa-location-dot" style="color: var(--primary-violet); margin-right: 6px;"></i> Location</span>
-                <span style="font-size: 1.1rem; font-weight: 800; color: #ffffff;">Nuel Property Services (St. Cloud, MN)</span>
-            </div>
-            <div style="width: 1px; height: 40px; background-color: var(--border-color); display: none; @media(min-width: 768px){display:block;}"></div>
-            <div>
-                <span style="display: block; font-size: 0.8rem; text-transform: uppercase; color: var(--text-muted); font-weight: 700; margin-bottom: 0.3rem;"><i class="fa-solid fa-phone" style="color: #34d399; margin-right: 6px;"></i> Contact & Info</span>
-                <a href="tel:3202173955" style="font-size: 1.1rem; font-weight: 800; color: #a5b4fc; text-decoration: none;">(320) 217-3955</a>
-            </div>
-        </div>
-    </section>
-    
-<!-- MEDIA SECTION -->
-<section id="media" class="media-section" style="padding: 60px 20px; background-color: #f9f9f9; color: #333;">
-    <div class="container" style="max-width: 1100px; margin: 0 auto; text-align: center;">
-        <h2 style="font-size: 2.5rem; margin-bottom: 10px; color: #1a1a1a;">Media & Publications</h2>
-        <p style="font-size: 1.1rem; margin-bottom: 40px; color: #666;">Explore books, audio content, and visual resources from the ministry.</p>
-        
-        <!-- START OF GRID: Everything inside here will line up in columns -->
-        <div class="media-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; text-align: left;">
-            
-            <!-- Card 1: Featured Book -->
-            <div class="media-card" style="background: #ffffff; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.08); display: flex; flex-direction: column;">
-                <div style="padding: 24px; flex-grow: 1;">
-                    <span style="background: #e6f0fa; color: #0066cc; font-size: 0.8rem; font-weight: bold; padding: 4px 10px; border-radius: 4px; text-transform: uppercase;">Featured Book</span>
-                    <h3 style="font-size: 1.4rem; margin: 15px 0 10px 0; color: #222;">Sudan Fire USA Ice</h3>
-                    <p style="font-size: 0.95rem; color: #555; line-height: 1.5; margin-bottom: 20px;">Explore the journey of identity, international footprint, and cultural convergence connecting roots in Sudan with growth in the USA.</p>
-                </div>
-                <div style="padding: 0 24px 24px 24px;">
-                    <a href="#" style="display: inline-block; background-color: #0066cc; color: #fff; padding: 10px 20px; border-radius: 4px; text-decoration: none; font-weight: 500; font-size: 0.9rem;">Learn More / Read</a>
-                </div>
-            </div>
-
-            <!-- Card 2: Book Series -->
-            <div class="media-card" style="background: #ffffff; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.08); display: flex; flex-direction: column;">
-                <div style="padding: 24px; flex-grow: 1;">
-                    <span style="background: #f0e6fa; color: #6600cc; font-size: 0.8rem; font-weight: bold; padding: 4px 10px; border-radius: 4px; text-transform: uppercase;">Book Series</span>
-                    <h3 style="font-size: 1.4rem; margin: 15px 0 10px 0; color: #222;">The 21-Book Collection</h3>
-                    <p style="font-size: 0.95rem; color: #555; line-height: 1.5; margin-bottom: 20px;">Core Focus: A comprehensive writing collection dedicated to growth, resilience, and personal transformation.
-​Thematic Scope: Explores identity, life movement, artistic expression, faith, and institutional legacy.
-​Evolution of the Series: Spans individual creative and spiritual journeys—beginning with foundational works like SUDAN FIRE USA ICE, God, My Life Guard, Art Is Love, Unique Poetry, and You Still Running—and builds upward into structural, systemic frameworks.
-​Ultimate Conclusion: Culminates in Book #21: The Nuel Legacy Ecosystem, which translates personal growth and flagship visions into permanent institutional sovereignty, wealth transfer, and community empowerment.</p>
-                </div>
-                <div style="padding: 0 24px 24px 24px;">
-                    <a href="#" style="display: inline-block; background-color: #6600cc; color: #fff; padding: 10px 20px; border-radius: 4px; text-decoration: none; font-weight: 500; font-size: 0.9rem;">Explore Series</a>
-                </div>
-            </div>
-
-            <!-- Card 3: Video Item -->
-            <div class="media-card" style="background: #ffffff; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.08); display: flex; flex-direction: column;">
-                <div style="width: 100%; background: #000;">
-                    <video controls style="width: 100%; height: auto; display: block;">
-                        <source src="from_the_fire.mp4" type="video/mp4">
-                        Your browser does not support the video tag.
-                    </video>
-                </div>
-                <div style="padding: 24px; flex-grow: 1;">
-                    <span style="background: #fafee6; color: #558800; font-size: 0.8rem; font-weight: bold; padding: 4px 10px; border-radius: 4px; text-transform: uppercase;">Ministry Video</span>
-                    <h3 style="font-size: 1.4rem; margin: 15px 0 10px 0; color: #222;">From The Fire</h3>
-                    <p style="font-size: 0.95rem; color: #555; line-height: 1.5; margin-bottom: 0;">Watch the official video and media piece.</p>
-                </div>
-            </div>
-
-        </div>
-        <!-- END OF GRID -->
-
-    </div>
-</section>
-
-
-    <!-- 6-MONTH CURRICULUM SECTION -->
-    <section class="section" id="curriculum">
-        <div class="section-header">
-            <h2>The 6-Month Curriculum Roadmap</h2>
-            <p>Each month focuses on a core theme designed to equip individuals, youth, and families with spiritual anchors, emotional wisdom, and practical habits.</p>
-        </div>
-
-        <div class="timeline-container">
-            <!-- MARCH -->
-            <div class="month-card">
-                <span class="month-badge">March • Month 1</span>
-                <h3>Reclaiming Your Story</h3>
-                <h4 class="theme-sub">Identity & Overcoming Stigma</h4>
-                <p class="description">Breaking the silence of trauma and mental health battles. Discovering that a diagnosis or past failure does not define your future.</p>
-                <div class="scripture-box">
-                    "For I know the plans I have for you... plans to give you hope and a future."
-                    <span class="ref">— Jeremiah 29:11</span>
-                </div>
-            </div>
-
-            <!-- APRIL -->
-            <div class="month-card">
-                <span class="month-badge">April • Month 2</span>
-                <h3>Resilience Through the Seasons</h3>
-                <h4 class="theme-sub">Faith in Hardship</h4>
-                <p class="description">How to keep your spiritual and emotional anchor steady when external circumstances, health, or environments shift drastically.</p>
-                <div class="scripture-box">
-                    "The Lord will guide you always; he will satisfy your needs in a sun-scorched land."
-                    <span class="ref">— Isaiah 58:11</span>
-                </div>
-            </div>
-
-            <!-- MAY -->
-            <div class="month-card">
-                <span class="month-badge">May • Month 3</span>
-                <h3>The Power of Creative Renewal</h3>
-                <h4 class="theme-sub">Art, Music & Outlets</h4>
-                <p class="description">Harnessing visual art, song creation, and quiet writing as divine tools for processing deep trauma and finding internal balance.</p>
-                <div class="scripture-box">
-                    "He has put a new song in my mouth, a hymn of praise to our God."
-                    <span class="ref">— Psalm 40:3</span>
-                </div>
-            </div>
-
-            <!-- JUNE -->
-            <div class="month-card">
-                <span class="month-badge">June • Month 4</span>
-                <h3>Discipline & Personal Comebacks</h3>
-                <h4 class="theme-sub">Health, Habits & Ownership</h4>
-                <p class="description">Replacing bad habits step-by-step, taking radical personal responsibility, and building physical and spiritual endurance.</p>
-                <div class="scripture-box">
-                    "For God has not given us a spirit of fear, but of power, love, and a sound mind."
-                    <span class="ref">— 2 Timothy 1:7</span>
-                </div>
-            </div>
-
-            <!-- JULY -->
-            <div class="month-card">
-                <span class="month-badge">July • Month 5</span>
-                <h3>Digital Wisdom & Healthy Boundaries</h3>
-                <h4 class="theme-sub">Guarding Your Mind</h4>
-                <p class="description">Setting healthy online boundaries, avoiding public reactions during crisis, and choosing quiet, offline healing.</p>
-                <div class="scripture-box">
-                    "Above all else, guard your heart, for everything you do flows from it."
-                    <span class="ref">— Proverbs 4:23</span>
-                </div>
-            </div>
-
-            <!-- AUGUST -->
-            <div class="month-card">
-                <span class="month-badge">August • Month 6</span>
-                <h3>Graduation & Community Commissioning</h3>
-                <h4 class="theme-sub">Advocacy & Mentorship</h4>
-                <p class="description">Commemorate your healing journey. Formally receive a diploma or certificate. A final communal commissioning where participants are sent forth as ambassadors for healing.</p>
-                <div class="scripture-box">
-                    "Therefore go and make disciples of all nations... surely I am with you always, to the very end of the age."
-                    <span class="ref">— Matthew 28:19-20</span>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- WHAT TO EXPECT EACH MONTH -->
-    <section class="section" id="expect" style="padding-top: 1rem;">
-        <div class="section-header">
-            <h2>What to Expect Each Month</h2>
-            <p>Every monthly gathering is structured into an intentional 80-minute interactive format designed for fellowship, learning, and safe table sharing.</p>
-        </div>
-
-        <div class="expect-grid">
-            <div class="expect-card">
-                <span class="duration-tag">15 Minutes</span>
-                <i class="fa-solid fa-people-group"></i>
-                <h4>Welcome & Fellowship</h4>
-                <p>Light refreshments, music, and casual connection before the session begins.</p>
-            </div>
-
-            <div class="expect-card">
-                <span class="duration-tag">25 Minutes</span>
-                <i class="fa-solid fa-book-open-reader"></i>
-                <h4>Keynote & Scripture</h4>
-                <p>Teaching on the monthly theme drawing direct lessons from <em>Sudan Fire USA ICE</em>.</p>
-            </div>
-
-            <div class="expect-card">
-                <span class="duration-tag">30 Minutes</span>
-                <i class="fa-solid fa-comments"></i>
-                <h4>Guided Table Discussions</h4>
-                <p>Small-group reflection, guided journaling, and safe-space sharing with table leaders.</p>
-            </div>
-
-            <div class="expect-card">
-                <span class="duration-tag">10 Minutes</span>
-                <i class="fa-solid fa-hands-praying"></i>
-                <h4>Call to Action & Prayer</h4>
-                <p>An encouraging monthly challenge and closing prayer for the weeks ahead.</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- QUOTE BANNER -->
-    <div class="quote-banner">
-        <blockquote>"Survival is not the finish line—becoming a voice for others is."</blockquote>
-    </div>
-
-    <!-- VENUE & ADMISSION -->
-    <section class="section" id="venue">
-        <div class="event-box">
-            <div class="event-details">
-                <h3>Join Us in Downtown St. Cloud</h3>
-                <p style="color: var(--text-muted); font-size: 1.05rem;">We meet monthly from March through August. Everyone is welcome to attend individual sessions or complete the entire 6-month journey.</p>
-                
-                <ul class="event-list">
-                    <li>
-                        <i class="fa-solid fa-location-dot"></i>
-                        <div>
-                            <strong>Location:</strong> Downtown St. Cloud, MN<br>
-                            <span style="font-size: 0.88rem; color: var(--text-muted);">Paramount Center for the Arts & Local Community Churches</span>
-                        </div>
-                    </li>
-                    <li>
-                        <i class="fa-solid fa-calendar-check"></i>
-                        <div>
-                            <strong>Schedule:</strong> Monthly Gatherings (March – August)
-                        </div>
-                    </li>
-                    <li>
-                        <i class="fa-solid fa-envelope"></i>
-                        <div>
-                            <strong>Contact & Registration:</strong> emmamodi551@gmail.com
-                        </div>
-                    </li>
-                </ul>
-            </div>
-
-            <div class="attend-box">
-                <div class="admission-badge">ADMISSION: FREE</div>
-                <p style="font-size: 0.85rem; color: #a5b4fc; font-weight: 700; margin-bottom: 1.2rem;">OPEN TO THE PUBLIC<br><span style="font-size: 0.78rem; color: var(--text-muted); font-weight: 400;">(Journaling materials & light refreshments provided)</span></p>
-                
-                <h4>Who Should Attend?</h4>
-                <ul class="attend-list">
-                    <li><i class="fa-solid fa-check"></i> Anyone seeking spiritual encouragement</li>
-                    <li><i class="fa-solid fa-check"></i> Youth needing positive mentorship</li>
-                    <li><i class="fa-solid fa-check"></i> Families navigating health/trauma recovery</li>
-                    <li><i class="fa-solid fa-check"></i> Community leaders committed to advocacy</li>
-                </ul>
-
-                <a href="mailto:emmamodi551@gmail.com?subject=Reserve%20a%20Seat%3A%20Survive%20Heal%20Rise" class="btn-primary" style="display: block; text-align: center; font-size: 0.9rem;">Reserve Your Seat</a>
-            </div>
-        </div>
-    </section> 
-        <section class="section" id="speaker">
-        <div class="speaker-card">
-            <div class="speaker-avatar">
-                <img src="1785664262512.png" alt="Emmanuel Modi - Author of Sudan Fire USA Ice" style="width: 100%; max-width: 220px; border-radius: 12px; object-fit: cover; box-shadow: 0 4px 12px rgba(0,0,0,0.3); margin-bottom: 0.5rem;">
-                <h4 style="font-size: 1.3rem; font-weight: 800; margin-top: 0.5rem;">Emmanuel Modi</h4>
-                <p style="font-size: 0.8rem; color: #a5b4fc; margin-top: 0.2rem;">Author & Community Leader</p>
-            </div>
-            <div class="speaker-info">
-                <h3>About the Speaker</h3>
-                <div class="speaker-role">Author of "Sudan Fire USA ICE" • Founder of Nuel Property Services</div>
-                <p>Emmanuel Modi is an author, entrepreneur, and community speaker operating in Central Minnesota. Having overcome displacement, war, mental health battles, and complex life transitions, Emmanuel grounds his speaking ministry in radical personal accountability, steady work ethic, and spiritual faith.</p>
-                <p>Through the <em>Survive. Heal. Rise.</em> community series, Emmanuel dedicates his story to creating safe spaces where individuals, youth, and families can break free from stigma and step into purpose.</p>
-            </div>
-        </div>
-        </section>
-    
-    
-    
-    <!-- FOOTER -->
-    <footer>
-        <p style="margin-bottom: 0.8rem;">
-            &copy; 2026 Nuel Enterprise & Ministry Outreach. All rights reserved.
-        </p>
-        <div class="footer-links">
-            <a href="https://digital.nuelpropertyservices.com" class="footer-btn">
-                <i class="fa-solid fa-cubes"></i> Nuel Digital
-            </a>
-            <a href="https://nuelpropertyservices.com" class="footer-btn">
-                <i class="fa-solid fa-broom"></i> Nuel Property Services
-            </a>
-        </div>
-    </footer>
-
-</body>
-</html>
+            <p class="tagline">From Trauma to Triumph. From Silence to Purpose. A monthly devotional workshop and community gathering held in Downtown St. Cloud, drawing from the memoir <em>"Sudan Fire USA IC
