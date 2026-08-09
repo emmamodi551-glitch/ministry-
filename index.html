@@ -583,7 +583,92 @@
         .footer-btn:hover {
             border-color: var(--primary-violet);
             color: #ffffff;
+                    /* NEWSLETTER COMPONENT STYLES */
+        .survive-heal-rise-newsletter {
+            background-color: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius);
+            padding: 30px;
+            max-width: 500px;
+            color: var(--text-light);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
         }
+
+        .newsletter-form .form-group {
+            margin-bottom: 15px;
+        }
+
+        .newsletter-form input[type="text"],
+        .newsletter-form input[type="email"] {
+            width: 100%;
+            padding: 12px 15px;
+            background-color: rgba(0, 0, 0, 0.2);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            font-size: 1rem;
+            color: #ffffff;
+            box-sizing: border-box;
+            transition: border-color 0.2s ease;
+        }
+
+        .newsletter-form input[type="text"]:focus,
+        .newsletter-form input[type="email"]:focus {
+            border-color: var(--primary-violet);
+            outline: none;
+        }
+
+        .checkbox-group {
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            margin-top: 10px;
+        }
+
+        .checkbox-group input {
+            margin-top: 3px;
+            accent-color: var(--primary-violet);
+        }
+
+        .newsletter-btn {
+            width: 100%;
+            background-color: var(--primary-violet);
+            color: #ffffff;
+            border: none;
+            border-radius: 8px;
+            padding: 12px;
+            font-size: 1rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: background-color 0.2s ease, transform 0.2s ease;
+            margin-top: 5px;
+            box-shadow: 0 4px 14px var(--accent-glow);
+        }
+
+        .newsletter-btn:hover {
+            background-color: var(--violet-hover);
+            transform: translateY(-1px);
+        }
+
+        .newsletter-footer {
+            text-align: center;
+            margin-top: 15px;
+            font-size: 0.8rem;
+            color: var(--text-muted);
+        }
+
+        .visually-hidden {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            border: 0;
+            }
+            
     </style>
 </head>
 <body>
