@@ -996,64 +996,204 @@
 
     <div class="book-container">
         <div class="section-header">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nuel Legacy Book Series</title>
+    <style>
+        :root {
+            --primary-color: #1a1a1a;
+            --accent-color: #c59b27;
+            --bg-color: #f9f9f9;
+            --card-bg: #ffffff;
+            --text-main: #333333;
+            --text-muted: #666666;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            margin: 0;
+            padding: 40px 20px;
+        }
+
+        .book-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .section-header h2 {
+            font-size: 2.5rem;
+            color: var(--primary-color);
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .section-header p {
+            color: var(--text-muted);
+            font-size: 1.1rem;
+        }
+
+        .book-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+
+        .book-card {
+            background-color: var(--card-bg);
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border: 1px solid #eee; /* Added subtle border */
+        }
+
+        .book-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Specific style for the actual cover */
+        .book-cover-image {
+            width: 100%;
+            height: auto; /* Maintains aspect ratio */
+            display: block;
+            border-bottom: 1px solid #eee;
+        }
+
+        /* Placeholder style for remaining books */
+        .book-cover-placeholder {
+            background: linear-gradient(135deg, #2c3e50, #4ca1af);
+            height: 350px; /* Tall to match book proportions */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+            font-size: 1.2rem;
+            text-align: center;
+            padding: 0 15px;
+        }
+
+        .book-content {
+            padding: 25px;
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+        }
+
+        .book-title {
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            margin: 0 0 10px 0;
+        }
+
+        .book-description {
+            font-size: 0.95rem;
+            color: var(--text-muted);
+            line-height: 1.5;
+            margin-bottom: 20px;
+            flex-grow: 1;
+        }
+
+        .btn-purchase {
+            display: inline-block;
+            text-align: center;
+            background-color: var(--primary-color);
+            color: #ffffff;
+            padding: 12px 20px;
+            border-radius: 4px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.9rem;
+            transition: background-color 0.2s ease;
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn-purchase:hover {
+            background-color: var(--accent-color);
+        }
+
+        /* Style for inactive placeholder buttons */
+        .btn-purchase.disabled {
+            background-color: #e0e0e0;
+            color: #888888;
+            pointer-events: none;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="book-container">
+        <div class="section-header">
             <h2>Nuel Legacy Book Series</h2>
             <p>Explore the complete collection of works by Emmanuel Modi</p>
         </div>
 
         <div class="book-grid">
             
-            <!-- Book 1: Sudan Fire USA Ice -->
+            <!-- Book 1: Sudan Fire USA Ice (LIVE IMAGE) -->
             <div class="book-card">
-                <div class="book-cover-placeholder">Sudan Fire USA Ice</div>
+                <!-- IMPORTANT: Replace 'YOUR_IMAGE_URL_HERE' with the actual direct link to your hosted image file -->
+                <img src="https://your-website-url.com/path/to/your/sudan-fire-cover.jpg" alt="Sudan Fire USA Ice Book Cover" class="book-cover-image">
                 <div class="book-content">
                     <h3 class="book-title">Sudan Fire USA Ice</h3>
-                    <p class="book-description">A compelling look into journey, resilience, and perspective.</p>
-                    <!-- UPDATE LINK HERE -->
-                    <a href="https://www.barnesandnoble.com/w/sudan-fire-usa-ice-by-emmanuel-modi-dale-neuschwander/1151018648?ean=9798906780911" target="_blank" class="btn-purchase">Get Your Copy</a>
+                    <p class="book-description">A compelling journey of resilience and perspective across continents.</p>
+                    <a href="https://www.barnesandnoble.com/w/sudan-fire-usa-ice-by-emmanuel-modi-dale-neuschwander/1151018648?ean=9798906780911" target="_blank" class="btn-purchase">Buy on Barnes & Noble</a>
                 </div>
             </div>
 
-            <!-- Book 2: God, My Lifeguard -->
+            <!-- Book 2: God, My Lifeguard (PLACEHOLDER) -->
             <div class="book-card">
-                <div class="book-cover-placeholder">God, My Lifeguard</div>
+                <div class="book-cover-placeholder">God, My Lifeguard<br>(Cover Coming Soon)</div>
                 <div class="book-content">
                     <h3 class="book-title">God, My Lifeguard</h3>
-                    <p class="book-description">Reflections on faith, spiritual anchoring, and divine protection.</p>
-                    <!-- UPDATE LINK HERE WHEN READY -->
-                    <a href="#" target="_blank" class="btn-purchase">Get Your Copy</a>
+                    <p class="book-description">Reflections on faith and divine anchoring.</p>
+                    <a href="#" class="btn-purchase disabled">Link Coming Soon</a>
                 </div>
             </div>
 
-            <!-- Book 3: Art Is Love -->
+            <!-- Book 3: Art Is Love (PLACEHOLDER) -->
             <div class="book-card">
-                <div class="book-cover-placeholder">Art Is Love</div>
+                <div class="book-cover-placeholder">Art Is Love<br>(Cover Coming Soon)</div>
                 <div class="book-content">
                     <h3 class="book-title">Art Is Love</h3>
-                    <p class="book-description">An exploration of creative expression as a profound reflection of love.</p>
-                    <!-- UPDATE LINK HERE WHEN READY -->
-                    <a href="#" target="_blank" class="btn-purchase">Get Your Copy</a>
+                    <p class="book-description">Exploring creative expression as a profound reflection of love.</p>
+                    <a href="#" class="btn-purchase disabled">Link Coming Soon</a>
                 </div>
             </div>
 
-            <!-- Book 4: Unique Poetry -->
+            <!-- Book 4: Unique Poetry (PLACEHOLDER) -->
             <div class="book-card">
-                <div class="book-cover-placeholder">Unique Poetry</div>
+                <div class="book-cover-placeholder">Unique Poetry<br>(Cover Coming Soon)</div>
                 <div class="book-content">
                     <h3 class="book-title">Unique Poetry</h3>
-                    <p class="book-description">A curated selection of rhythmic and emotive verse capturing distinct experiences.</p>
-                    <!-- UPDATE LINK HERE WHEN READY -->
-                    <a href="#" target="_blank" class="btn-purchase">Get Your Copy</a>
+                    <p class="book-description">A curated selection of emotive verse capturing distinct experiences.</p>
+                    <a href="#" class="btn-purchase disabled">Link Coming Soon</a>
                 </div>
             </div>
 
-            <!-- Book 5: You Still Running -->
+            <!-- Book 5: You Still Running (PLACEHOLDER) -->
             <div class="book-card">
-                <div class="book-cover-placeholder">You Still Running</div>
+                <div class="book-cover-placeholder">You Still Running<br>(Cover Coming Soon)</div>
                 <div class="book-content">
                     <h3 class="book-title">You Still Running</h3>
-                    <p class="book-description">An inspiring exploration of endurance, stamina, and continuous forward momentum.</p>
-                    <!-- UPDATE LINK HERE WHEN READY -->
-                    <a href="#" target="_blank" class="btn-purchase">Get Your Copy</a>
+                    <p class="book-description">An inspiring exploration of endurance and continuous forward momentum.</p>
+                    <a href="#" class="btn-purchase disabled">Link Coming Soon</a>
                 </div>
             </div>
 
@@ -1062,7 +1202,7 @@
 
 </body>
 </html>
-    
+            
 
     <!-- 6-MONTH CURRICULUM SECTION -->
     <section class="section" id="curriculum">
