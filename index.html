@@ -39,6 +39,813 @@
             padding: 0;
         }
 
+      <!-- ============================================================
+     SURVIVE. HEAL. RISE.
+     ONE-TIME ACCESSIBILITY + SEO + BEST-PRACTICES PATCH
+     Paste immediately before </body>
+     ============================================================ -->
+
+<script>
+(function () {
+    "use strict";
+
+    /* ---------------------------------------------------------
+       1. BASIC PAGE SEO
+       --------------------------------------------------------- */
+
+    const head = document.head;
+
+    function addMeta(attribute, value, content) {
+        if (!head.querySelector(`meta[${attribute}="${value}"]`)) {
+            const meta = document.createElement("meta");
+            meta.setAttribute(attribute, value);
+            meta.setAttribute("content", content);
+            head.appendChild(meta);
+        }
+    }
+
+    /* Improve title if the existing title is present */
+    document.title =
+        "Survive. Heal. Rise. | 6-Month Community Healing & Faith Series";
+
+    addMeta(
+        "name",
+        "description",
+        "Survive. Heal. Rise. is a six-month community series focused on healing, resilience, faith, creativity, service, and personal growth through community conversations and ministry outreach."
+    );
+
+    addMeta("name", "robots", "index, follow");
+    addMeta("name", "author", "Emmanuel Modi");
+    addMeta("name", "theme-color", "#0a0e1a");
+
+    /* ---------------------------------------------------------
+       2. CANONICAL URL
+       --------------------------------------------------------- */
+
+    if (!head.querySelector('link[rel="canonical"]')) {
+        const canonical = document.createElement("link");
+        canonical.rel = "canonical";
+        canonical.href = window.location.origin + window.location.pathname;
+        head.appendChild(canonical);
+    }
+
+    /* ---------------------------------------------------------
+       3. OPEN GRAPH / SOCIAL SEO
+       --------------------------------------------------------- */
+
+    function addOG(property, content) {
+        if (!head.querySelector(`meta[property="${property}"]`)) {
+            const meta = document.createElement("meta");
+            meta.setAttribute("property", property);
+            meta.content = content;
+            head.appendChild(meta);
+        }
+    }
+
+    const pageURL = window.location.href;
+    const logoURL =
+        new URL("1785664262512.png", window.location.href).href;
+
+    addOG("og:type", "website");
+    addOG(
+        "og:title",
+        "Survive. Heal. Rise. | 6-Month Community Series"
+    );
+    addOG(
+        "og:description",
+        "A six-month community series focused on healing, resilience, faith, creativity, service, and personal growth."
+    );
+    addOG("og:url", pageURL);
+    addOG("og:site_name", "Survive. Heal. Rise.");
+    addOG("og:image", logoURL);
+    addOG(
+        "og:image:alt",
+        "Survive. Heal. Rise. program logo"
+    );
+
+    /* ---------------------------------------------------------
+       4. TWITTER / X SEO
+       --------------------------------------------------------- */
+
+    addMeta(
+        "name",
+        "twitter:card",
+        "summary_large_image"
+    );
+
+    addMeta(
+        "name",
+        "twitter:title",
+        "Survive. Heal. Rise. | 6-Month Community Series"
+    );
+
+    addMeta(
+        "name",
+        "twitter:description",
+        "Join a six-month community series centered on healing, resilience, faith, creativity, service, and personal growth."
+    );
+
+    addMeta(
+        "name",
+        "twitter:image",
+        logoURL
+    );
+
+    /* ---------------------------------------------------------
+       5. ACCESSIBILITY CSS
+       --------------------------------------------------------- */
+
+    const accessibilityCSS = document.createElement("style");
+
+    accessibilityCSS.textContent = `
+        /* Accessible skip link */
+        .shr-skip-link {
+            position: fixed;
+            left: 16px;
+            top: -100px;
+            z-index: 99999;
+            background: #ffffff;
+            color: #0a0e1a;
+            padding: 12px 18px;
+            border-radius: 8px;
+            font-weight: 800;
+            text-decoration: none;
+            box-shadow: 0 4px 20px rgba(0,0,0,.35);
+            transition: top .2s ease;
+        }
+
+        .shr-skip-link:focus {
+            top: 16px;
+            outline: 3px solid #fcd34d;
+            outline-offset: 3px;
+        }
+
+        /* Strong keyboard focus */
+        a:focus-visible,
+        button:focus-visible,
+        input:focus-visible,
+        textarea:focus-visible,
+        select:focus-visible {
+            outline: 3px solid #fcd34d !important;
+            outline-offset: 3px !important;
+        }
+
+        /* Better readable muted text */
+        :root {
+            --text-muted-accessible: #cbd5e1;
+        }
+
+        .section-header p,
+        .month-card p.description,
+        .expect-card p,
+        .speaker-info p,
+        .attend-list li,
+        .newsletter-footer {
+            color: var(--text-muted-accessible) !important;
+        }
+
+        /* Visually hidden but accessible labels */
+        .visually-hidden,
+        .shr-visually-hidden {
+            position: absolute !important;
+            width: 1px !important;
+            height: 1px !important;
+            padding: 0 !important;
+            margin: -1px !important;
+            overflow: hidden !important;
+            clip: rect(0, 0, 0, 0) !important;
+            white-space: nowrap !important;
+            border: 0 !important;
+        }
+
+        /* Newsletter safety override */
+        .survive-heal-rise-newsletter {
+            background-color: #111827;
+            border: 1px solid #1e293b;
+            border-radius: 14px;
+            padding: 30px;
+            max-width: 500px;
+            color: #ffffff;
+            box-shadow: 0 10px 30px rgba(0,0,0,.3);
+        }
+
+        .newsletter-form .form-group {
+            margin-bottom: 15px;
+        }
+
+        .newsletter-form input[type="text"],
+        .newsletter-form input[type="email"] {
+            width: 100%;
+            padding: 12px 15px;
+            background-color: rgba(0,0,0,.25);
+            border: 1px solid #475569;
+            border-radius: 8px;
+            font-size: 1rem;
+            color: #ffffff;
+        }
+
+        .newsletter-form input::placeholder {
+            color: #cbd5e1;
+            opacity: 1;
+        }
+
+        .newsletter-form input:focus {
+            border-color: #a5b4fc;
+            outline: 3px solid rgba(165,180,252,.35);
+        }
+
+        .checkbox-group {
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+            font-size: .85rem;
+            color: #cbd5e1;
+            margin: 10px 0 15px;
+        }
+
+        .checkbox-group input {
+            margin-top: 3px;
+            accent-color: #6366f1;
+            min-width: 18px;
+            min-height: 18px;
+        }
+
+        .checkbox-group label {
+            cursor: pointer;
+        }
+
+        .newsletter-btn {
+            width: 100%;
+            background-color: #6366f1;
+            color: #ffffff;
+            border: none;
+            border-radius: 8px;
+            padding: 12px;
+            font-size: 1rem;
+            font-weight: 700;
+            cursor: pointer;
+            margin-top: 5px;
+            box-shadow: 0 4px 14px rgba(99,102,241,.25);
+        }
+
+        .newsletter-btn:hover {
+            background-color: #4f46e5;
+        }
+
+        /* Better mobile navigation */
+        @media (max-width: 850px) {
+            .navbar {
+                flex-wrap: wrap;
+                gap: 1rem;
+            }
+
+            .nav-links {
+                width: 100%;
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: .7rem 1rem;
+            }
+
+            .nav-links a {
+                font-size: .85rem;
+            }
+        }
+
+        /* Respect reduced-motion preferences */
+        @media (prefers-reduced-motion: reduce) {
+            html {
+                scroll-behavior: auto !important;
+            }
+
+            *,
+            *::before,
+            *::after {
+                animation-duration: .01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: .01ms !important;
+                scroll-behavior: auto !important;
+            }
+        }
+    `;
+
+    document.head.appendChild(accessibilityCSS);
+
+    /* ---------------------------------------------------------
+       6. SKIP-TO-CONTENT LINK
+       --------------------------------------------------------- */
+
+    if (!document.querySelector(".shr-skip-link")) {
+        const skipLink = document.createElement("a");
+
+        skipLink.className = "shr-skip-link";
+        skipLink.href = "#main-content";
+        skipLink.textContent = "Skip to main content";
+
+        document.body.prepend(skipLink);
+    }
+
+    /* ---------------------------------------------------------
+       7. MAIN CONTENT LANDMARK
+       --------------------------------------------------------- */
+
+    let main = document.querySelector("main");
+
+    if (!main) {
+        main = document.createElement("main");
+        main.id = "main-content";
+
+        const header = document.querySelector("header");
+
+        let current = header
+            ? header.nextElementSibling
+            : document.body.firstElementChild;
+
+        while (
+            current &&
+            current.tagName !== "FOOTER"
+        ) {
+            const next = current.nextElementSibling;
+            main.appendChild(current);
+            current = next;
+        }
+
+        if (header) {
+            header.after(main);
+        } else {
+            document.body.prepend(main);
+        }
+    }
+
+    main.id = "main-content";
+
+    /* ---------------------------------------------------------
+       8. NAVIGATION ACCESSIBILITY
+       --------------------------------------------------------- */
+
+    const nav = document.querySelector("nav");
+
+    if (nav) {
+        nav.setAttribute(
+            "aria-label",
+            "Primary navigation"
+        );
+
+        /*
+         * The original page contains a nested duplicate
+         * .nav-links <ul>. Move its links into the main list.
+         */
+        const navLists = nav.querySelectorAll(
+            ":scope > ul.nav-links"
+        );
+
+        if (navLists.length > 1) {
+            const primaryList = navLists[0];
+
+            for (let i = 1; i < navLists.length; i++) {
+                const duplicateList = navLists[i];
+
+                while (duplicateList.firstElementChild) {
+                    primaryList.appendChild(
+                        duplicateList.firstElementChild
+                    );
+                }
+
+                duplicateList.remove();
+            }
+        }
+
+        /* Ensure navigation links have accessible names */
+        nav.querySelectorAll("a").forEach(function (link) {
+            if (!link.getAttribute("aria-label")) {
+                const text = link.textContent.trim();
+
+                if (text) {
+                    link.setAttribute(
+                        "aria-label",
+                        text
+                    );
+                }
+            }
+        });
+    }
+
+    /* ---------------------------------------------------------
+       9. LOGO ACCESSIBILITY
+       --------------------------------------------------------- */
+
+    document
+        .querySelectorAll('img[src*="1785664262512"]')
+        .forEach(function (img) {
+
+            img.alt =
+                "Survive. Heal. Rise. program logo";
+
+            img.setAttribute(
+                "decoding",
+                "async"
+            );
+
+            if (!img.width) {
+                img.width = 34;
+            }
+
+            if (!img.height) {
+                img.height = 34;
+            }
+        });
+
+    /* ---------------------------------------------------------
+       10. IMPROVE ALL OTHER IMAGES
+       --------------------------------------------------------- */
+
+    document.querySelectorAll("img").forEach(function (img) {
+
+        /* Prevent missing alt attributes */
+        if (!img.hasAttribute("alt")) {
+            img.alt = "";
+        }
+
+        img.setAttribute(
+            "decoding",
+            "async"
+        );
+
+        /*
+         * Images outside the top of the page can be lazy-loaded.
+         */
+        const rect = img.getBoundingClientRect();
+
+        if (rect.top > window.innerHeight) {
+            img.setAttribute(
+                "loading",
+                "lazy"
+            );
+        }
+    });
+
+    /* ---------------------------------------------------------
+       11. ADD ACCESSIBLE SECTION LABELS
+       --------------------------------------------------------- */
+
+    const sectionNames = {
+        "curriculum": "Six-Month Series",
+        "expect": "Schedule",
+        "venue": "Venue and Access",
+        "speaker": "Speaker",
+        "outreach-series": "Summer Series",
+        "newsletter": "Newsletter"
+    };
+
+    Object.keys(sectionNames).forEach(function (id) {
+
+        const section = document.getElementById(id);
+
+        if (!section) {
+            return;
+        }
+
+        section.setAttribute(
+            "aria-label",
+            sectionNames[id]
+        );
+    });
+
+    /* ---------------------------------------------------------
+       12. MONTH CARDS AS ARTICLES
+       --------------------------------------------------------- */
+
+    document.querySelectorAll(".month-card").forEach(
+        function (card) {
+
+            if (card.tagName.toLowerCase() !== "article") {
+                card.setAttribute(
+                    "role",
+                    "article"
+                );
+            }
+
+            card.setAttribute(
+                "aria-label",
+                card.querySelector("h3")
+                    ? card.querySelector("h3").textContent.trim()
+                    : "Monthly program"
+            );
+        }
+    );
+
+    /* ---------------------------------------------------------
+       13. EXPECTATION CARDS
+       --------------------------------------------------------- */
+
+    document.querySelectorAll(".expect-card").forEach(
+        function (card) {
+
+            card.setAttribute(
+                "role",
+                "article"
+            );
+
+            const heading = card.querySelector("h4");
+
+            if (heading) {
+                card.setAttribute(
+                    "aria-label",
+                    heading.textContent.trim()
+                );
+            }
+        }
+    );
+
+    /* ---------------------------------------------------------
+       14. DECORATIVE ICONS
+       --------------------------------------------------------- */
+
+    document.querySelectorAll(
+        ".expect-card i, .event-list i, .attend-list i, .speaker-avatar i, .ecosystem-link i"
+    ).forEach(function (icon) {
+
+        icon.setAttribute(
+            "aria-hidden",
+            "true"
+        );
+
+    });
+
+    /* ---------------------------------------------------------
+       15. FORM ACCESSIBILITY
+       --------------------------------------------------------- */
+
+    document.querySelectorAll("input").forEach(
+        function (input, index) {
+
+            const type =
+                (input.type || "").toLowerCase();
+
+            if (
+                type === "hidden" ||
+                type === "submit" ||
+                type === "button"
+            ) {
+                return;
+            }
+
+            /*
+             * If an input does not have a label,
+             * create a visually-hidden accessible label.
+             */
+            if (
+                !input.id ||
+                !document.querySelector(
+                    `label[for="${input.id}"]`
+                )
+            ) {
+
+                if (!input.id) {
+                    input.id =
+                        "shr-input-" + (index + 1);
+                }
+
+                const label =
+                    document.createElement("label");
+
+                label.className =
+                    "shr-visually-hidden";
+
+                label.htmlFor = input.id;
+
+                if (type === "email") {
+                    label.textContent =
+                        "Email address";
+                } else if (type === "checkbox") {
+                    label.textContent =
+                        "Email subscription consent";
+                } else {
+                    label.textContent =
+                        "Your name";
+                }
+
+                input.parentNode.insertBefore(
+                    label,
+                    input
+                );
+            }
+
+            /* Useful autocomplete attributes */
+            if (type === "email") {
+                input.setAttribute(
+                    "autocomplete",
+                    "email"
+                );
+            }
+
+            if (
+                type === "text" &&
+                !input.getAttribute("autocomplete")
+            ) {
+                input.setAttribute(
+                    "autocomplete",
+                    "name"
+                );
+            }
+        }
+    );
+
+    /* ---------------------------------------------------------
+       16. BUTTON ACCESSIBILITY
+       --------------------------------------------------------- */
+
+    document.querySelectorAll("button").forEach(
+        function (button) {
+
+            if (
+                !button.textContent.trim() &&
+                !button.getAttribute("aria-label")
+            ) {
+                button.setAttribute(
+                    "aria-label",
+                    "Button"
+                );
+            }
+        }
+    );
+
+    /* ---------------------------------------------------------
+       17. EXTERNAL LINKS
+       --------------------------------------------------------- */
+
+    document.querySelectorAll(
+        'a[href^="http"]'
+    ).forEach(function (link) {
+
+        const currentHost =
+            window.location.hostname;
+
+        try {
+            const url =
+                new URL(link.href);
+
+            if (
+                url.hostname &&
+                url.hostname !== currentHost
+            ) {
+                link.setAttribute(
+                    "rel",
+                    "noopener noreferrer"
+                );
+            }
+        } catch (error) {
+            /* Ignore invalid URLs */
+        }
+    });
+
+    /* ---------------------------------------------------------
+       18. STRUCTURED DATA FOR SEARCH ENGINES
+       --------------------------------------------------------- */
+
+    if (
+        !document.querySelector(
+            'script[data-shr-schema="true"]'
+        )
+    ) {
+
+        const schema = {
+            "@context": "https://schema.org",
+            "@type": "Event",
+            "name":
+                "Survive. Heal. Rise. — 6-Month Community Series",
+            "description":
+                "A six-month community series focused on healing, resilience, faith, creativity, service, and personal growth.",
+            "url":
+                window.location.href,
+            "organizer": {
+                "@type": "Organization",
+                "name":
+                    "Survive. Heal. Rise.",
+                "url":
+                    window.location.origin
+            }
+        };
+
+        const schemaScript =
+            document.createElement("script");
+
+        schemaScript.type =
+            "application/ld+json";
+
+        schemaScript.dataset.shrSchema =
+            "true";
+
+        schemaScript.textContent =
+            JSON.stringify(schema);
+
+        document.head.appendChild(
+            schemaScript
+        );
+    }
+
+    /* ---------------------------------------------------------
+       19. BETTER SEMANTIC STRUCTURE
+       --------------------------------------------------------- */
+
+    document.querySelectorAll(
+        ".month-card"
+    ).forEach(function (card) {
+
+        const heading =
+            card.querySelector("h3");
+
+        if (heading) {
+            heading.setAttribute(
+                "tabindex",
+                "-1"
+            );
+        }
+    });
+
+    /* ---------------------------------------------------------
+       20. NEWSLETTER ACCESSIBILITY
+       --------------------------------------------------------- */
+
+    const newsletter =
+        document.querySelector(
+            ".survive-heal-rise-newsletter"
+        );
+
+    if (newsletter) {
+
+        const heading =
+            newsletter.querySelector(
+                "h2, h3, h4"
+            );
+
+        if (heading) {
+            newsletter.setAttribute(
+                "aria-labelledby",
+                "shr-newsletter-heading"
+            );
+
+            if (!heading.id) {
+                heading.id =
+                    "shr-newsletter-heading";
+            }
+        }
+
+        const emailInputs =
+            newsletter.querySelectorAll(
+                'input[type="email"]'
+            );
+
+        emailInputs.forEach(function (input) {
+            input.required = true;
+            input.setAttribute(
+                "autocomplete",
+                "email"
+            );
+        });
+    }
+
+    /* ---------------------------------------------------------
+       21. FIX NEWSLETTER FOOTER IF CSS WAS PREVIOUSLY BROKEN
+       --------------------------------------------------------- */
+
+    document.querySelectorAll(
+        ".newsletter-footer"
+    ).forEach(function (element) {
+        element.style.textAlign = "center";
+        element.style.marginTop = "15px";
+        element.style.color = "#cbd5e1";
+    });
+
+    /* ---------------------------------------------------------
+       22. ACCESSIBLE EXTERNAL ECOSYSTEM LINKS
+       --------------------------------------------------------- */
+
+    document.querySelectorAll(
+        ".ecosystem-link"
+    ).forEach(function (link) {
+
+        link.setAttribute(
+            "rel",
+            "noopener noreferrer"
+        );
+
+    });
+
+    /* ---------------------------------------------------------
+       23. FINAL HTML ACCESSIBILITY CHECKS
+       --------------------------------------------------------- */
+
+    document.documentElement.setAttribute(
+        "lang",
+        document.documentElement.lang || "en"
+    );
+
+})();
+</script>
+
+<!-- ============================================================
+     END ONE-TIME ACCESSIBILITY + SEO PATCH
+     ============================================================ -->  
         body {
             font-family: 'Plus Jakarta Sans', sans-serif;
             color: var(--text-light);
