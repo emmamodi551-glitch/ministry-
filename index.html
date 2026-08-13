@@ -1,24 +1,29 @@
-<!DOCTYPE html>  
-<html lang="en">    
-<head> 
+<!DOCTYPE html>
+<html lang="en">
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Survive. Heal. Rise. | 6-Month Community Series & Ministry Outreach</title>
+
+    <meta name="description" content="Survive. Heal. Rise. is a six-month community series and ministry outreach focused on faith, resilience, healing, creativity, mentorship, and community empowerment.">
+
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Cinzel:wght@600;700;800&display=swap" rel="stylesheet">
-    <!-- FontAwesome Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
-    <style>
-        html {
-            scroll-behavior: smooth;
-        }
 
-        section {
-            scroll-margin-top: 90px;
-        }
+    <!-- FontAwesome -->
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    >
+
+    <style>
+
+        /* =========================================================
+           GLOBAL
+        ========================================================= */
 
         :root {
             --bg-dark: #0a0e1a;
@@ -29,7 +34,7 @@
             --text-light: #ffffff;
             --text-muted: #94a3b8;
             --border-color: #1e293b;
-            --accent-glow: rgba(99, 102, 241, 0.25); 
+            --accent-glow: rgba(99, 102, 241, 0.25);
             --radius: 14px;
         }
 
@@ -39,21 +44,53 @@
             padding: 0;
         }
 
+        html {
+            scroll-behavior: smooth;
+        }
+
         body {
-            font-family: 'Plus Jakarta Sans', sans-serif;
+            font-family: "Plus Jakarta Sans", sans-serif;
             color: var(--text-light);
             background-color: var(--bg-dark);
             line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        section {
+            scroll-margin-top: 90px;
+        }
+
+        img {
+            max-width: 100%;
+        }
+
+        a {
+            color: inherit;
         }
 
         .brand-font {
-            font-family: 'Cinzel', serif;
+            font-family: "Cinzel", serif;
             letter-spacing: -0.02em;
         }
 
-        /* HEADER & NAVBAR */
+        .highlight {
+            background: linear-gradient(
+                135deg,
+                #fcd34d 0%,
+                #d97706 100%
+            );
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+
+        /* =========================================================
+           HEADER / NAVIGATION
+        ========================================================= */
+
         header {
-            background-color: rgba(10, 14, 26, 0.95);
+            background-color: rgba(10, 14, 26, 0.96);
             backdrop-filter: blur(10px);
             position: sticky;
             top: 0;
@@ -67,36 +104,44 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 1.2rem 2rem;
+            gap: 20px;
+            padding: 1.1rem 2rem;
         }
 
         .logo {
             color: #ffffff;
-            font-size: 1.35rem;
+            font-size: 1rem;
             font-weight: 800;
             text-decoration: none;
             display: flex;
             align-items: center;
-            gap: 12px;
-            letter-spacing: -0.02em;
+            gap: 8px;
+            white-space: nowrap;
         }
 
-        .logo span {
-            color: var(--primary-violet);
+        .logo img {
+            width: 34px;
+            height: 34px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 2px solid #fbbf24;
+            flex-shrink: 0;
         }
 
         .nav-links {
             display: flex;
             list-style: none;
-            gap: 1.8rem;
+            gap: 1.1rem;
             align-items: center;
+            flex-wrap: wrap;
+            justify-content: flex-end;
         }
 
         .nav-links a {
             color: var(--text-muted);
             text-decoration: none;
             font-weight: 500;
-            font-size: 0.92rem;
+            font-size: 0.88rem;
             transition: color 0.3s ease;
         }
 
@@ -107,9 +152,9 @@
         .cta-btn {
             background-color: var(--primary-violet);
             color: #ffffff !important;
-            padding: 0.65rem 1.4rem;
+            padding: 0.65rem 1.2rem;
             border-radius: 8px;
-            font-weight: 600 !important;
+            font-weight: 700 !important;
             transition: all 0.3s ease !important;
             box-shadow: 0 4px 14px var(--accent-glow);
         }
@@ -122,7 +167,7 @@
         .ecosystem-link {
             color: #a5b4fc !important;
             border: 1px solid var(--border-color);
-            padding: 0.4rem 0.8rem;
+            padding: 0.4rem 0.7rem;
             border-radius: 6px;
             background: rgba(255,255,255,0.02);
             transition: all 0.3s ease;
@@ -133,11 +178,20 @@
             color: #ffffff !important;
         }
 
-        /* HERO SECTION */
+
+        /* =========================================================
+           HERO
+        ========================================================= */
+
         .hero {
-            padding: 6rem 2rem 5rem 2rem;
+            padding: 6rem 2rem 5rem;
             text-align: center;
-            background: radial-gradient(circle at top, rgba(99, 102, 241, 0.18) 0%, rgba(10, 14, 26, 1) 75%);
+            background:
+                radial-gradient(
+                    circle at top,
+                    rgba(99, 102, 241, 0.18) 0%,
+                    rgba(10, 14, 26, 1) 75%
+                );
         }
 
         .hero-content {
@@ -167,12 +221,6 @@
             letter-spacing: -0.03em;
         }
 
-        .hero h1 span.highlight {
-            background: linear-gradient(135deg, #fcd34d 0%, #d97706 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-
         .hero h2.subtitle {
             font-size: 1.6rem;
             color: #a5b4fc;
@@ -196,14 +244,19 @@
             flex-wrap: wrap;
         }
 
-        .btn-primary {
-            background-color: var(--primary-violet);
-            color: #ffffff;
+        .btn-primary,
+        .btn-secondary {
+            display: inline-block;
             padding: 0.9rem 2.2rem;
             border-radius: 10px;
             text-decoration: none;
-            font-weight: 700;
             transition: all 0.3s ease;
+        }
+
+        .btn-primary {
+            background-color: var(--primary-violet);
+            color: #ffffff;
+            font-weight: 700;
             box-shadow: 0 4px 20px var(--accent-glow);
         }
 
@@ -216,11 +269,7 @@
             background-color: #161e2e;
             color: #ffffff;
             border: 1px solid var(--border-color);
-            padding: 0.9rem 2.2rem;
-            border-radius: 10px;
-            text-decoration: none;
             font-weight: 600;
-            transition: all 0.3s ease;
         }
 
         .btn-secondary:hover {
@@ -228,7 +277,11 @@
             border-color: #334155;
         }
 
-        /* SECTION LAYOUT */
+
+        /* =========================================================
+           GENERAL SECTIONS
+        ========================================================= */
+
         .section {
             padding: 5rem 2rem;
             max-width: 1200px;
@@ -238,7 +291,7 @@
         .section-header {
             text-align: center;
             max-width: 750px;
-            margin: 0 auto 3.5rem auto;
+            margin: 0 auto 3.5rem;
         }
 
         .section-header h2 {
@@ -252,11 +305,336 @@
             color: var(--text-muted);
             font-size: 1.1rem;
         }
-     
-        /* 6-MONTH CURRICULUM GRID */
+
+
+        /* =========================================================
+           SUMMER SERIES
+        ========================================================= */
+
+        .summer-section {
+            background: linear-gradient(
+                180deg,
+                #0a0e1a 0%,
+                #111827 100%
+            );
+            max-width: none;
+        }
+
+        .summer-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .expect-grid {
+            display: grid;
+            grid-template-columns: repeat(
+                auto-fit,
+                minmax(240px, 1fr)
+            );
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .expect-card {
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius);
+            padding: 1.8rem;
+            text-align: center;
+        }
+
+        .expect-card i {
+            font-size: 2.2rem;
+            color: var(--primary-violet);
+            margin-bottom: 1rem;
+        }
+
+        .expect-card h4 {
+            font-size: 1.1rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+
+        .expect-card p {
+            font-size: 0.88rem;
+            color: var(--text-muted);
+        }
+
+        .attend-list {
+            text-align: left;
+            list-style: none;
+            margin-bottom: 1.5rem;
+        }
+
+        .attend-list li {
+            font-size: 0.88rem;
+            color: var(--text-muted);
+            margin-bottom: 0.6rem;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .attend-list li i {
+            color: #fcd34d;
+            font-size: 0.8rem;
+        }
+
+        .summer-info-bar {
+            background-color: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius);
+            padding: 2rem;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 2rem;
+            text-align: center;
+        }
+
+        .summer-info-item span:first-child {
+            display: block;
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            color: var(--text-muted);
+            font-weight: 700;
+            margin-bottom: 0.3rem;
+        }
+
+        .summer-info-item span:last-child,
+        .summer-info-item a {
+            font-size: 1.1rem;
+            font-weight: 800;
+            color: #ffffff;
+            text-decoration: none;
+        }
+
+
+        /* =========================================================
+           MEDIA
+        ========================================================= */
+
+        .media-section {
+            padding: 60px 20px;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+
+        .media-container {
+            max-width: 1100px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .media-container h2 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            color: #1a1a1a;
+        }
+
+        .media-intro {
+            font-size: 1.1rem;
+            margin-bottom: 40px;
+            color: #666;
+        }
+
+        .media-grid {
+            display: grid;
+            grid-template-columns: repeat(
+                auto-fit,
+                minmax(280px, 1fr)
+            );
+            gap: 30px;
+            text-align: left;
+        }
+
+        .media-card {
+            background: #ffffff;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .media-card-content {
+            padding: 24px;
+            flex-grow: 1;
+        }
+
+        .media-card h3 {
+            font-size: 1.4rem;
+            margin: 15px 0 10px;
+            color: #222;
+        }
+
+        .media-card p {
+            font-size: 0.95rem;
+            color: #555;
+            line-height: 1.5;
+            margin-bottom: 20px;
+        }
+
+        .media-card-button {
+            display: inline-block;
+            color: #ffffff;
+            padding: 10px 20px;
+            border-radius: 4px;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.9rem;
+        }
+
+        .video-wrapper {
+            width: 100%;
+            background: #000;
+        }
+
+        .video-wrapper video {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+
+        /* =========================================================
+           BOOK SERIES
+        ========================================================= */
+
+        .book-series-section {
+            background-color: #f9f9f9;
+            color: #333;
+            padding: 60px 20px;
+        }
+
+        .book-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .book-section-header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .book-section-header h2 {
+            font-size: 2.5rem;
+            color: #1a1a1a;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .book-section-header p {
+            color: #666;
+            font-size: 1.1rem;
+        }
+
+        .book-grid {
+            display: grid;
+            grid-template-columns: repeat(
+                auto-fit,
+                minmax(280px, 1fr)
+            );
+            gap: 30px;
+        }
+
+        .book-card {
+            background-color: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            transition:
+                transform 0.3s ease,
+                box-shadow 0.3s ease;
+            border: 1px solid #eee;
+        }
+
+        .book-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+        }
+
+        .book-cover-image {
+            width: 100%;
+            height: auto;
+            display: block;
+            border-bottom: 1px solid #eee;
+        }
+
+        .book-content {
+            padding: 25px;
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+        }
+
+        .book-title {
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: #1a1a1a;
+            margin: 0 0 10px;
+        }
+
+        .book-description {
+            font-size: 0.95rem;
+            color: #666;
+            line-height: 1.5;
+            margin-bottom: 20px;
+            flex-grow: 1;
+        }
+
+        .btn-purchase {
+            display: block;
+            width: 100%;
+            text-align: center;
+            background-color: #1a1a1a;
+            color: #ffffff;
+            padding: 12px 20px;
+            border-radius: 4px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.9rem;
+            transition: background-color 0.2s ease;
+            border: none;
+            cursor: pointer;
+            margin-top: auto;
+        }
+
+        .btn-purchase:hover {
+            background-color: #c59b27;
+        }
+
+        /* IMPORTANT:
+           Disabled buttons do not contain href="#".
+           This prevents the page from jumping to the top.
+        */
+
+        .btn-purchase.disabled {
+            background-color: #e0e0e0;
+            color: #888888;
+            cursor: default;
+        }
+
+        .btn-purchase.disabled:hover {
+            background-color: #e0e0e0;
+            transform: none;
+        }
+
+
+        /* =========================================================
+           6-MONTH CURRICULUM
+        ========================================================= */
+
         .timeline-container {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+            grid-template-columns: repeat(
+                auto-fit,
+                minmax(340px, 1fr)
+            );
             gap: 1.8rem;
         }
 
@@ -279,9 +657,9 @@
 
         .month-badge {
             align-self: flex-start;
-            background: rgba(99, 102, 241, 0.15);
+            background: rgba(99,102,241,0.15);
             color: #a5b4fc;
-            border: 1px solid rgba(99, 102, 241, 0.3);
+            border: 1px solid rgba(99,102,241,0.3);
             padding: 0.3rem 0.8rem;
             border-radius: 6px;
             font-size: 0.8rem;
@@ -316,7 +694,7 @@
         }
 
         .scripture-box {
-            background: rgba(0, 0, 0, 0.25);
+            background: rgba(0,0,0,0.25);
             border-left: 3px solid var(--primary-violet);
             padding: 0.9rem 1.1rem;
             border-radius: 0 8px 8px 0;
@@ -334,42 +712,14 @@
             font-size: 0.82rem;
         }
 
-        /* WHAT TO EXPECT SECTION */
-        .expect-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-            gap: 1.5rem;
-            margin-top: 2rem;
-        }
 
-        .expect-card {
-            background: var(--card-bg);
-            border: 1px solid var(--border-color);
-            border-radius: var(--radius);
-            padding: 1.8rem;
-            text-align: center;
-        }
-
-        .expect-card i {
-            font-size: 2.2rem;
-            color: var(--primary-violet);
-            margin-bottom: 1rem;
-        }
-
-        .expect-card h4 {
-            font-size: 1.1rem;
-            font-weight: 700;
-            margin-bottom: 0.5rem;
-        }
-
-        .expect-card p {
-            font-size: 0.88rem;
-            color: var(--text-muted);
-        }
+        /* =========================================================
+           WHAT TO EXPECT
+        ========================================================= */
 
         .duration-tag {
             display: inline-block;
-            background: rgba(217, 119, 6, 0.2);
+            background: rgba(217,119,6,0.2);
             color: #fcd34d;
             font-weight: 700;
             font-size: 0.75rem;
@@ -379,9 +729,40 @@
             text-transform: uppercase;
         }
 
-        /* EVENT & VENUE DETAILS */
+
+        /* =========================================================
+           QUOTE
+        ========================================================= */
+
+        .quote-banner {
+            text-align: center;
+            padding: 3rem 2rem;
+            background: rgba(255,255,255,0.02);
+            border-top: 1px solid var(--border-color);
+            border-bottom: 1px solid var(--border-color);
+            margin: 4rem 0;
+        }
+
+        .quote-banner blockquote {
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: #e2e8f0;
+            max-width: 800px;
+            margin: 0 auto;
+            font-style: italic;
+        }
+
+
+        /* =========================================================
+           VENUE
+        ========================================================= */
+
         .event-box {
-            background: linear-gradient(135deg, #0f172a 0%, #111827 100%);
+            background: linear-gradient(
+                135deg,
+                #0f172a 0%,
+                #111827 100%
+            );
             border: 1px solid var(--border-color);
             border-radius: var(--radius);
             padding: 3.5rem 2.5rem;
@@ -390,14 +771,6 @@
             grid-template-columns: 1.5fr 1fr;
             gap: 3rem;
             align-items: center;
-        }
-
-        @media (max-width: 850px) {
-            .event-box {
-                grid-template-columns: 1fr;
-                gap: 2rem;
-                padding: 2rem 1.5rem;
-            }
         }
 
         .event-details h3 {
@@ -441,26 +814,6 @@
             color: #ffffff;
         }
 
-        .attend-list {
-            text-align: left;
-            list-style: none;
-            margin-bottom: 1.5rem;
-        }
-
-        .attend-list li {
-            font-size: 0.88rem;
-            color: var(--text-muted);
-            margin-bottom: 0.6rem;
-            display: flex;
-            align-items: center;
-            gap: 8px;
-        }
-
-        .attend-list li i {
-            color: #fcd34d;
-            font-size: 0.8rem;
-        }
-
         .admission-badge {
             background: var(--primary-violet);
             color: #ffffff;
@@ -472,7 +825,11 @@
             letter-spacing: 0.5px;
         }
 
-        /* ABOUT SPEAKER */
+
+        /* =========================================================
+           SPEAKER
+        ========================================================= */
+
         .speaker-card {
             background-color: var(--card-bg);
             border: 1px solid var(--border-color);
@@ -484,16 +841,14 @@
             align-items: center;
         }
 
-        @media (max-width: 850px) {
-            .speaker-card {
-                grid-template-columns: 1fr;
-            }
-        }
-
         .speaker-avatar {
             width: 100%;
-            height: 280px;
-            background: linear-gradient(135deg, rgba(99, 102, 241, 0.25) 0%, #111827 100%);
+            min-height: 280px;
+            background: linear-gradient(
+                135deg,
+                rgba(99,102,241,0.25) 0%,
+                #111827 100%
+            );
             border: 1px solid var(--border-color);
             border-radius: var(--radius);
             display: flex;
@@ -504,10 +859,13 @@
             padding: 1.5rem;
         }
 
-        .speaker-avatar i {
-            font-size: 3.5rem;
-            color: var(--primary-violet);
-            margin-bottom: 1rem;
+        .speaker-avatar img {
+            width: 100%;
+            max-width: 220px;
+            border-radius: 12px;
+            object-fit: cover;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+            margin-bottom: 0.5rem;
         }
 
         .speaker-info h3 {
@@ -530,24 +888,114 @@
             line-height: 1.7;
         }
 
-        /* QUOTE & FOOTER */
-        .quote-banner {
-            text-align: center;
-            padding: 3rem 2rem;
-            background: rgba(255,255,255,0.02);
+
+        /* =========================================================
+           NEWSLETTER
+        ========================================================= */
+
+        .newsletter-section {
+            background-color: #0f172a;
             border-top: 1px solid var(--border-color);
-            border-bottom: 1px solid var(--border-color);
-            margin: 4rem 0;
+            text-align: center;
         }
 
-        .quote-banner blockquote {
-            font-size: 1.4rem;
-            font-weight: 700;
-            color: #e2e8f0;
-            max-width: 800px;
+        .survive-heal-rise-newsletter {
+            background-color: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius);
+            padding: 30px;
+            max-width: 500px;
+            width: 100%;
+            color: var(--text-light);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
             margin: 0 auto;
-            font-style: italic;
         }
+
+        .newsletter-form .form-group {
+            margin-bottom: 15px;
+        }
+
+        .newsletter-form input[type="text"],
+        .newsletter-form input[type="email"] {
+            width: 100%;
+            padding: 12px 15px;
+            background-color: rgba(0,0,0,0.2);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            font-size: 1rem;
+            color: #ffffff;
+            transition: border-color 0.2s ease;
+        }
+
+        .newsletter-form input[type="text"]:focus,
+        .newsletter-form input[type="email"]:focus {
+            border-color: var(--primary-violet);
+            outline: none;
+        }
+
+        .newsletter-form input::placeholder {
+            color: #94a3b8;
+        }
+
+        .checkbox-group {
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            margin-top: 10px;
+            text-align: left;
+        }
+
+        .checkbox-group input {
+            margin-top: 3px;
+            accent-color: var(--primary-violet);
+        }
+
+        .newsletter-btn {
+            width: 100%;
+            background-color: var(--primary-violet);
+            color: #ffffff;
+            border: none;
+            border-radius: 8px;
+            padding: 12px;
+            font-size: 1rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition:
+                background-color 0.2s ease,
+                transform 0.2s ease;
+            margin-top: 5px;
+            box-shadow: 0 4px 14px var(--accent-glow);
+        }
+
+        .newsletter-btn:hover {
+            background-color: var(--violet-hover);
+            transform: translateY(-1px);
+        }
+
+        .newsletter-footer {
+            text-align: center;
+            margin-top: 15px;
+            font-size: 0.8rem;
+            color: var(--text-muted);
+        }
+
+        .visually-hidden {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0,0,0,0);
+            border: 0;
+        }
+
+
+        /* =========================================================
+           FOOTER
+        ========================================================= */
 
         footer {
             background-color: #050811;
@@ -583,750 +1031,1758 @@
         .footer-btn:hover {
             border-color: var(--primary-violet);
             color: #ffffff;
-                    /* NEWSLETTER COMPONENT STYLES */
-        .survive-heal-rise-newsletter {
-            background-color: var(--card-bg);
-            border: 1px solid var(--border-color);
-            border-radius: var(--radius);
-            padding: 30px;
-            max-width: 500px;
-            color: var(--text-light);
-            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
         }
 
-        .newsletter-form .form-group {
-            margin-bottom: 15px;
-        }
 
-        .newsletter-form input[type="text"],
-        .newsletter-form input[type="email"] {
-            width: 100%;
-            padding: 12px 15px;
-            background-color: rgba(0, 0, 0, 0.2);
-            border: 1px solid var(--border-color);
-            border-radius: 8px;
-            font-size: 1rem;
-            color: #ffffff;
-            box-sizing: border-box;
-            transition: border-color 0.2s ease;
-        }
+        /* =========================================================
+           TABLET
+        ========================================================= */
 
-        .newsletter-form input[type="text"]:focus,
-        .newsletter-form input[type="email"]:focus {
-            border-color: var(--primary-violet);
-            outline: none;
-        }
+        @media (max-width: 1000px) {
 
-        .checkbox-group {
-            display: flex;
-            align-items: flex-start;
-            gap: 10px;
-            font-size: 0.85rem;
-            color: var(--text-muted);
-            margin-top: 10px;
-        }
-
-        .checkbox-group input {
-            margin-top: 3px;
-            accent-color: var(--primary-violet);
-        }
-
-        .newsletter-btn {
-            width: 100%;
-            background-color: var(--primary-violet);
-            color: #ffffff;
-            border: none;
-            border-radius: 8px;
-            padding: 12px;
-            font-size: 1rem;
-            font-weight: 700;
-            cursor: pointer;
-            transition: background-color 0.2s ease, transform 0.2s ease;
-            margin-top: 5px;
-            box-shadow: 0 4px 14px var(--accent-glow);
-        }
-
-        .newsletter-btn:hover {
-            background-color: var(--violet-hover);
-            transform: translateY(-1px);
-        }
-
-        .newsletter-footer {
-            text-align: center;
-            margin-top: 15px;
-            font-size: 0.8rem;
-            color: var(--text-muted);
-        }
-
-        .visually-hidden {
-            position: absolute;
-            width: 1px;
-            height: 1px;
-            padding: 0;
-            margin: -1px;
-            overflow: hidden;
-            clip: rect(0, 0, 0, 0);
-            border: 0;
+            .navbar {
+                flex-direction: column;
             }
-            
+
+            .nav-links {
+                justify-content: center;
+            }
+
+            .hero h1 {
+                font-size: 3rem;
+            }
+        }
+
+
+        /* =========================================================
+           MOBILE
+        ========================================================= */
+
+        @media (max-width: 850px) {
+
+            .event-box {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+                padding: 2rem 1.5rem;
+            }
+
+            .speaker-card {
+                grid-template-columns: 1fr;
+                padding: 2rem;
+            }
+
+            .speaker-avatar {
+                min-height: auto;
+            }
+
+            .timeline-container {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 600px) {
+
+            .navbar {
+                padding: 1rem;
+            }
+
+            .logo span {
+                font-size: 0.7rem !important;
+            }
+
+            .nav-links {
+                gap: 0.6rem;
+            }
+
+            .nav-links a {
+                font-size: 0.78rem;
+            }
+
+            .hero {
+                padding: 4rem 1.2rem;
+            }
+
+            .hero h1 {
+                font-size: 2.3rem;
+            }
+
+            .hero h2.subtitle {
+                font-size: 1.25rem;
+            }
+
+            .hero p.tagline {
+                font-size: 1rem;
+            }
+
+            .section {
+                padding: 3.5rem 1.2rem;
+            }
+
+            .section-header h2 {
+                font-size: 1.9rem;
+            }
+
+            .section-header p {
+                font-size: 1rem;
+            }
+
+            .media-container h2,
+            .book-section-header h2 {
+                font-size: 2rem;
+            }
+
+            .book-grid,
+            .media-grid,
+            .expect-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .quote-banner blockquote {
+                font-size: 1.1rem;
+            }
+
+            .summer-info-bar {
+                flex-direction: column;
+            }
+        }
+
     </style>
 </head>
+
 <body>
-    
-    <!-- NAVBAR -->
-    <header>
-        <nav class="navbar">
-            <a href="#" class="logo brand-font" style="display: flex; align-items: center; gap: 8px; text-decoration: none;">
-                <img src="1785664262512.png" alt="Logo" style="width: 34px; height: 34px; border-radius: 50%; object-fit: cover; border: 2px solid #fbbf24;">
-                <span style="font-size: 0.8rem; font-weight: 800; color: #fff; white-space: nowrap; letter-spacing: -0.5px;">SURVIVE. HEAL. RISE.</span>
+
+
+<!-- =========================================================
+     NAVIGATION
+========================================================= -->
+
+<header>
+    <nav class="navbar">
+
+        <a href="#" class="logo brand-font">
+
+            <img
+                src="1785664262512.png"
+                alt="Survive Heal Rise logo"
+            >
+
+            <span>
+                SURVIVE. HEAL. RISE.
+            </span>
+
+        </a>
+
+        <ul class="nav-links">
+
+            <li>
+                <a href="#curriculum">
+                    6-Month Series
+                </a>
+            </li>
+
+            <li>
+                <a href="#expect">
+                    Schedule
+                </a>
+            </li>
+
+            <li>
+                <a href="#venue">
+                    Venue & Access
+                </a>
+            </li>
+
+            <li>
+                <a href="#speaker">
+                    Speaker
+                </a>
+            </li>
+
+            <li>
+                <a href="#outreach-series">
+                    Summer Series
+                </a>
+            </li>
+
+            <li>
+                <a
+                    href="https://digital.nuelpropertyservices.com"
+                    class="ecosystem-link"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    <i class="fa-solid fa-cubes"></i>
+                    Nuel Digital
+                </a>
+            </li>
+
+            <li>
+                <a
+                    href="https://nuelpropertyservices.com"
+                    class="ecosystem-link"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    <i class="fa-solid fa-broom"></i>
+                    Property Services
+                </a>
+            </li>
+
+            <li>
+                <a
+                    href="mailto:emmamodi551@gmail.com?subject=Survive%20Heal%20Rise%20Registration"
+                    class="cta-btn"
+                >
+                    Join Series
+                </a>
+            </li>
+
+        </ul>
+
+    </nav>
+</header>
+
+
+<!-- =========================================================
+     HERO
+========================================================= -->
+
+<section class="hero">
+
+    <div class="hero-content">
+
+        <span class="hero-tag">
+            A 6-Month Community Series • March to August
+        </span>
+
+        <h1 class="brand-font">
+            SURVIVE. HEAL.
+            <span class="highlight">
+                RISE.
+            </span>
+        </h1>
+
+        <h2 class="subtitle">
+            Your Story Has Purpose.
+        </h2>
+
+        <p class="tagline">
+            From Trauma to Triumph. From Silence to Purpose.
+            A monthly devotional workshop and community gathering
+            held in Downtown St. Cloud, drawing from the memoir
+            <em>"Sudan Fire USA ICE"</em> by Emmanuel Modi.
+        </p>
+
+        <div class="hero-buttons">
+
+            <a
+                href="#curriculum"
+                class="btn-primary"
+            >
+                Explore 6-Month Themes
             </a>
-            <ul class="nav-links">
-                
-            <ul class="nav-links">
-                <li><a href="#curriculum">6-Month Series</a></li>
-                <li><a href="#expect">Schedule</a></li>
-                <li><a href="#venue">Venue & Access</a></li>
-                <li><a href="#speaker">Speaker</a></li>
-                <li><a href="#outreach-series">Summer Series</a></li>
-                <li><a href="https://digital.nuelpropertyservices.com" class="ecosystem-link"><i class="fa-solid fa-cubes"></i> Nuel Digital</a></li>
-                <li><a href="https://nuelpropertyservices.com" class="ecosystem-link"><i class="fa-solid fa-broom"></i> Property Services</a></li>
-                <li><a href="mailto:emmamodi551@gmail.com?subject=Survive%20Heal%20Rise%20Registration" class="cta-btn">Join Series</a></li> 
-                
-                
-            </ul>
-        </nav>
-    </header>
 
-    <!-- HERO SECTION -->
-    <section class="hero">
-        <div class="hero-content">
-            <span class="hero-tag">A 6-Month Community Series • March to August</span>
-            <h1 class="brand-font">SURVIVE. HEAL. <span class="highlight">RISE.</span></h1>
-            <h2 class="subtitle">Your Story Has Purpose.</h2>
-            <p class="tagline">From Trauma to Triumph. From Silence to Purpose. A monthly devotional workshop and community gathering held in Downtown St. Cloud, drawing from the memoir <em>"Sudan Fire USA ICE"</em> by Emmanuel Modi.</p>
-            <div class="hero-buttons">
-                <a href="#curriculum" class="btn-primary">Explore 6-Month Themes</a>
-                <a href="mailto:emmamodi551@gmail.com?subject=Inquiry%3A%20Survive%20Heal%20Rise%20Community%20Series" class="btn-secondary">Contact & Registration</a>
-            </div>
-        </div>
-    </section>
-        <!-- COMMUNITY OUTREACH MINISTRY SUMMER SERIES SECTION -->
-    <section id="outreach-series" class="section" style="background: linear-gradient(180deg, #0a0e1a 0%, #111827 100%);">
-        <div class="section-header">
-            <span class="hero-tag">Community Outreach Ministry</span>
-            <h2 class="brand-font">NEIGHBORHOOD <span class="highlight" style="background: linear-gradient(135deg, #fcd34d 0%, #d97706 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">SUMMER SERIES</span></h2>
-            <p>Join us for free food, fun, fellowship, and supportive community events designed to uplift families and individuals in St. Cloud.</p>
-        </div>
-
-        <!-- 4-GRID EVENT CARDS -->
-        <div class="expect-grid" style="margin-bottom: 3.5rem;">
-            <!-- Card 1: Community Cookout -->
-            <div class="expect-card" style="text-align: left; display: flex; flex-direction: column; justify-content: space-between;">
-                <div>
-                    <div style="font-size: 2rem; color: #d97706; margin-bottom: 1rem;"><i class="fa-solid fa-fire-burner"></i></div>
-                    <h4 style="font-size: 1.25rem; font-weight: 800; color: #ffffff; margin-bottom: 1rem;">Community Cookout</h4>
-                    <ul class="attend-list" style="margin-bottom: 1.5rem;">
-                        <li><i class="fa-solid fa-check"></i> Free BBQ & Food</li>
-                        <li><i class="fa-solid fa-check"></i> Games for All Ages</li>
-                        <li><i class="fa-solid fa-check"></i> Live Music & Entertainment</li>
-                        <li><i class="fa-solid fa-check"></i> Exciting Giveaways</li>
-                    </ul>
-                </div>
-                <div style="background: rgba(217, 119, 6, 0.15); border: 1px solid rgba(217, 119, 6, 0.3); border-radius: 8px; padding: 0.75rem; text-align: center; font-size: 0.85rem; font-weight: 700; color: #fcd34d;">
-                    Fellowship & Food
-                </div>
-            </div>
-
-            <!-- Card 2: Back-to-School Resource Drive -->
-            <div class="expect-card" style="text-align: left; display: flex; flex-direction: column; justify-content: space-between;">
-                <div>
-                    <div style="font-size: 2rem; color: var(--primary-violet); margin-bottom: 1rem;"><i class="fa-solid fa-backpack"></i></div>
-                    <h4 style="font-size: 1.25rem; font-weight: 800; color: #ffffff; margin-bottom: 1rem;">Back-to-School Resource Drive</h4>
-                    <ul class="attend-list" style="margin-bottom: 1.5rem;">
-                        <li><i class="fa-solid fa-check"></i> Free School Supplies</li>
-                        <li><i class="fa-solid fa-check"></i> Backpack Distribution</li>
-                        <li><i class="fa-solid fa-check"></i> Community Resource Fair</li>
-                        <li><i class="fa-solid fa-check"></i> Inspiring Guest Speakers</li>
-                    </ul>
-                </div>
-                <div style="background: rgba(99, 102, 241, 0.15); border: 1px solid rgba(99, 102, 241, 0.3); border-radius: 8px; padding: 0.75rem; text-align: center; font-size: 0.85rem; font-weight: 700; color: #a5b4fc;">
-                    Equipping Youth
-                </div>
-            </div>
-
-            <!-- Card 3: Fitness & Wellness Jam -->
-            <div class="expect-card" style="text-align: left; display: flex; flex-direction: column; justify-content: space-between;">
-                <div>
-                    <div style="font-size: 2rem; color: #10b981; margin-bottom: 1rem;"><i class="fa-solid fa-person-running"></i></div>
-                    <h4 style="font-size: 1.25rem; font-weight: 800; color: #ffffff; margin-bottom: 1rem;">Fitness & Wellness Jam</h4>
-                    <ul class="attend-list" style="margin-bottom: 1.5rem;">
-                        <li><i class="fa-solid fa-check"></i> Zumba & Line Dancing</li>
-                        <li><i class="fa-solid fa-check"></i> Health Screenings</li>
-                        <li><i class="fa-solid fa-check"></i> Fresh Smoothies</li>
-                        <li><i class="fa-solid fa-check"></i> Group Workouts</li>
-                    </ul>
-                </div>
-                <div style="background: rgba(16, 185, 129, 0.15); border: 1px solid rgba(16, 185, 129, 0.3); border-radius: 8px; padding: 0.75rem; text-align: center; font-size: 0.85rem; font-weight: 700; color: #34d399;">
-                    Health & Vitality
-                </div>
-            </div>
-
-            <!-- Card 4: Family Fun Day -->
-            <div class="expect-card" style="text-align: left; display: flex; flex-direction: column; justify-content: space-between;">
-                <div>
-                    <div style="font-size: 2rem; color: #ec4899; margin-bottom: 1rem;"><i class="fa-solid fa-people-group"></i></div>
-                    <h4 style="font-size: 1.25rem; font-weight: 800; color: #ffffff; margin-bottom: 1rem;">Family Fun Day</h4>
-                    <ul class="attend-list" style="margin-bottom: 1.5rem;">
-                        <li><i class="fa-solid fa-check"></i> Bounce Houses</li>
-                        <li><i class="fa-solid fa-check"></i> Face Painting</li>
-                        <li><i class="fa-solid fa-check"></i> Crafts & Games</li>
-                        <li><i class="fa-solid fa-check"></i> Local Food Trucks</li>
-                    </ul>
-                </div>
-                <div style="background: rgba(236, 72, 153, 0.15); border: 1px solid rgba(236, 72, 153, 0.3); border-radius: 8px; padding: 0.75rem; text-align: center; font-size: 0.85rem; font-weight: 700; color: #f472b6;">
-                    Family Joy
-                </div>
-            </div>
-        </div>
-
-        <!-- EVENT QUICK INFO FOOTER BAR -->
-        <div style="background-color: var(--card-bg); border: 1px solid var(--border-color); border-radius: var(--radius); padding: 2rem; display: flex; justify-content: space-around; align-items: center; flex-wrap: wrap; gap: 2rem; text-align: center;">
-            <div>
-                <span style="display: block; font-size: 0.8rem; text-transform: uppercase; color: var(--text-muted); font-weight: 700; margin-bottom: 0.3rem;"><i class="fa-regular fa-calendar-days" style="color: #fcd34d; margin-right: 6px;"></i> Schedule</span>
-                <span style="font-size: 1.1rem; font-weight: 800; color: #ffffff;">All Events: 11:00 AM – 3:00 PM</span>
-            </div>
-            <div style="width: 1px; height: 40px; background-color: var(--border-color); display: none; @media(min-width: 768px){display:block;}"></div>
-            <div>
-                <span style="display: block; font-size: 0.8rem; text-transform: uppercase; color: var(--text-muted); font-weight: 700; margin-bottom: 0.3rem;"><i class="fa-solid fa-location-dot" style="color: var(--primary-violet); margin-right: 6px;"></i> Location</span>
-                <span style="font-size: 1.1rem; font-weight: 800; color: #ffffff;">Nuel Property Services (St. Cloud, MN)</span>
-            </div>
-            <div style="width: 1px; height: 40px; background-color: var(--border-color); display: none; @media(min-width: 768px){display:block;}"></div>
-            <div>
-                <span style="display: block; font-size: 0.8rem; text-transform: uppercase; color: var(--text-muted); font-weight: 700; margin-bottom: 0.3rem;"><i class="fa-solid fa-phone" style="color: #34d399; margin-right: 6px;"></i> Contact & Info</span>
-                <a href="tel:3202173955" style="font-size: 1.1rem; font-weight: 800; color: #a5b4fc; text-decoration: none;">(320) 217-3955</a>
-            </div>
-        </div>
-    </section>
-    
-<!-- MEDIA SECTION -->
-<section id="media" class="media-section" style="padding: 60px 20px; background-color: #f9f9f9; color: #333;">
-    <div class="container" style="max-width: 1100px; margin: 0 auto; text-align: center;">
-        <h2 style="font-size: 2.5rem; margin-bottom: 10px; color: #1a1a1a;">Media & Publications</h2>
-        <p style="font-size: 1.1rem; margin-bottom: 40px; color: #666;">Explore books, audio content, and visual resources from the ministry.</p>
-        
-        <!-- START OF GRID: Everything inside here will line up in columns -->
-        <div class="media-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; text-align: left;">
-            
-            <!-- Card 1: Featured Book -->
-            <div class="media-card" style="background: #ffffff; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.08); display: flex; flex-direction: column;">
-                <div style="padding: 24px; flex-grow: 1;">
-                    <span style="background: #e6f0fa; color: #0066cc; font-size: 0.8rem; font-weight: bold; padding: 4px 10px; border-radius: 4px; text-transform: uppercase;">Featured Book</span>
-                    <h3 style="font-size: 1.4rem; margin: 15px 0 10px 0; color: #222;">Sudan Fire USA Ice</h3>
-                    <p style="font-size: 0.95rem; color: #555; line-height: 1.5; margin-bottom: 20px;">Explore the journey of identity, international footprint, and cultural convergence connecting roots in Sudan with growth in the USA.</p>
-                </div>
-                <div style="padding: 0 24px 24px 24px;">
-                    <a href="#" style="display: inline-block; background-color: #0066cc; color: #fff; padding: 10px 20px; border-radius: 4px; text-decoration: none; font-weight: 500; font-size: 0.9rem;">Learn More / Read</a>
-                </div>
-            </div>
-
-            <!-- Card 2: Book Series -->
-            <div class="media-card" style="background: #ffffff; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.08); display: flex; flex-direction: column;">
-                <div style="padding: 24px; flex-grow: 1;">
-                    <span style="background: #f0e6fa; color: #6600cc; font-size: 0.8rem; font-weight: bold; padding: 4px 10px; border-radius: 4px; text-transform: uppercase;">Book Series</span>
-                    <h3 style="font-size: 1.4rem; margin: 15px 0 10px 0; color: #222;">The 21-Book Collection</h3>
-                    <p style="font-size: 0.95rem; color: #555; line-height: 1.5; margin-bottom: 20px;">Core Focus: A comprehensive writing collection dedicated to growth, resilience, and personal transformation.
-​Thematic Scope: Explores identity, life movement, artistic expression, faith, and institutional legacy.
-​Evolution of the Series: Spans individual creative and spiritual journeys—beginning with foundational works like SUDAN FIRE USA ICE, God, My Life Guard, Art Is Love, Unique Poetry, and You Still Running—and builds upward into structural, systemic frameworks.
-​Ultimate Conclusion: Culminates in Book #21: The Nuel Legacy Ecosystem, which translates personal growth and flagship visions into permanent institutional sovereignty, wealth transfer, and community empowerment.</p>
-                </div>
-                <div style="padding: 0 24px 24px 24px;">
-                    <a href="#" style="display: inline-block; background-color: #6600cc; color: #fff; padding: 10px 20px; border-radius: 4px; text-decoration: none; font-weight: 500; font-size: 0.9rem;">Explore Series</a>
-                </div>
-            </div>
-
-            <!-- Card 3: Video Item -->
-            <div class="media-card" style="background: #ffffff; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.08); display: flex; flex-direction: column;">
-                <div style="width: 100%; background: #000;">
-                    <video controls style="width: 100%; height: auto; display: block;">
-                        <source src="from_the_fire.mp4" type="video/mp4">
-                        Your browser does not support the video tag.
-                    </video>
-                </div>
-                <div style="padding: 24px; flex-grow: 1;">
-                    <span style="background: #fafee6; color: #558800; font-size: 0.8rem; font-weight: bold; padding: 4px 10px; border-radius: 4px; text-transform: uppercase;">Ministry Video</span>
-                    <h3 style="font-size: 1.4rem; margin: 15px 0 10px 0; color: #222;">From The Fire</h3>
-                    <p style="font-size: 0.95rem; color: #555; line-height: 1.5; margin-bottom: 0;">Watch the official video and media piece.</p>
-                </div>
-            </div>
+            <a
+                href="mailto:emmamodi551@gmail.com?subject=Inquiry%3A%20Survive%20Heal%20Rise%20Community%20Series"
+                class="btn-secondary"
+            >
+                Contact & Registration
+            </a>
 
         </div>
-        <!-- END OF GRID -->
 
     </div>
+
 </section>
 
-    <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nuel Legacy Book Series</title>
-    <style>
-        :root {
-            --primary-color: #1a1a1a;
-            --accent-color: #c59b27;
-            --bg-color: #f9f9f9;
-            --card-bg: #ffffff;
-            --text-main: #333333;
-            --text-muted: #666666;
-        }
 
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: var(--bg-color);
-            color: var(--text-main);
-            margin: 0;
-            padding: 40px 20px;
-        }
+<!-- =========================================================
+     COMMUNITY OUTREACH SUMMER SERIES
+========================================================= -->
 
-        .book-container {
-            max-width: 1200px;
-            margin: 0 auto;
-        }
+<section
+    id="outreach-series"
+    class="summer-section"
+>
 
-        .section-header {
-            text-align: center;
-            margin-bottom: 40px;
-        }
+    <div class="summer-inner section">
 
-        .section-header h2 {
-            font-size: 2.5rem;
-            color: var(--primary-color);
-            margin-bottom: 10px;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
+        <div class="section-header">
 
-        .section-header p {
-            color: var(--text-muted);
-            font-size: 1.1rem;
-        }
+            <span class="hero-tag">
+                Community Outreach Ministry
+            </span>
 
-        .book-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 30px;
-        }
+            <h2 class="brand-font">
+                NEIGHBORHOOD
+                <span class="highlight">
+                    SUMMER SERIES
+                </span>
+            </h2>
 
-        .book-card {
-            background-color: var(--card-bg);
-            border-radius: 8px;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
-            overflow: hidden;
-            display: flex;
-            flex-direction: column;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            border: 1px solid #eee; /* Added subtle border */
-        }
+            <p>
+                Join us for free food, fun, fellowship, and supportive
+                community events designed to uplift families and
+                individuals in St. Cloud.
+            </p>
 
-        .book-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
-        }
+        </div>
 
-        /* Specific style for the actual cover */
-        .book-cover-image {
-            width: 100%;
-            height: auto; /* Maintains aspect ratio */
-            display: block;
-            border-bottom: 1px solid #eee;
-        }
 
-        /* Placeholder style for remaining books */
-        .book-cover-placeholder {
-            background: linear-gradient(135deg, #2c3e50, #4ca1af);
-            height: 350px; /* Tall to match book proportions */
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            font-weight: bold;
-            font-size: 1.2rem;
-            text-align: center;
-            padding: 0 15px;
-        }
+        <div
+            class="expect-grid"
+            style="margin-bottom: 3.5rem;"
+        >
 
-        .book-content {
-            padding: 25px;
-            display: flex;
-            flex-direction: column;
-            flex-grow: 1;
-        }
 
-        .book-title {
-            font-size: 1.3rem;
-            font-weight: 700;
-            color: var(--primary-color);
-            margin: 0 0 10px 0;
-        }
+            <!-- COMMUNITY COOKOUT -->
 
-        .book-description {
-            font-size: 0.95rem;
-            color: var(--text-muted);
-            line-height: 1.5;
-            margin-bottom: 20px;
-            flex-grow: 1;
-        }
+            <div
+                class="expect-card"
+                style="text-align:left; display:flex; flex-direction:column; justify-content:space-between;"
+            >
 
-        .btn-purchase {
-            display: inline-block;
-            text-align: center;
-            background-color: var(--primary-color);
-            color: #ffffff;
-            padding: 12px 20px;
-            border-radius: 4px;
-            text-decoration: none;
-            font-weight: 600;
-            font-size: 0.9rem;
-            transition: background-color 0.2s ease;
-            border: none;
-            cursor: pointer;
-        }
+                <div>
 
-        .btn-purchase:hover {
-            background-color: var(--accent-color);
-        }
+                    <div
+                        style="font-size:2rem; color:#d97706; margin-bottom:1rem;"
+                    >
+                        <i class="fa-solid fa-fire-burner"></i>
+                    </div>
 
-        /* Style for inactive placeholder buttons */
-        .btn-purchase.disabled {
-            background-color: #e0e0e0;
-            color: #888888;
-            pointer-events: none;
-        }
-    </style>
-</head>
-<body>
+                    <h4
+                        style="font-size:1.25rem; font-weight:800; color:#ffffff; margin-bottom:1rem;"
+                    >
+                        Community Cookout
+                    </h4>
+
+                    <ul class="attend-list">
+
+                        <li>
+                            <i class="fa-solid fa-check"></i>
+                            Free BBQ & Food
+                        </li>
+
+                        <li>
+                            <i class="fa-solid fa-check"></i>
+                            Games for All Ages
+                        </li>
+
+                        <li>
+                            <i class="fa-solid fa-check"></i>
+                            Live Music & Entertainment
+                        </li>
+
+                        <li>
+                            <i class="fa-solid fa-check"></i>
+                            Exciting Giveaways
+                        </li>
+
+                    </ul>
+
+                </div>
+
+                <div
+                    style="background:rgba(217,119,6,0.15); border:1px solid rgba(217,119,6,0.3); border-radius:8px; padding:0.75rem; text-align:center; font-size:0.85rem; font-weight:700; color:#fcd34d;"
+                >
+                    Fellowship & Food
+                </div>
+
+            </div>
+
+
+            <!-- BACK TO SCHOOL -->
+
+            <div
+                class="expect-card"
+                style="text-align:left; display:flex; flex-direction:column; justify-content:space-between;"
+            >
+
+                <div>
+
+                    <div
+                        style="font-size:2rem; color:var(--primary-violet); margin-bottom:1rem;"
+                    >
+                        <i class="fa-solid fa-backpack"></i>
+                    </div>
+
+                    <h4
+                        style="font-size:1.25rem; font-weight:800; color:#ffffff; margin-bottom:1rem;"
+                    >
+                        Back-to-School Resource Drive
+                    </h4>
+
+                    <ul class="attend-list">
+
+                        <li>
+                            <i class="fa-solid fa-check"></i>
+                            Free School Supplies
+                        </li>
+
+                        <li>
+                            <i class="fa-solid fa-check"></i>
+                            Backpack Distribution
+                        </li>
+
+                        <li>
+                            <i class="fa-solid fa-check"></i>
+                            Community Resource Fair
+                        </li>
+
+                        <li>
+                            <i class="fa-solid fa-check"></i>
+                            Inspiring Guest Speakers
+                        </li>
+
+                    </ul>
+
+                </div>
+
+                <div
+                    style="background:rgba(99,102,241,0.15); border:1px solid rgba(99,102,241,0.3); border-radius:8px; padding:0.75rem; text-align:center; font-size:0.85rem; font-weight:700; color:#a5b4fc;"
+                >
+                    Equipping Youth
+                </div>
+
+            </div>
+
+
+            <!-- FITNESS -->
+
+            <div
+                class="expect-card"
+                style="text-align:left; display:flex; flex-direction:column; justify-content:space-between;"
+            >
+
+                <div>
+
+                    <div
+                        style="font-size:2rem; color:#10b981; margin-bottom:1rem;"
+                    >
+                        <i class="fa-solid fa-person-running"></i>
+                    </div>
+
+                    <h4
+                        style="font-size:1.25rem; font-weight:800; color:#ffffff; margin-bottom:1rem;"
+                    >
+                        Fitness & Wellness Jam
+                    </h4>
+
+                    <ul class="attend-list">
+
+                        <li>
+                            <i class="fa-solid fa-check"></i>
+                            Zumba & Line Dancing
+                        </li>
+
+                        <li>
+                            <i class="fa-solid fa-check"></i>
+                            Health Screenings
+                        </li>
+
+                        <li>
+                            <i class="fa-solid fa-check"></i>
+                            Fresh Smoothies
+                        </li>
+
+                        <li>
+                            <i class="fa-solid fa-check"></i>
+                            Group Workouts
+                        </li>
+
+                    </ul>
+
+                </div>
+
+                <div
+                    style="background:rgba(16,185,129,0.15); border:1px solid rgba(16,185,129,0.3); border-radius:8px; padding:0.75rem; text-align:center; font-size:0.85rem; font-weight:700; color:#34d399;"
+                >
+                    Health & Vitality
+                </div>
+
+            </div>
+
+
+            <!-- FAMILY FUN DAY -->
+
+            <div
+                class="expect-card"
+                style="text-align:left; display:flex; flex-direction:column; justify-content:space-between;"
+            >
+
+                <div>
+
+                    <div
+                        style="font-size:2rem; color:#ec4899; margin-bottom:1rem;"
+                    >
+                        <i class="fa-solid fa-people-group"></i>
+                    </div>
+
+                    <h4
+                        style="font-size:1.25rem; font-weight:800; color:#ffffff; margin-bottom:1rem;"
+                    >
+                        Family Fun Day
+                    </h4>
+
+                    <ul class="attend-list">
+
+                        <li>
+                            <i class="fa-solid fa-check"></i>
+                            Bounce Houses
+                        </li>
+
+                        <li>
+                            <i class="fa-solid fa-check"></i>
+                            Face Painting
+                        </li>
+
+                        <li>
+                            <i class="fa-solid fa-check"></i>
+                            Crafts & Games
+                        </li>
+
+                        <li>
+                            <i class="fa-solid fa-check"></i>
+                            Local Food Trucks
+                        </li>
+
+                    </ul>
+
+                </div>
+
+                <div
+                    style="background:rgba(236,72,153,0.15); border:1px solid rgba(236,72,153,0.3); border-radius:8px; padding:0.75rem; text-align:center; font-size:0.85rem; font-weight:700; color:#f472b6;"
+                >
+                    Family Joy
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- QUICK INFO -->
+
+        <div class="summer-info-bar">
+
+            <div class="summer-info-item">
+
+                <span>
+                    <i
+                        class="fa-regular fa-calendar-days"
+                        style="color:#fcd34d; margin-right:6px;"
+                    ></i>
+
+                    Schedule
+                </span>
+
+                <span>
+                    All Events: 11:00 AM – 3:00 PM
+                </span>
+
+            </div>
+
+
+            <div class="summer-info-item">
+
+                <span>
+                    <i
+                        class="fa-solid fa-location-dot"
+                        style="color:var(--primary-violet); margin-right:6px;"
+                    ></i>
+
+                    Location
+                </span>
+
+                <span>
+                    Nuel Property Services (St. Cloud, MN)
+                </span>
+
+            </div>
+
+
+            <div class="summer-info-item">
+
+                <span>
+                    <i
+                        class="fa-solid fa-phone"
+                        style="color:#34d399; margin-right:6px;"
+                    ></i>
+
+                    Contact & Info
+                </span>
+
+                <a href="tel:3202173955">
+                    (320) 217-3955
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     MEDIA
+========================================================= -->
+
+<section
+    id="media"
+    class="media-section"
+>
+
+    <div class="media-container">
+
+        <h2>
+            Media & Publications
+        </h2>
+
+        <p class="media-intro">
+            Explore books, audio content, and visual resources
+            from the ministry.
+        </p>
+
+
+        <div class="media-grid">
+
+
+            <!-- FEATURED BOOK -->
+
+            <div class="media-card">
+
+                <div class="media-card-content">
+
+                    <span
+                        style="background:#e6f0fa; color:#0066cc; font-size:0.8rem; font-weight:bold; padding:4px 10px; border-radius:4px; text-transform:uppercase;"
+                    >
+                        Featured Book
+                    </span>
+
+                    <h3>
+                        Sudan Fire USA Ice
+                    </h3>
+
+                    <p>
+                        Explore the journey of identity, international
+                        footprint, and cultural convergence connecting
+                        roots in Sudan with growth in the USA.
+                    </p>
+
+                </div>
+
+                <div style="padding:0 24px 24px;">
+
+                    <a
+                        href="#books"
+                        class="media-card-button"
+                        style="background-color:#0066cc;"
+                    >
+                        Learn More / Read
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- BOOK SERIES -->
+
+            <div class="media-card">
+
+                <div class="media-card-content">
+
+                    <span
+                        style="background:#f0e6fa; color:#6600cc; font-size:0.8rem; font-weight:bold; padding:4px 10px; border-radius:4px; text-transform:uppercase;"
+                    >
+                        Book Series
+                    </span>
+
+                    <h3>
+                        The 21-Book Collection
+                    </h3>
+
+                    <p>
+                        Core Focus: A comprehensive writing collection
+                        dedicated to growth, resilience, and personal
+                        transformation.
+
+                        <br><br>
+
+                        Thematic Scope: Explores identity, life movement,
+                        artistic expression, faith, and institutional legacy.
+
+                        <br><br>
+
+                        Evolution of the Series: Spans individual creative
+                        and spiritual journeys—beginning with foundational
+                        works like SUDAN FIRE USA ICE, God, My Lifeguard,
+                        Art Is Love, Unique Poetry, and You Still Running.
+
+                        <br><br>
+
+                        Ultimate Conclusion: Culminates in Book #21:
+                        The Nuel Legacy Ecosystem.
+                    </p>
+
+                </div>
+
+                <div style="padding:0 24px 24px;">
+
+                    <a
+                        href="#books"
+                        class="media-card-button"
+                        style="background-color:#6600cc;"
+                    >
+                        Explore Series
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- VIDEO -->
+
+            <div class="media-card">
+
+                <div class="video-wrapper">
+
+                    <video controls preload="metadata">
+
+                        <source
+                            src="from_the_fire.mp4"
+                            type="video/mp4"
+                        >
+
+                        Your browser does not support the video tag.
+
+                    </video>
+
+                </div>
+
+                <div class="media-card-content">
+
+                    <span
+                        style="background:#fafee6; color:#558800; font-size:0.8rem; font-weight:bold; padding:4px 10px; border-radius:4px; text-transform:uppercase;"
+                    >
+                        Ministry Video
+                    </span>
+
+                    <h3>
+                        From The Fire
+                    </h3>
+
+                    <p>
+                        Watch the official video and media piece.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     NUEL LEGACY BOOK SERIES
+========================================================= -->
+
+<section
+    id="books"
+    class="book-series-section"
+>
 
     <div class="book-container">
-        <div class="section-header">
-            <h2>Nuel Legacy Book Series</h2>
-            <p>Explore the complete collection of works by Emmanuel Modi</p>
+
+
+        <div class="book-section-header">
+
+            <h2>
+                Nuel Legacy Book Series
+            </h2>
+
+            <p>
+                Explore the complete collection of works by Emmanuel Modi
+            </p>
+
         </div>
+
 
         <div class="book-grid">
-            
-            
-        <!-- Book 1: Sudan Fire USA Ice (LIVE IMAGE) -->
-<div class="book-card">
-    <img src="images.sudan.jpeg" alt="Sudan Fire USA Ice Book Cover" class="book-cover-image">
-    <div class="book-content">
-        <h3 class="book-title">Sudan Fire USA Ice</h3>
-        <p class="book-description">A compelling journey of resilience and perspective across continents.</p>
-        <a href="https://www.barnesandnoble.com/w/sudan-fire-usa-ice-by-emmanuel-modi-dale-neuschwander/1151018648?ean=9798906780911" target="_blank" class="btn-purchase">Buy on Barnes & Noble</a>
+
+
+            <!-- =================================================
+                 BOOK 1
+            ================================================== -->
+
+            <div class="book-card">
+
+                <img
+                    src="images.sudan.jpeg"
+                    alt="Sudan Fire USA Ice Book Cover"
+                    class="book-cover-image"
+                >
+
+                <div class="book-content">
+
+                    <h3 class="book-title">
+                        Sudan Fire USA Ice
+                    </h3>
+
+                    <p class="book-description">
+                        A compelling journey of resilience and perspective
+                        across continents.
+                    </p>
+
+                    <a
+                        href="https://www.barnesandnoble.com/w/sudan-fire-usa-ice-by-emmanuel-modi-dale-neuschwander/1151018648?ean=9798906780911"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="btn-purchase"
+                    >
+                        Buy on Barnes & Noble
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- =================================================
+                 BOOK 2
+            ================================================== -->
+
+            <div class="book-card">
+
+                <img
+                    src="imagegod.jpeg"
+                    alt="God, My Lifeguard Book Cover"
+                    class="book-cover-image"
+                >
+
+                <div class="book-content">
+
+                    <h3 class="book-title">
+                        God, My Lifeguard
+                    </h3>
+
+                    <p class="book-description">
+                        Reflections on faith, spiritual anchoring,
+                        and divine protection.
+                    </p>
+
+                    <!--
+                        COMING SOON BUTTON
+                        No href="#".
+                        Therefore it will NOT move the page.
+                    -->
+
+                    <span
+                        class="btn-purchase disabled"
+                        aria-label="God, My Lifeguard purchase link coming soon"
+                    >
+                        Link Coming Soon
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <!-- =================================================
+                 BOOK 3
+            ================================================== -->
+
+            <div class="book-card">
+
+                <img
+                    src="imageart.jpeg"
+                    alt="Art Is Love Book Cover"
+                    class="book-cover-image"
+                >
+
+                <div class="book-content">
+
+                    <h3 class="book-title">
+                        Art Is Love
+                    </h3>
+
+                    <p class="book-description">
+                        Exploring creative expression as a profound
+                        reflection of love.
+                    </p>
+
+                    <span
+                        class="btn-purchase disabled"
+                        aria-label="Art Is Love purchase link coming soon"
+                    >
+                        Link Coming Soon
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <!-- =================================================
+                 BOOK 4
+            ================================================== -->
+
+            <div class="book-card">
+
+                <img
+                    src="imagepoetry.jpeg"
+                    alt="Unique Poetry Book Cover"
+                    class="book-cover-image"
+                >
+
+                <div class="book-content">
+
+                    <h3 class="book-title">
+                        Unique Poetry
+                    </h3>
+
+                    <p class="book-description">
+                        A curated selection of emotive verse capturing
+                        distinct experiences.
+                    </p>
+
+                    <span
+                        class="btn-purchase disabled"
+                        aria-label="Unique Poetry purchase link coming soon"
+                    >
+                        Link Coming Soon
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <!-- =================================================
+                 BOOK 5
+            ================================================== -->
+
+            <div class="book-card">
+
+                <img
+                    src="imageysr.jpeg"
+                    alt="You Still Running Book Cover"
+                    class="book-cover-image"
+                >
+
+                <div class="book-content">
+
+                    <h3 class="book-title">
+                        You Still Running
+                    </h3>
+
+                    <p class="book-description">
+                        An inspiring exploration of endurance and
+                        continuous forward momentum.
+                    </p>
+
+                    <span
+                        class="btn-purchase disabled"
+                        aria-label="You Still Running purchase link coming soon"
+                    >
+                        Link Coming Soon
+                    </span>
+
+                </div>
+
+            </div>
+
+
+        </div>
+        <!-- END BOOK GRID -->
+
     </div>
-</div>
+    <!-- END BOOK CONTAINER -->
 
-            <!-- Book 2: God, My Lifeguard (LIVE IMAGE) -->
-<div class="book-card">
-    <img src="imagegod.jpeg" alt="God, My Lifeguard Book Cover" class="book-cover-image">
-    <div class="book-content">
-        <h3 class="book-title">God, My Lifeguard</h3>
-        <p class="book-description">Reflections on faith, spiritual anchoring, and divine protection.</p>
-        <!-- NOTE: Replace '#' below with the actual purchase link when ready -->
-        <a href="#" target="_blank" class="btn-purchase">Link Coming Soon</a>
-    </div>
-</div>
-            
-<!-- Book 3: Art Is Love (LIVE IMAGE) -->
-<div class="book-card">
-    <img src="imageart.jpeg" alt="Art Is Love Book Cover" class="book-cover-image">
-    <div class="book-content">
-        <h3 class="book-title">Art Is Love</h3>
-        <p class="book-description">Exploring creative expression as a profound reflection of love.</p>
-        <a href="#" target="_blank" class="btn-purchase">Link Coming Soon</a>
-    </div>
-</div>
+</section>
+<!-- END BOOK SERIES -->
 
-          <!-- Book 4: Unique Poetry (LIVE IMAGE) -->
-<div class="book-card">
-    <img src="imagepoetry.jpeg" alt="Unique Poetry Book Cover" class="book-cover-image">
-    <div class="book-content">
-        <h3 class="book-title">Unique Poetry</h3>
-        <p class="book-description">A curated selection of emotive verse capturing distinct experiences.</p>
-        <a href="#" target="_blank" class="btn-purchase">Link Coming Soon</a>
-    </div>
-</div>
-               
 
-            <!-- Book 5: You Still Running (LIVE IMAGE) -->
-<div class="book-card">
-    <img src="imageysr.jpeg" alt="You Still Running Book Cover" class="book-cover-image">
-    <div class="book-content">
-        <h3 class="book-title">You Still Running</h3>
-        <p class="book-description">An inspiring exploration of endurance and continuous forward momentum.</p>
-        <a href="#" target="_blank" class="btn-purchase">Link Coming Soon</a>
-    </div>
-</div>
-            
-            
+<!-- =========================================================
+     6-MONTH CURRICULUM
+========================================================= -->
 
-    <!-- 6-MONTH CURRICULUM SECTION -->
-    <section class="section" id="curriculum">
-        <div class="section-header">
-            <h2>The 6-Month Curriculum Roadmap</h2>
-            <p>Each month focuses on a core theme designed to equip individuals, youth, and families with spiritual anchors, emotional wisdom, and practical habits.</p>
-        </div>
+<section
+    class="section"
+    id="curriculum"
+>
 
-        <div class="timeline-container">
-            <!-- MARCH -->
-            <div class="month-card">
-                <span class="month-badge">March • Month 1</span>
-                <h3>Reclaiming Your Story</h3>
-                <h4 class="theme-sub">Identity & Overcoming Stigma</h4>
-                <p class="description">Breaking the silence of trauma and mental health battles. Discovering that a diagnosis or past failure does not define your future.</p>
-                <div class="scripture-box">
-                    "For I know the plans I have for you... plans to give you hope and a future."
-                    <span class="ref">— Jeremiah 29:11</span>
-                </div>
-            </div>
+    <div class="section-header">
 
-            <!-- APRIL -->
-            <div class="month-card">
-                <span class="month-badge">April • Month 2</span>
-                <h3>Resilience Through the Seasons</h3>
-                <h4 class="theme-sub">Faith in Hardship</h4>
-                <p class="description">How to keep your spiritual and emotional anchor steady when external circumstances, health, or environments shift drastically.</p>
-                <div class="scripture-box">
-                    "The Lord will guide you always; he will satisfy your needs in a sun-scorched land."
-                    <span class="ref">— Isaiah 58:11</span>
-                </div>
-            </div>
+        <h2>
+            The 6-Month Curriculum Roadmap
+        </h2>
 
-            <!-- MAY -->
-            <div class="month-card">
-                <span class="month-badge">May • Month 3</span>
-                <h3>The Power of Creative Renewal</h3>
-                <h4 class="theme-sub">Art, Music & Outlets</h4>
-                <p class="description">Harnessing visual art, song creation, and quiet writing as divine tools for processing deep trauma and finding internal balance.</p>
-                <div class="scripture-box">
-                    "He has put a new song in my mouth, a hymn of praise to our God."
-                    <span class="ref">— Psalm 40:3</span>
-                </div>
-            </div>
-
-            <!-- JUNE -->
-            <div class="month-card">
-                <span class="month-badge">June • Month 4</span>
-                <h3>Discipline & Personal Comebacks</h3>
-                <h4 class="theme-sub">Health, Habits & Ownership</h4>
-                <p class="description">Replacing bad habits step-by-step, taking radical personal responsibility, and building physical and spiritual endurance.</p>
-                <div class="scripture-box">
-                    "For God has not given us a spirit of fear, but of power, love, and a sound mind."
-                    <span class="ref">— 2 Timothy 1:7</span>
-                </div>
-            </div>
-
-            <!-- JULY -->
-            <div class="month-card">
-                <span class="month-badge">July • Month 5</span>
-                <h3>Digital Wisdom & Healthy Boundaries</h3>
-                <h4 class="theme-sub">Guarding Your Mind</h4>
-                <p class="description">Setting healthy online boundaries, avoiding public reactions during crisis, and choosing quiet, offline healing.</p>
-                <div class="scripture-box">
-                    "Above all else, guard your heart, for everything you do flows from it."
-                    <span class="ref">— Proverbs 4:23</span>
-                </div>
-            </div>
-
-            <!-- AUGUST -->
-            <div class="month-card">
-                <span class="month-badge">August • Month 6</span>
-                <h3>Graduation & Community Commissioning</h3>
-                <h4 class="theme-sub">Advocacy & Mentorship</h4>
-                <p class="description">Commemorate your healing journey. Formally receive a diploma or certificate. A final communal commissioning where participants are sent forth as ambassadors for healing.</p>
-                <div class="scripture-box">
-                    "Therefore go and make disciples of all nations... surely I am with you always, to the very end of the age."
-                    <span class="ref">— Matthew 28:19-20</span>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- WHAT TO EXPECT EACH MONTH -->
-    <section class="section" id="expect" style="padding-top: 1rem;">
-        <div class="section-header">
-            <h2>What to Expect Each Month</h2>
-            <p>Every monthly gathering is structured into an intentional 80-minute interactive format designed for fellowship, learning, and safe table sharing.</p>
-        </div>
-
-        <div class="expect-grid">
-            <div class="expect-card">
-                <span class="duration-tag">15 Minutes</span>
-                <i class="fa-solid fa-people-group"></i>
-                <h4>Welcome & Fellowship</h4>
-                <p>Light refreshments, music, and casual connection before the session begins.</p>
-            </div>
-
-            <div class="expect-card">
-                <span class="duration-tag">25 Minutes</span>
-                <i class="fa-solid fa-book-open-reader"></i>
-                <h4>Keynote & Scripture</h4>
-                <p>Teaching on the monthly theme drawing direct lessons from <em>Sudan Fire USA ICE</em>.</p>
-            </div>
-
-            <div class="expect-card">
-                <span class="duration-tag">30 Minutes</span>
-                <i class="fa-solid fa-comments"></i>
-                <h4>Guided Table Discussions</h4>
-                <p>Small-group reflection, guided journaling, and safe-space sharing with table leaders.</p>
-            </div>
-
-            <div class="expect-card">
-                <span class="duration-tag">10 Minutes</span>
-                <i class="fa-solid fa-hands-praying"></i>
-                <h4>Call to Action & Prayer</h4>
-                <p>An encouraging monthly challenge and closing prayer for the weeks ahead.</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- QUOTE BANNER -->
-    <div class="quote-banner">
-        <blockquote>"Survival is not the finish line—becoming a voice for others is."</blockquote>
-    </div>
-
-    <!-- VENUE & ADMISSION -->
-    <section class="section" id="venue">
-        <div class="event-box">
-            <div class="event-details">
-                <h3>Join Us in Downtown St. Cloud</h3>
-                <p style="color: var(--text-muted); font-size: 1.05rem;">We meet monthly from March through August. Everyone is welcome to attend individual sessions or complete the entire 6-month journey.</p>
-                
-                <ul class="event-list">
-                    <li>
-                        <i class="fa-solid fa-location-dot"></i>
-                        <div>
-                            <strong>Location:</strong> Downtown St. Cloud, MN<br>
-                            <span style="font-size: 0.88rem; color: var(--text-muted);">Paramount Center for the Arts & Local Community Churches</span>
-                        </div>
-                    </li>
-                    <li>
-                        <i class="fa-solid fa-calendar-check"></i>
-                        <div>
-                            <strong>Schedule:</strong> Monthly Gatherings (March – August)
-                        </div>
-                    </li>
-                    <li>
-                        <i class="fa-solid fa-envelope"></i>
-                        <div>
-                            <strong>Contact & Registration:</strong> emmamodi551@gmail.com
-                        </div>
-                    </li>
-                </ul>
-            </div>
-
-            <div class="attend-box">
-                <div class="admission-badge">ADMISSION: FREE</div>
-                <p style="font-size: 0.85rem; color: #a5b4fc; font-weight: 700; margin-bottom: 1.2rem;">OPEN TO THE PUBLIC<br><span style="font-size: 0.78rem; color: var(--text-muted); font-weight: 400;">(Journaling materials & light refreshments provided)</span></p>
-                
-                <h4>Who Should Attend?</h4>
-                <ul class="attend-list">
-                    <li><i class="fa-solid fa-check"></i> Anyone seeking spiritual encouragement</li>
-                    <li><i class="fa-solid fa-check"></i> Youth needing positive mentorship</li>
-                    <li><i class="fa-solid fa-check"></i> Families navigating health/trauma recovery</li>
-                    <li><i class="fa-solid fa-check"></i> Community leaders committed to advocacy</li>
-                </ul>
-
-                <a href="mailto:emmamodi551@gmail.com?subject=Reserve%20a%20Seat%3A%20Survive%20Heal%20Rise" class="btn-primary" style="display: block; text-align: center; font-size: 0.9rem;">Reserve Your Seat</a>
-            </div>
-        </div>
-    </section> 
-        <section class="section" id="speaker">
-        <div class="speaker-card">
-            <div class="speaker-avatar">
-                <img src="1785664262512.png" alt="Emmanuel Modi - Author of Sudan Fire USA Ice" style="width: 100%; max-width: 220px; border-radius: 12px; object-fit: cover; box-shadow: 0 4px 12px rgba(0,0,0,0.3); margin-bottom: 0.5rem;">
-                <h4 style="font-size: 1.3rem; font-weight: 800; margin-top: 0.5rem;">Emmanuel Modi</h4>
-                <p style="font-size: 0.8rem; color: #a5b4fc; margin-top: 0.2rem;">Author & Community Leader</p>
-            </div>
-            <div class="speaker-info">
-                <h3>About the Speaker</h3>
-                <div class="speaker-role">Author of "Sudan Fire USA ICE" • Founder of Nuel Property Services</div>
-                <p>Emmanuel Modi is an author, entrepreneur, and community speaker operating in Central Minnesota. Having overcome displacement, war, mental health battles, and complex life transitions, Emmanuel grounds his speaking ministry in radical personal accountability, steady work ethic, and spiritual faith.</p>
-                <p>Through the <em>Survive. Heal. Rise.</em> community series, Emmanuel dedicates his story to creating safe spaces where individuals, youth, and families can break free from stigma and step into purpose.</p>
-            </div>
-        </div>
-        </section>
-    
-        <!-- NEWSLETTER SUBSCRIPTION SECTION -->
-    <section class="section" style="background-color: #0f172a; border-top: 1px solid var(--border-color); text-align: center;">
-        <div class="section-header" style="margin-bottom: 2rem;">
-            <span class="hero-tag">Stay Connected</span>
-            <h2 class="brand-font">NEWSLETTERS & <span class="highlight">PROGRAM UPDATES</span></h2>
-            <p>Join our community list to receive regular devotionals, schedule updates, and event notifications directly to your inbox.</p>
-        </div>
-        
-        <div style="display: flex; justify-content: center;">
-            <div class="survive-heal-rise-newsletter" style="text-align: left; width: 100%;">
-              <form class="newsletter-form" action="https://formspree.io/f/xoeajzzb" method="POST">
-                <div class="form-group">
-                  <label for="subscriber-name" class="visually-hidden">Full Name</label>
-                  <input 
-                    type="text" 
-                    id="subscriber-name" 
-                    name="name" 
-                    placeholder="Your Full Name" 
-                    required 
-                  />
-                </div>
-                
-                <div class="form-group">
-                  <label for="subscriber-email" class="visually-hidden">Email Address</label>
-                  <input 
-                    type="email" 
-                    id="subscriber-email" 
-                    name="email" 
-                    placeholder="Your Email Address" 
-                    required 
-                  />
-                </div>
-                
-                <div class="form-group checkbox-group">
-                  <input type="checkbox" id="program-updates" name="updates" checked />
-                  <label for="program-updates">Also send me direct updates on upcoming programs and events</label>
-                </div>
-                
-                <button type="submit" class="newsletter-btn">Subscribe Now</button>
-                <input type="hidden" name="_next" value="https://yourdomain.com/thank-you.html">
-                  
-              </form>
-              
-              <div class="newsletter-footer">
-                <small>We respect your privacy. Unsubscribe at any time.</small>
-              </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- FOOTER -->
-    <footer>
-       <!-- Your existing footer content -->
-    </footer>
-    
-    
-    <!-- FOOTER -->
-    <footer>
-        <p style="margin-bottom: 0.8rem;">
-            &copy; 2026 Nuel Enterprise & Ministry Outreach. All rights reserved.
+        <p>
+            Each month focuses on a core theme designed to equip
+            individuals, youth, and families with spiritual anchors,
+            emotional wisdom, and practical habits.
         </p>
-        <div class="footer-links">
-            <a href="https://digital.nuelpropertyservices.com" class="footer-btn">
-                <i class="fa-solid fa-cubes"></i> Nuel Digital
-            </a>
-            <a href="https://nuelpropertyservices.com" class="footer-btn">
-                <i class="fa-solid fa-broom"></i> Nuel Property Services
-            </a>
+
+    </div>
+
+
+    <div class="timeline-container">
+
+
+        <!-- MARCH -->
+
+        <div class="month-card">
+
+            <span class="month-badge">
+                March • Month 1
+            </span>
+
+            <h3>
+                Reclaiming Your Story
+            </h3>
+
+            <h4 class="theme-sub">
+                Identity & Overcoming Stigma
+            </h4>
+
+            <p class="description">
+                Breaking the silence of trauma and mental health battles.
+                Discovering that a diagnosis or past failure does not
+                define your future.
+            </p>
+
+            <div class="scripture-box">
+
+                "For I know the plans I have for you...
+                plans to give you hope and a future."
+
+                <span class="ref">
+                    — Jeremiah 29:11
+                </span>
+
+            </div>
+
         </div>
-    </footer>
+
+
+        <!-- APRIL -->
+
+        <div class="month-card">
+
+            <span class="month-badge">
+                April • Month 2
+            </span>
+
+            <h3>
+                Resilience Through the Seasons
+            </h3>
+
+            <h4 class="theme-sub">
+                Faith in Hardship
+            </h4>
+
+            <p class="description">
+                How to keep your spiritual and emotional anchor steady
+                when external circumstances, health, or environments
+                shift drastically.
+            </p>
+
+            <div class="scripture-box">
+
+                "The Lord will guide you always; he will satisfy
+                your needs in a sun-scorched land."
+
+                <span class="ref">
+                    — Isaiah 58:11
+                </span>
+
+            </div>
+
+        </div>
+
+
+        <!-- MAY -->
+
+        <div class="month-card">
+
+            <span class="month-badge">
+                May • Month 3
+            </span>
+
+            <h3>
+                The Power of Creative Renewal
+            </h3>
+
+            <h4 class="theme-sub">
+                Art, Music & Outlets
+            </h4>
+
+            <p class="description">
+                Harnessing visual art, song creation, and quiet writing
+                as divine tools for processing deep trauma and finding
+                internal balance.
+            </p>
+
+            <div class="scripture-box">
+
+                "He has put a new song in my mouth, a hymn of praise
+                to our God."
+
+                <span class="ref">
+                    — Psalm 40:3
+                </span>
+
+            </div>
+
+        </div>
+
+
+        <!-- JUNE -->
+
+        <div class="month-card">
+
+            <span class="month-badge">
+                June • Month 4
+            </span>
+
+            <h3>
+                Discipline & Personal Comebacks
+            </h3>
+
+            <h4 class="theme-sub">
+                Health, Habits & Ownership
+            </h4>
+
+            <p class="description">
+                Replacing bad habits step-by-step, taking radical
+                personal responsibility, and building physical and
+                spiritual endurance.
+            </p>
+
+            <div class="scripture-box">
+
+                "For God has not given us a spirit of fear,
+                but of power, love, and a sound mind."
+
+                <span class="ref">
+                    — 2 Timothy 1:7
+                </span>
+
+            </div>
+
+        </div>
+
+
+        <!-- JULY -->
+
+        <div class="month-card">
+
+            <span class="month-badge">
+                July • Month 5
+            </span>
+
+            <h3>
+                Digital Wisdom & Healthy Boundaries
+            </h3>
+
+            <h4 class="theme-sub">
+                Guarding Your Mind
+            </h4>
+
+            <p class="description">
+                Setting healthy online boundaries, avoiding public
+                reactions during crisis, and choosing quiet,
+                offline healing.
+            </p>
+
+            <div class="scripture-box">
+
+                "Above all else, guard your heart, for everything
+                you do flows from it."
+
+                <span class="ref">
+                    — Proverbs 4:23
+                </span>
+
+            </div>
+
+        </div>
+
+
+        <!-- AUGUST -->
+
+        <div class="month-card">
+
+            <span class="month-badge">
+                August • Month 6
+            </span>
+
+            <h3>
+                Graduation & Community Commissioning
+            </h3>
+
+            <h4 class="theme-sub">
+                Advocacy & Mentorship
+            </h4>
+
+            <p class="description">
+                Commemorate your healing journey. Formally receive
+                a diploma or certificate. A final communal commissioning
+                where participants are sent forth as ambassadors for healing.
+            </p>
+
+            <div class="scripture-box">
+
+                "Therefore go and make disciples of all nations...
+                surely I am with you always, to the very end of the age."
+
+                <span class="ref">
+                    — Matthew 28:19-20
+                </span>
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     WHAT TO EXPECT
+========================================================= -->
+
+<section
+    class="section"
+    id="expect"
+    style="padding-top:1rem;"
+>
+
+    <div class="section-header">
+
+        <h2>
+            What to Expect Each Month
+        </h2>
+
+        <p>
+            Every monthly gathering is structured into an intentional
+            80-minute interactive format designed for fellowship,
+            learning, and safe table sharing.
+        </p>
+
+    </div>
+
+
+    <div class="expect-grid">
+
+
+        <div class="expect-card">
+
+            <span class="duration-tag">
+                15 Minutes
+            </span>
+
+            <i class="fa-solid fa-people-group"></i>
+
+            <h4>
+                Welcome & Fellowship
+            </h4>
+
+            <p>
+                Light refreshments, music, and casual connection
+                before the session begins.
+            </p>
+
+        </div>
+
+
+        <div class="expect-card">
+
+            <span class="duration-tag">
+                25 Minutes
+            </span>
+
+            <i class="fa-solid fa-book-open-reader"></i>
+
+            <h4>
+                Keynote & Scripture
+            </h4>
+
+            <p>
+                Teaching on the monthly theme drawing direct lessons
+                from <em>Sudan Fire USA ICE</em>.
+            </p>
+
+        </div>
+
+
+        <div class="expect-card">
+
+            <span class="duration-tag">
+                30 Minutes
+            </span>
+
+            <i class="fa-solid fa-comments"></i>
+
+            <h4>
+                Guided Table Discussions
+            </h4>
+
+            <p>
+                Small-group reflection, guided journaling, and
+                safe-space sharing with table leaders.
+            </p>
+
+        </div>
+
+
+        <div class="expect-card">
+
+            <span class="duration-tag">
+                10 Minutes
+            </span>
+
+            <i class="fa-solid fa-hands-praying"></i>
+
+            <h4>
+                Call to Action & Prayer
+            </h4>
+
+            <p>
+                An encouraging monthly challenge and closing prayer
+                for the weeks ahead.
+            </p>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     QUOTE
+========================================================= -->
+
+<div class="quote-banner">
+
+    <blockquote>
+        "Survival is not the finish line—becoming a voice for others is."
+    </blockquote>
+
+</div>
+
+
+<!-- =========================================================
+     VENUE
+========================================================= -->
+
+<section
+    class="section"
+    id="venue"
+>
+
+    <div class="event-box">
+
+
+        <div class="event-details">
+
+            <h3>
+                Join Us in Downtown St. Cloud
+            </h3>
+
+            <p
+                style="color:var(--text-muted); font-size:1.05rem;"
+            >
+                We meet monthly from March through August.
+                Everyone is welcome to attend individual sessions
+                or complete the entire 6-month journey.
+            </p>
+
+
+            <ul class="event-list">
+
+                <li>
+
+                    <i class="fa-solid fa-location-dot"></i>
+
+                    <div>
+
+                        <strong>
+                            Location:
+                        </strong>
+
+                        Downtown St. Cloud, MN
+
+                        <br>
+
+                        <span
+                            style="font-size:0.88rem; color:var(--text-muted);"
+                        >
+                            Paramount Center for the Arts &
+                            Local Community Churches
+                        </span>
+
+                    </div>
+
+                </li>
+
+
+                <li>
+
+                    <i class="fa-solid fa-calendar-check"></i>
+
+                    <div>
+
+                        <strong>
+                            Schedule:
+                        </strong>
+
+                        Monthly Gatherings
+                        (March – August)
+
+                    </div>
+
+                </li>
+
+
+                <li>
+
+                    <i class="fa-solid fa-envelope"></i>
+
+                    <div>
+
+                        <strong>
+                            Contact & Registration:
+                        </strong>
+
+                        <a
+                            href="mailto:emmamodi551@gmail.com"
+                            style="color:#a5b4fc;"
+                        >
+                            emmamodi551@gmail.com
+                        </a>
+
+                    </div>
+
+                </li>
+
+            </ul>
+
+        </div>
+
+
+        <div class="attend-box">
+
+            <div class="admission-badge">
+                ADMISSION: FREE
+            </div>
+
+            <p
+                style="font-size:0.85rem; color:#a5b4fc; font-weight:700; margin-bottom:1.2rem;"
+            >
+                OPEN TO THE PUBLIC
+
+                <br>
+
+                <span
+                    style="font-size:0.78rem; color:var(--text-muted); font-weight:400;"
+                >
+                    Journaling materials & light refreshments provided
+                </span>
+
+            </p>
+
+
+            <h4>
+                Who Should Attend?
+            </h4>
+
+
+            <ul class="attend-list">
+
+                <li>
+                    <i class="fa-solid fa-check"></i>
+                    Anyone seeking spiritual encouragement
+                </li>
+
+                <li>
+                    <i class="fa-solid fa-check"></i>
+                    Youth needing positive mentorship
+                </li>
+
+                <li>
+                    <i class="fa-solid fa-check"></i>
+                    Families navigating health/trauma recovery
+                </li>
+
+                <li>
+                    <i class="fa-solid fa-check"></i>
+                    Community leaders committed to advocacy
+                </li>
+
+            </ul>
+
+
+            <a
+                href="mailto:emmamodi551@gmail.com?subject=Reserve%20a%20Seat%3A%20Survive%20Heal%20Rise"
+                class="btn-primary"
+                style="display:block; text-align:center; font-size:0.9rem;"
+            >
+                Reserve Your Seat
+            </a>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     SPEAKER
+========================================================= -->
+
+<section
+    class="section"
+    id="speaker"
+>
+
+    <div class="speaker-card">
+
+
+        <div class="speaker-avatar">
+
+            <img
+                src="1785664262512.png"
+                alt="Emmanuel Modi - Author of Sudan Fire USA Ice"
+            >
+
+            <h4
+                style="font-size:1.3rem; font-weight:800; margin-top:0.5rem;"
+            >
+                Emmanuel Modi
+            </h4>
+
+            <p
+                style="font-size:0.8rem; color:#a5b4fc; margin-top:0.2rem;"
+            >
+                Author & Community Leader
+            </p>
+
+        </div>
+
+
+        <div class="speaker-info">
+
+            <h3>
+                About the Speaker
+            </h3>
+
+            <div class="speaker-role">
+                Author of "Sudan Fire USA ICE"
+                • Founder of Nuel Property Services
+            </div>
+
+            <p>
+                Emmanuel Modi is an author, entrepreneur, and community
+                speaker operating in Central Minnesota. Having overcome
+                displacement, war, mental health battles, and complex
+                life transitions, Emmanuel grounds his speaking ministry
+                in radical personal accountability, steady work ethic,
+                and spiritual faith.
+            </p>
+
+            <p>
+                Through the <em>Survive. Heal. Rise.</em> community series,
+                Emmanuel dedicates his story to creating safe spaces where
+                individuals, youth, and families can break free from stigma
+                and step into purpose.
+            </p>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     NEWSLETTER
+========================================================= -->
+
+<section
+    class="section newsletter-section"
+>
+
+    <div class="section-header">
+
+        <span class="hero-tag">
+            Stay Connected
+        </span>
+
+        <h2 class="brand-font">
+
+            NEWSLETTERS &
+
+            <span class="highlight">
+                PROGRAM UPDATES
+            </span>
+
+        </h2>
+
+        <p>
+            Join our community list to receive regular devotionals,
+            schedule updates, and event notifications directly
+            to your inbox.
+        </p>
+
+    </div>
+
+
+    <div class="survive-heal-rise-newsletter">
+
+        <form
+            class="newsletter-form"
+            action="https://formspree.io/f/xoeajzzb"
+            method="POST"
+        >
+
+            <div class="form-group">
+
+                <label
+                    for="subscriber-name"
+                    class="visually-hidden"
+                >
+                    Full Name
+                </label>
+
+                <input
+                    type="text"
+                    id="subscriber-name"
+                    name="name"
+                    placeholder="Your Full Name"
+                    required
+                >
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label
+                    for="subscriber-email"
+                    class="visually-hidden"
+                >
+                    Email Address
+                </label>
+
+                <input
+                    type="email"
+                    id="subscriber-email"
+                    name="email"
+                    placeholder="Your Email Address"
+                    required
+                >
+
+            </div>
+
+
+            <div class="form-group checkbox-group">
+
+                <input
+                    type="checkbox"
+                    id="program-updates"
+                    name="updates"
+                    checked
+                >
+
+                <label for="program-updates">
+                    Also send me direct updates on upcoming
+                    programs and events.
+                </label>
+
+            </div>
+
+
+            <button
+                type="submit"
+                class="newsletter-btn"
+            >
+                Subscribe Now
+            </button>
+
+        </form>
+
+
+        <div class="newsletter-footer">
+
+            <small>
+                We respect your privacy. Unsubscribe at any time.
+            </small>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     FOOTER
+========================================================= -->
+
+<footer>
+
+    <p style="margin-bottom:0.8rem;">
+
+        &copy; 2026 Nuel Enterprise & Ministry Outreach.
+        All rights reserved.
+
+    </p>
+
+
+    <div class="footer-links">
+
+        <a
+            href="https://digital.nuelpropertyservices.com"
+            class="footer-btn"
+            target="_blank"
+            rel="noopener noreferrer"
+        >
+            <i class="fa-solid fa-cubes"></i>
+            Nuel Digital
+        </a>
+
+
+        <a
+            href="https://nuelpropertyservices.com"
+            class="footer-btn"
+            target="_blank"
+            rel="noopener noreferrer"
+        >
+            <i class="fa-solid fa-broom"></i>
+            Nuel Property Services
+        </a>
+
+    </div>
+
+</footer>
+
 
 </body>
 </html>
