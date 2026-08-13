@@ -1681,44 +1681,6 @@ header {
             "outreach-series"
         );
 
-    if (summer) {
-        summer.remove();
-    }
-
-    /* ============================================================
-       8. FIX BOOK BUTTONS
-       ============================================================ */
-
-    document.querySelectorAll(
-        "a, button"
-    ).forEach(function (element) {
-
-        const text =
-            element.textContent
-                .trim()
-                .toLowerCase();
-
-        if (
-            text.includes(
-                "link coming soon"
-            )
-        ) {
-
-            /*
-             * Find the nearest reasonable card.
-             */
-            const card =
-                element.closest(
-                    ".book-card, " +
-                    ".book, " +
-                    ".book-item, " +
-                    ".card, " +
-                    "article"
-                );
-
-    <!-- ============================================================
-     SURVIVE. HEAL. RISE.
-     ONE-TIME WEBSITE STRUCTURE + SEO + ACCESSIBILITY + MOBILE FIX
      
      IMPORTANT:
      Place this entire block immediately BEFORE </body>.
