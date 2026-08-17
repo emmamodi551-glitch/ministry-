@@ -1727,6 +1727,426 @@
     height: auto;
     display: block;
 }
+```css
+/* =====================================================
+   ONLINE COMMUNITY CONVERSATION
+====================================================== */
+
+.zoom-section {
+    background:
+        radial-gradient(
+            circle at 80% 20%,
+            rgba(99,102,241,.14),
+            transparent 35%
+        ),
+        radial-gradient(
+            circle at 15% 80%,
+            rgba(217,119,6,.07),
+            transparent 30%
+        ),
+        #080c16;
+}
+
+
+/* =====================================================
+   MAIN CARD
+====================================================== */
+
+.zoom-card {
+    display: grid;
+
+    grid-template-columns:
+        minmax(0, 1.55fr)
+        minmax(300px, .85fr);
+
+    gap: 38px;
+
+    max-width: 1050px;
+
+    margin: 0 auto;
+
+    padding: 40px;
+
+    background:
+        linear-gradient(
+            145deg,
+            #111827,
+            #0d1422
+        );
+
+    border:
+        1px solid var(--border);
+
+    border-radius: var(--radius);
+
+    box-shadow: var(--shadow);
+}
+
+
+/* =====================================================
+   LEFT CONTENT
+====================================================== */
+
+.zoom-intro {
+    min-width: 0;
+}
+
+
+.zoom-icon {
+    width: 60px;
+    height: 60px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    margin-bottom: 18px;
+
+    border-radius: 15px;
+
+    background:
+        rgba(99,102,241,.14);
+
+    border:
+        1px solid rgba(99,102,241,.3);
+
+    color: #a5b4fc;
+
+    font-size: 1.5rem;
+}
+
+
+.zoom-status {
+    display: inline-block;
+
+    margin-bottom: 9px;
+
+    color: var(--gold-light);
+
+    font-size: .7rem;
+
+    font-weight: 800;
+
+    letter-spacing: 1px;
+}
+
+
+.zoom-intro h3 {
+    margin-bottom: 14px;
+
+    font-size: clamp(
+        1.4rem,
+        3vw,
+        1.7rem
+    );
+
+    line-height: 1.25;
+}
+
+
+.zoom-intro p {
+    max-width: 700px;
+
+    margin-bottom: 15px;
+
+    color: var(--muted);
+
+    font-size: .91rem;
+
+    line-height: 1.7;
+}
+
+
+/* =====================================================
+   DETAILS
+====================================================== */
+
+.zoom-details {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 11px;
+
+    margin-top: 24px;
+}
+
+
+.zoom-details div {
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    color: var(--text);
+
+    font-size: .82rem;
+}
+
+
+.zoom-detail-icon {
+    width: 25px;
+    height: 25px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    flex-shrink: 0;
+
+    border-radius: 6px;
+
+    background:
+        rgba(99,102,241,.1);
+
+    color: #a5b4fc;
+
+    font-size: .7rem;
+}
+
+
+/* =====================================================
+   REGISTRATION CARD
+====================================================== */
+
+.zoom-registration {
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    align-items: center;
+
+    padding: 30px;
+
+    background:
+        rgba(255,255,255,.035);
+
+    border:
+        1px solid var(--border);
+
+    border-radius: 14px;
+
+    text-align: center;
+}
+
+
+.registration-icon {
+    width: 56px;
+    height: 56px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    margin-bottom: 15px;
+
+    border-radius: 50%;
+
+    background:
+        rgba(217,119,6,.12);
+
+    border:
+        1px solid rgba(217,119,6,.3);
+
+    color: var(--gold-light);
+
+    font-size: 1.25rem;
+}
+
+
+.registration-label {
+    margin-bottom: 7px;
+
+    color: var(--gold-light);
+
+    font-size: .68rem;
+
+    font-weight: 800;
+
+    letter-spacing: .9px;
+}
+
+
+.zoom-registration h3 {
+    margin-bottom: 10px;
+
+    font-size: 1.3rem;
+
+    line-height: 1.3;
+}
+
+
+.zoom-registration > p {
+    margin-bottom: 20px;
+
+    color: var(--muted);
+
+    font-size: .84rem;
+
+    line-height: 1.65;
+}
+
+
+.zoom-register-btn {
+    width: 100%;
+
+    min-height: 50px;
+}
+
+
+.zoom-secondary-link {
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 7px;
+
+    margin-top: 16px;
+
+    color: #a5b4fc;
+
+    font-size: .78rem;
+
+    font-weight: 700;
+
+    text-decoration: none;
+}
+
+
+.zoom-secondary-link:hover {
+    color: var(--gold-light);
+}
+
+
+.zoom-secondary-link i {
+    font-size: .65rem;
+}
+
+
+.registration-note {
+    margin-top: 15px !important;
+
+    margin-bottom: 0 !important;
+
+    color: #64748b !important;
+
+    font-size: .68rem !important;
+
+    line-height: 1.5 !important;
+}
+
+
+/* =====================================================
+   COMMUNITY MESSAGE
+====================================================== */
+
+.online-message {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 12px;
+
+    max-width: 850px;
+
+    margin: 28px auto 0;
+
+    padding: 18px 22px;
+
+    background:
+        rgba(99,102,241,.06);
+
+    border:
+        1px solid rgba(99,102,241,.15);
+
+    border-radius: 10px;
+
+    text-align: center;
+}
+
+
+.online-message > i {
+    flex-shrink: 0;
+
+    color: var(--primary);
+
+    font-size: 1.15rem;
+}
+
+
+.online-message p {
+    margin: 0;
+
+    color: var(--muted);
+
+    font-size: .82rem;
+}
+
+
+.online-message strong {
+    color: var(--text);
+}
+
+
+/* =====================================================
+   MOBILE
+====================================================== */
+
+@media (max-width: 800px) {
+
+    .zoom-card {
+        grid-template-columns: 1fr;
+
+        gap: 28px;
+
+        padding: 28px;
+    }
+
+
+    .zoom-registration {
+        padding: 27px 22px;
+    }
+
+}
+
+
+@media (max-width: 500px) {
+
+    .zoom-card {
+        padding: 21px;
+    }
+
+
+    .zoom-icon {
+        width: 52px;
+        height: 52px;
+    }
+
+
+    .zoom-details div {
+        align-items: flex-start;
+
+        font-size: .78rem;
+    }
+
+
+    .online-message {
+        align-items: flex-start;
+
+        text-align: left;
+    }
+
+}
+```
 
     </style>
 
@@ -1798,7 +2218,7 @@
                     6-Month Series
                 </a>
             </li>
-
+         <ul class="nav-links">
             <li>
                 <a href="#schedule">
                     Schedule
@@ -2910,6 +3330,426 @@
     </div>
 
 </section>
+```css
+/* =====================================================
+   ONLINE COMMUNITY CONVERSATION
+====================================================== */
+
+.zoom-section {
+    background:
+        radial-gradient(
+            circle at 80% 20%,
+            rgba(99,102,241,.14),
+            transparent 35%
+        ),
+        radial-gradient(
+            circle at 15% 80%,
+            rgba(217,119,6,.07),
+            transparent 30%
+        ),
+        #080c16;
+}
+
+
+/* =====================================================
+   MAIN CARD
+====================================================== */
+
+.zoom-card {
+    display: grid;
+
+    grid-template-columns:
+        minmax(0, 1.55fr)
+        minmax(300px, .85fr);
+
+    gap: 38px;
+
+    max-width: 1050px;
+
+    margin: 0 auto;
+
+    padding: 40px;
+
+    background:
+        linear-gradient(
+            145deg,
+            #111827,
+            #0d1422
+        );
+
+    border:
+        1px solid var(--border);
+
+    border-radius: var(--radius);
+
+    box-shadow: var(--shadow);
+}
+
+
+/* =====================================================
+   LEFT CONTENT
+====================================================== */
+
+.zoom-intro {
+    min-width: 0;
+}
+
+
+.zoom-icon {
+    width: 60px;
+    height: 60px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    margin-bottom: 18px;
+
+    border-radius: 15px;
+
+    background:
+        rgba(99,102,241,.14);
+
+    border:
+        1px solid rgba(99,102,241,.3);
+
+    color: #a5b4fc;
+
+    font-size: 1.5rem;
+}
+
+
+.zoom-status {
+    display: inline-block;
+
+    margin-bottom: 9px;
+
+    color: var(--gold-light);
+
+    font-size: .7rem;
+
+    font-weight: 800;
+
+    letter-spacing: 1px;
+}
+
+
+.zoom-intro h3 {
+    margin-bottom: 14px;
+
+    font-size: clamp(
+        1.4rem,
+        3vw,
+        1.7rem
+    );
+
+    line-height: 1.25;
+}
+
+
+.zoom-intro p {
+    max-width: 700px;
+
+    margin-bottom: 15px;
+
+    color: var(--muted);
+
+    font-size: .91rem;
+
+    line-height: 1.7;
+}
+
+
+/* =====================================================
+   DETAILS
+====================================================== */
+
+.zoom-details {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 11px;
+
+    margin-top: 24px;
+}
+
+
+.zoom-details div {
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    color: var(--text);
+
+    font-size: .82rem;
+}
+
+
+.zoom-detail-icon {
+    width: 25px;
+    height: 25px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    flex-shrink: 0;
+
+    border-radius: 6px;
+
+    background:
+        rgba(99,102,241,.1);
+
+    color: #a5b4fc;
+
+    font-size: .7rem;
+}
+
+
+/* =====================================================
+   REGISTRATION CARD
+====================================================== */
+
+.zoom-registration {
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    align-items: center;
+
+    padding: 30px;
+
+    background:
+        rgba(255,255,255,.035);
+
+    border:
+        1px solid var(--border);
+
+    border-radius: 14px;
+
+    text-align: center;
+}
+
+
+.registration-icon {
+    width: 56px;
+    height: 56px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    margin-bottom: 15px;
+
+    border-radius: 50%;
+
+    background:
+        rgba(217,119,6,.12);
+
+    border:
+        1px solid rgba(217,119,6,.3);
+
+    color: var(--gold-light);
+
+    font-size: 1.25rem;
+}
+
+
+.registration-label {
+    margin-bottom: 7px;
+
+    color: var(--gold-light);
+
+    font-size: .68rem;
+
+    font-weight: 800;
+
+    letter-spacing: .9px;
+}
+
+
+.zoom-registration h3 {
+    margin-bottom: 10px;
+
+    font-size: 1.3rem;
+
+    line-height: 1.3;
+}
+
+
+.zoom-registration > p {
+    margin-bottom: 20px;
+
+    color: var(--muted);
+
+    font-size: .84rem;
+
+    line-height: 1.65;
+}
+
+
+.zoom-register-btn {
+    width: 100%;
+
+    min-height: 50px;
+}
+
+
+.zoom-secondary-link {
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 7px;
+
+    margin-top: 16px;
+
+    color: #a5b4fc;
+
+    font-size: .78rem;
+
+    font-weight: 700;
+
+    text-decoration: none;
+}
+
+
+.zoom-secondary-link:hover {
+    color: var(--gold-light);
+}
+
+
+.zoom-secondary-link i {
+    font-size: .65rem;
+}
+
+
+.registration-note {
+    margin-top: 15px !important;
+
+    margin-bottom: 0 !important;
+
+    color: #64748b !important;
+
+    font-size: .68rem !important;
+
+    line-height: 1.5 !important;
+}
+
+
+/* =====================================================
+   COMMUNITY MESSAGE
+====================================================== */
+
+.online-message {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 12px;
+
+    max-width: 850px;
+
+    margin: 28px auto 0;
+
+    padding: 18px 22px;
+
+    background:
+        rgba(99,102,241,.06);
+
+    border:
+        1px solid rgba(99,102,241,.15);
+
+    border-radius: 10px;
+
+    text-align: center;
+}
+
+
+.online-message > i {
+    flex-shrink: 0;
+
+    color: var(--primary);
+
+    font-size: 1.15rem;
+}
+
+
+.online-message p {
+    margin: 0;
+
+    color: var(--muted);
+
+    font-size: .82rem;
+}
+
+
+.online-message strong {
+    color: var(--text);
+}
+
+
+/* =====================================================
+   MOBILE
+====================================================== */
+
+@media (max-width: 800px) {
+
+    .zoom-card {
+        grid-template-columns: 1fr;
+
+        gap: 28px;
+
+        padding: 28px;
+    }
+
+
+    .zoom-registration {
+        padding: 27px 22px;
+    }
+
+}
+
+
+@media (max-width: 500px) {
+
+    .zoom-card {
+        padding: 21px;
+    }
+
+
+    .zoom-icon {
+        width: 52px;
+        height: 52px;
+    }
+
+
+    .zoom-details div {
+        align-items: flex-start;
+
+        font-size: .78rem;
+    }
+
+
+    .online-message {
+        align-items: flex-start;
+
+        text-align: left;
+    }
+
+}
+```
 
 
 <!-- =========================================================
