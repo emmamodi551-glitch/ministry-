@@ -216,10 +216,6 @@
             background: var(--primary-dark);
         }
 
-        .nav-external {
-            border: 1px solid var(--border);
-        }
-
         /* HERO */
         .hero {
             padding: 110px 0 90px;
@@ -374,79 +370,6 @@
             color: #fff;
         }
 
-        .story-image {
-            max-width: 1000px;
-            margin: 0 auto;
-            overflow: hidden;
-            border-radius: var(--radius);
-            border: 1px solid var(--border);
-            background: #050811;
-            box-shadow: var(--shadow);
-        }
-
-        .story-image img {
-            width: 100%;
-            height: auto;
-        }
-
-        /* MEDIA */
-        .media-grid {
-            display: grid;
-            grid-template-columns: repeat(3, minmax(0,1fr));
-            gap: 22px;
-        }
-
-        .media-card {
-            display: flex;
-            flex-direction: column;
-            overflow: hidden;
-            background: #fff;
-            color: #222;
-            border-radius: var(--radius);
-            box-shadow: 0 8px 25px rgba(0,0,0,.2);
-        }
-
-        .media-card-content {
-            display: flex;
-            flex: 1;
-            flex-direction: column;
-            padding: 25px;
-        }
-
-        .media-label {
-            align-self: flex-start;
-            padding: 5px 9px;
-            border-radius: 5px;
-            background: #e6f0fa;
-            color: #0066cc;
-            font-size: .7rem;
-            font-weight: 800;
-            text-transform: uppercase;
-        }
-
-        .media-card h3 {
-            margin: 13px 0 8px;
-            font-size: 1.35rem;
-        }
-
-        .media-card p {
-            color: #555;
-            font-size: .9rem;
-            margin-bottom: 20px;
-        }
-
-        .media-card .media-btn {
-            align-self: flex-start;
-            margin-top: auto;
-            padding: 9px 16px;
-            border-radius: 6px;
-            background: #0066cc;
-            color: #fff;
-            text-decoration: none;
-            font-size: .85rem;
-            font-weight: 700;
-        }
-
         /* BOOKS */
         .books-section {
             background: linear-gradient(180deg, #0a0e1a 0%, #0f172a 100%);
@@ -525,26 +448,6 @@
             border: 1px solid rgba(217,119,6,.25);
         }
 
-        .book-curriculum {
-            margin: 0 0 20px;
-            padding: 12px 13px;
-            background: rgba(99,102,241,.06);
-            border-left: 3px solid var(--primary);
-            border-radius: 0 7px 7px 0;
-            color: #cbd5e1;
-            font-size: .78rem;
-            line-height: 1.55;
-        }
-
-        .book-curriculum strong {
-            display: block;
-            margin-bottom: 3px;
-            color: #a5b4fc;
-            font-size: .7rem;
-            text-transform: uppercase;
-            letter-spacing: .5px;
-        }
-
         .book-button {
             width: 100%;
             margin-top: auto;
@@ -597,10 +500,6 @@
             color: var(--muted);
             font-size: .9rem;
             line-height: 1.7;
-        }
-
-        .curriculum-intro strong {
-            color: #e2e8f0;
         }
 
         .timeline-grid {
@@ -742,7 +641,7 @@
 
         /* RESPONSIVE */
         @media (max-width: 900px) {
-            .media-grid, .books-grid, .timeline-grid, .expect-grid {
+            .books-grid, .timeline-grid, .expect-grid {
                 grid-template-columns: 1fr;
             }
             .nav-links {
@@ -758,11 +657,203 @@
     <header>
         <nav class="navbar container" aria-label="Main Navigation">
             <a href="#" class="logo">
-                <img src="assets/emmanuel.jpg" alt="Emmanuel Modi">
+                <img src="https://emmamodi551-glitch.github.io/ministry/assets/emmanuel.jpg" alt="Emmanuel Modi">
                 <span class="logo-text">Survive. Heal. Rise.</span>
             </a>
             <ul class="nav-links">
                 <li><a href="#story">Story</a></li>
                 <li><a href="#books">Books</a></li>
                 <li><a href="#series">Series</a></li>
-     
+                <li><a href="#curriculum">Curriculum</a></li>
+                <li><a href="#expect" class="nav-cta">Get Involved</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="main-content">
+        <section class="hero">
+            <div class="hero-content">
+                <span class="hero-tag">6-Month Community Series • St. Cloud, MN</span>
+                <h1>Survive. Heal. <span class="highlight">Rise.</span></h1>
+                <h2>From Trauma to Triumph. From Silence to Purpose.</h2>
+                <p>A transformative six-month community series focused on healing, resilience, faith, creativity, service, and personal growth, incorporating Emmanuel Modi's growing book collection.</p>
+                <div class="hero-buttons">
+                    <a href="#curriculum" class="btn btn-primary">Explore Curriculum <i class="fa-solid fa-arrow-right"></i></a>
+                    <a href="#books" class="btn btn-secondary">View Books</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="story" class="section section-alt">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-label">The Vision</span>
+                    <h2>A Journey of Transformation</h2>
+                    <p>Rooted in lived experience, faith, and community resilience.</p>
+                </div>
+                <div class="story-content">
+                    <div class="story-text">
+                        <p><strong>Survive. Heal. Rise.</strong> is more than a series—it is a movement born out of deep resilience. Based in St. Cloud, Minnesota, this initiative offers a safe space for individuals and communities to move past trauma and step into their God-given purpose.</p>
+                        <p>Led by Emmanuel Modi, the program weaves together practical wisdom, storytelling, faith-based guidance, and creative expression to empower every participant.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="books" class="section books-section">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-label">The Literature</span>
+                    <h2>Featured Books & Resources</h2>
+                    <p>Core reading materials that ground and guide each month of the series.</p>
+                </div>
+                <div class="books-grid">
+                    <article class="book-card">
+                        <img src="https://emmamodi551-glitch.github.io/ministry/assets/book1.jpg" alt="Survive. Heal. Rise. Book Cover" class="book-cover-image">
+                        <div class="book-content">
+                            <span class="book-status available">Available Now</span>
+                            <h3>Survive. Heal. Rise.</h3>
+                            <p>The foundational memoir and guide charting the path from deep trauma to triumphant purpose.</p>
+                            <a href="#" class="btn btn-primary book-button">Get Book</a>
+                        </div>
+                    </article>
+                    <article class="book-card">
+                        <img src="https://emmamodi551-glitch.github.io/ministry/assets/book2.jpg" alt="Faith & Resilience Book Cover" class="book-cover-image">
+                        <div class="book-content">
+                            <span class="book-status coming-soon">Coming Soon</span>
+                            <h3>Faith & Resilience</h3>
+                            <p>Deepening spiritual roots to withstand life's fiercest trials and emerge unbroken.</p>
+                            <a href="#" class="btn btn-secondary book-button disabled">Coming Soon</a>
+                        </div>
+                    </article>
+                    <article class="book-card">
+                        <img src="https://emmamodi551-glitch.github.io/ministry/assets/book3.jpg" alt="Purpose in Action Book Cover" class="book-cover-image">
+                        <div class="book-content">
+                            <span class="book-status coming-soon">Coming Soon</span>
+                            <h3>Purpose in Action</h3>
+                            <p>Turning personal healing outward into powerful community service and creative leadership.</p>
+                            <a href="#" class="btn btn-secondary book-button disabled">Coming Soon</a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="series" class="section">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-label">The Structure</span>
+                    <h2>About the 6-Month Series</h2>
+                    <p>A comprehensive roadmap designed for steady, profound personal growth.</p>
+                </div>
+                <div class="series-box">
+                    <p>Each month builds intentionally on the previous one, ensuring that participants don't just process past pain, but actively build a thriving, purpose-driven future.</p>
+                    <ul class="series-list">
+                        <li>Weekly guided discussions and workshops</li>
+                        <li>Interactive community storytelling circles</li>
+                        <li>Practical resource sharing and mentorship</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="curriculum" class="section section-alt">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-label">Roadmap</span>
+                    <h2>6-Month Curriculum Timeline</h2>
+                    <p>Starting strong with **October** as our foundational launch month.</p>
+                </div>
+                
+                <div class="curriculum-intro">
+                    <p>Our journey begins in <strong>October</strong>, focusing heavily on laying the groundwork for personal survival and emotional stabilization before moving into deeper healing and rise.</p>
+                </div>
+
+                <div class="timeline-grid">
+                    <div class="month-card">
+                        <span class="month-badge">Month 1</span>
+                        <h3>October</h3>
+                        <span class="theme">Foundations of Survival</span>
+                        <p>Acknowledging our stories, breaking silence, and establishing safe emotional footing.</p>
+                        <div class="curriculum-resource">
+                            <strong>Core Reading:</strong> Survive. Heal. Rise. (Part 1)
+                        </div>
+                        <div class="scripture">
+                            "The light shines in the darkness, and the darkness has not overcome it."
+                            <strong>— John 1:5</strong>
+                        </div>
+                    </div>
+
+                    <div class="month-card">
+                        <span class="month-badge">Month 2</span>
+                        <h3>November</h3>
+                        <span class="theme">The Healing Journey</span>
+                        <p>Unpacking trauma safely, processing grief, and embracing emotional restoration.</p>
+                        <div class="curriculum-resource">
+                            <strong>Core Reading:</strong> Faith & Resilience
+                        </div>
+                        <div class="scripture">
+                            "He heals the brokenhearted and binds up their wounds."
+                            <strong>— Psalm 147:3</strong>
+                        </div>
+                    </div>
+
+                    <div class="month-card">
+                        <span class="month-badge">Month 3</span>
+                        <h3>December</h3>
+                        <span class="theme">Faith & Steadfastness</span>
+                        <p>Anchoring hope during difficult seasons through spiritual discipline and community.</p>
+                        <div class="curriculum-resource">
+                            <strong>Core Reading:</strong> Faith & Resilience (Part 2)
+                        </div>
+                        <div class="scripture">
+                            "Let us not become weary in doing good..."
+                            <strong>— Galatians 6:9</strong>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="expect" class="section">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-label">Experience</span>
+                    <h2>What to Expect</h2>
+                    <p>A supportive environment designed for authentic connection and growth.</p>
+                </div>
+                <div class="expect-grid">
+                    <div class="expect-card">
+                        <i class="fa-solid fa-users"></i>
+                        <h3>Community</h3>
+                        <p>Safe, welcoming circles of support in St. Cloud, MN.</p>
+                    </div>
+                    <div class="expect-card">
+                        <i class="fa-solid fa-book-open"></i>
+                        <h3>Literature</h3>
+                        <p>Engaging book discussions and writing guides.</p>
+                    </div>
+                    <div class="expect-card">
+                        <i class="fa-solid fa-heart-pulse"></i>
+                        <h3>Healing</h3>
+                        <p>Practical tools to process trauma and build resilience.</p>
+                    </div>
+                    <div class="expect-card">
+                        <i class="fa-solid fa-seedling"></i>
+                        <h3>Growth</h3>
+                        <p>Actionable steps toward your ultimate life purpose.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Emmanuel Modi &amp; Survive. Heal. Rise. All rights reserved.</p>
+            <p class="muted">St. Cloud, Minnesota</p>
+        </div>
+    </footer>
+
+</body>
+</html>
