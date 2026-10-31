@@ -22,10 +22,17 @@
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Cinzel:wght@600;700;800&display=swap" rel="stylesheet">
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Cinzel:wght@600;700;800&display=swap"
+        rel="stylesheet"
+    >
 
     <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    >
 
     <style>
         :root {
@@ -101,16 +108,22 @@
             color: var(--muted);
         }
 
-        /* ACCESSIBILITY */
+        /* =========================
+           ACCESSIBILITY
+        ========================== */
+
         .skip-link {
             position: fixed;
             top: -100px;
             left: 15px;
             z-index: 9999;
+
             background: #fff;
             color: #000;
+
             padding: 12px 18px;
             border-radius: 8px;
+
             font-weight: 800;
             text-decoration: none;
         }
@@ -136,13 +149,18 @@
             border: 0 !important;
         }
 
-        /* HEADER */
+        /* =========================
+           HEADER
+        ========================== */
+
         header {
             position: sticky;
             top: 0;
             z-index: 1000;
+
             background: rgba(10,14,26,.96);
             backdrop-filter: blur(14px);
+
             border-bottom: 1px solid var(--border);
         }
 
@@ -150,6 +168,7 @@
             width: min(var(--max-width), calc(100% - 40px));
             min-height: 76px;
             margin: 0 auto;
+
             display: flex;
             align-items: center;
             justify-content: space-between;
@@ -160,6 +179,7 @@
             display: flex;
             align-items: center;
             gap: 10px;
+
             color: #fff;
             text-decoration: none;
             white-space: nowrap;
@@ -168,8 +188,10 @@
         .logo img {
             width: 42px;
             height: 42px;
+
             border-radius: 50%;
             object-fit: cover;
+
             border: 2px solid var(--gold-light);
             background: #111827;
         }
@@ -186,17 +208,23 @@
             align-items: center;
             justify-content: flex-end;
             gap: 10px;
+
             list-style: none;
         }
 
         .nav-links a {
             display: block;
+
             padding: 9px 10px;
+
             color: var(--muted);
             text-decoration: none;
+
             font-size: .82rem;
             font-weight: 600;
+
             border-radius: 7px;
+
             transition: .25s ease;
         }
 
@@ -208,6 +236,7 @@
         .nav-links .nav-cta {
             color: #fff;
             background: var(--primary);
+
             padding-left: 15px;
             padding-right: 15px;
         }
@@ -216,12 +245,29 @@
             background: var(--primary-dark);
         }
 
-        /* HERO */
+        .nav-external {
+            border: 1px solid var(--border);
+        }
+
+        /* =========================
+           HERO
+        ========================== */
+
         .hero {
             padding: 110px 0 90px;
             text-align: center;
-            background: radial-gradient(circle at 50% 0%, rgba(99,102,241,.25), transparent 45%),
-                        radial-gradient(circle at 15% 30%, rgba(217,119,6,.08), transparent 30%);
+
+            background:
+                radial-gradient(
+                    circle at 50% 0%,
+                    rgba(99,102,241,.25),
+                    transparent 45%
+                ),
+                radial-gradient(
+                    circle at 15% 30%,
+                    rgba(217,119,6,.08),
+                    transparent 30%
+                );
         }
 
         .hero-content {
@@ -231,14 +277,20 @@
 
         .hero-tag {
             display: inline-block;
+
             margin-bottom: 25px;
             padding: 7px 16px;
+
             border-radius: 50px;
+
             border: 1px solid rgba(217,119,6,.45);
             background: rgba(217,119,6,.13);
+
             color: var(--gold-light);
+
             font-size: .8rem;
             font-weight: 800;
+
             text-transform: uppercase;
             letter-spacing: .5px;
         }
@@ -246,27 +298,39 @@
         .hero h1 {
             font-size: clamp(2.5rem, 7vw, 4.5rem);
             line-height: 1.05;
+
             margin-bottom: 15px;
             letter-spacing: -.04em;
         }
 
         .highlight {
-            background: linear-gradient(135deg, #fcd34d, #d97706);
+            background: linear-gradient(
+                135deg,
+                #fcd34d,
+                #d97706
+            );
+
             -webkit-background-clip: text;
             background-clip: text;
+
             color: transparent;
         }
 
         .hero h2 {
             color: #a5b4fc;
+
             font-size: clamp(1.25rem, 3vw, 1.7rem);
+
             margin-bottom: 18px;
         }
 
         .hero p {
             max-width: 760px;
+
             margin: 0 auto 32px;
+
             color: var(--muted);
+
             font-size: 1.05rem;
         }
 
@@ -279,22 +343,33 @@
 
         .btn {
             display: inline-flex;
+
             align-items: center;
             justify-content: center;
+
             gap: 8px;
+
             min-height: 46px;
+
             padding: 11px 21px;
+
             border-radius: 9px;
+
             text-decoration: none;
+
             font-weight: 700;
+
             transition: .25s ease;
+
             border: 1px solid transparent;
         }
 
         .btn-primary {
             background: var(--primary);
             color: #fff;
-            box-shadow: 0 8px 25px rgba(99,102,241,.25);
+
+            box-shadow:
+                0 8px 25px rgba(99,102,241,.25);
         }
 
         .btn-primary:hover {
@@ -312,7 +387,10 @@
             background: #1d293d;
         }
 
-        /* SECTIONS */
+        /* =========================
+           SECTIONS
+        ========================== */
+
         .section {
             padding: 85px 0;
         }
@@ -323,13 +401,17 @@
 
         .section-header {
             max-width: 760px;
+
             margin: 0 auto 45px;
+
             text-align: center;
         }
 
         .section-header h2 {
             font-size: clamp(2rem, 4vw, 2.7rem);
+
             line-height: 1.15;
+
             margin-bottom: 12px;
         }
 
@@ -339,15 +421,22 @@
 
         .section-label {
             display: inline-block;
+
             margin-bottom: 10px;
+
             color: var(--gold-light);
+
             font-size: .75rem;
             font-weight: 800;
+
             text-transform: uppercase;
             letter-spacing: 1px;
         }
 
-        /* STORY */
+        /* =========================
+           STORY
+        ========================== */
+
         .story-content {
             max-width: 1000px;
             margin: 0 auto;
@@ -361,8 +450,10 @@
 
         .story-text p {
             color: var(--muted);
+
             font-size: 1.05rem;
             line-height: 1.8;
+
             margin-bottom: 18px;
         }
 
@@ -370,47 +461,178 @@
             color: #fff;
         }
 
-        /* BOOKS */
+        .story-image {
+            max-width: 1000px;
+
+            margin: 0 auto;
+
+            overflow: hidden;
+
+            border-radius: var(--radius);
+            border: 1px solid var(--border);
+
+            background: #050811;
+
+            box-shadow: var(--shadow);
+        }
+
+        .story-image img {
+            width: 100%;
+            height: auto;
+        }
+
+        /* =========================
+           MEDIA
+        ========================== */
+
+        .media-grid {
+            display: grid;
+
+            grid-template-columns:
+                repeat(3, minmax(0,1fr));
+
+            gap: 22px;
+        }
+
+        .media-card {
+            display: flex;
+            flex-direction: column;
+
+            overflow: hidden;
+
+            background: #fff;
+            color: #222;
+
+            border-radius: var(--radius);
+
+            box-shadow:
+                0 8px 25px rgba(0,0,0,.2);
+        }
+
+        .media-card-content {
+            display: flex;
+            flex: 1;
+            flex-direction: column;
+
+            padding: 25px;
+        }
+
+        .media-label {
+            align-self: flex-start;
+
+            padding: 5px 9px;
+
+            border-radius: 5px;
+
+            background: #e6f0fa;
+            color: #0066cc;
+
+            font-size: .7rem;
+            font-weight: 800;
+
+            text-transform: uppercase;
+        }
+
+        .media-card h3 {
+            margin: 13px 0 8px;
+            font-size: 1.35rem;
+        }
+
+        .media-card p {
+            color: #555;
+            font-size: .9rem;
+
+            margin-bottom: 20px;
+        }
+
+        .media-card .media-btn {
+            align-self: flex-start;
+
+            margin-top: auto;
+
+            padding: 9px 16px;
+
+            border-radius: 6px;
+
+            background: #0066cc;
+            color: #fff;
+
+            text-decoration: none;
+
+            font-size: .85rem;
+            font-weight: 700;
+        }
+
+        /* =========================
+           BOOKS
+        ========================== */
+
         .books-section {
-            background: linear-gradient(180deg, #0a0e1a 0%, #0f172a 100%);
+            background:
+                linear-gradient(
+                    180deg,
+                    #0a0e1a 0%,
+                    #0f172a 100%
+                );
         }
 
         .books-grid {
             display: grid;
-            grid-template-columns: repeat(3, minmax(0,1fr));
+
+            grid-template-columns:
+                repeat(3, minmax(0,1fr));
+
             gap: 24px;
         }
 
         .book-card {
             display: flex;
             flex-direction: column;
+
             min-width: 0;
+
             overflow: hidden;
+
             background: var(--card);
+
             border: 1px solid var(--border);
+
             border-radius: var(--radius);
-            transition: transform .25s ease, border-color .25s ease, box-shadow .25s ease;
+
+            transition:
+                transform .25s ease,
+                border-color .25s ease,
+                box-shadow .25s ease;
         }
 
         .book-card:hover {
             transform: translateY(-5px);
-            border-color: rgba(99,102,241,.7);
+
+            border-color:
+                rgba(99,102,241,.7);
+
             box-shadow: var(--shadow);
         }
 
         .book-cover-image {
             width: 100%;
+
             aspect-ratio: 7 / 10;
+
             object-fit: cover;
             object-position: center;
+
             background: #111827;
-            border-bottom: 1px solid var(--border);
+
+            border-bottom:
+                1px solid var(--border);
         }
 
         .book-content {
             display: flex;
             flex: 1;
             flex-direction: column;
+
             padding: 23px;
         }
 
@@ -421,53 +643,113 @@
 
         .book-content p {
             color: var(--muted);
+
             font-size: .88rem;
+
             margin-bottom: 20px;
         }
 
         .book-status {
             display: inline-block;
+
             align-self: flex-start;
+
             margin-bottom: 10px;
+
             padding: 4px 8px;
+
             border-radius: 5px;
+
             font-size: .68rem;
             font-weight: 800;
+
             text-transform: uppercase;
         }
 
         .available {
-            background: rgba(34,197,94,.12);
+            background:
+                rgba(34,197,94,.12);
+
             color: #86efac;
-            border: 1px solid rgba(34,197,94,.25);
+
+            border:
+                1px solid rgba(34,197,94,.25);
         }
 
         .coming-soon {
-            background: rgba(217,119,6,.12);
+            background:
+                rgba(217,119,6,.12);
+
             color: var(--gold-light);
-            border: 1px solid rgba(217,119,6,.25);
+
+            border:
+                1px solid rgba(217,119,6,.25);
+        }
+
+        .book-curriculum {
+            margin: 0 0 20px;
+
+            padding: 12px 13px;
+
+            background: rgba(99,102,241,.06);
+
+            border-left: 3px solid var(--primary);
+
+            border-radius: 0 7px 7px 0;
+
+            color: #cbd5e1;
+
+            font-size: .78rem;
+
+            line-height: 1.55;
+        }
+
+        .book-curriculum strong {
+            display: block;
+
+            margin-bottom: 3px;
+
+            color: #a5b4fc;
+
+            font-size: .7rem;
+
+            text-transform: uppercase;
+
+            letter-spacing: .5px;
         }
 
         .book-button {
             width: 100%;
+
             margin-top: auto;
+
             text-align: center;
         }
 
         .book-button.disabled {
             background: #252f42;
             color: #94a3b8;
+
             cursor: default;
+
             pointer-events: none;
         }
 
-        /* SERIES */
+        /* =========================
+           SERIES
+        ========================== */
+
         .series-box {
             max-width: 900px;
+
             margin: 0 auto;
+
             padding: 35px;
+
             background: var(--card);
+
             border: 1px solid var(--border);
+
             border-radius: var(--radius);
         }
 
@@ -485,55 +767,92 @@
             margin-bottom: 8px;
         }
 
-        /* CURRICULUM */
+        /* =========================
+           CURRICULUM
+        ========================== */
+
         .curriculum-intro {
             max-width: 900px;
+
             margin: -15px auto 35px;
+
             padding: 22px 25px;
+
             background: rgba(99,102,241,.06);
-            border: 1px solid rgba(99,102,241,.2);
+
+            border:
+                1px solid rgba(99,102,241,.2);
+
             border-radius: var(--radius);
+
             text-align: center;
         }
 
         .curriculum-intro p {
             color: var(--muted);
+
             font-size: .9rem;
+
             line-height: 1.7;
+        }
+
+        .curriculum-intro strong {
+            color: #e2e8f0;
         }
 
         .timeline-grid {
             display: grid;
-            grid-template-columns: repeat(3, minmax(0,1fr));
+
+            grid-template-columns:
+                repeat(3, minmax(0,1fr));
+
             gap: 20px;
         }
 
         .month-card {
             display: flex;
             flex-direction: column;
+
             padding: 25px;
+
             background: var(--card);
+
             border: 1px solid var(--border);
+
             border-radius: var(--radius);
+
             min-width: 0;
+
             transition: .25s ease;
         }
 
         .month-card:hover {
             transform: translateY(-4px);
-            border-color: var(--primary);
+
+            border-color:
+                var(--primary);
         }
 
         .month-badge {
             align-self: flex-start;
+
             margin-bottom: 14px;
+
             padding: 5px 9px;
+
             border-radius: 5px;
-            background: rgba(99,102,241,.13);
-            border: 1px solid rgba(99,102,241,.25);
+
+            background:
+                rgba(99,102,241,.13);
+
+            border:
+                1px solid rgba(99,102,241,.25);
+
             color: #a5b4fc;
+
             font-size: .7rem;
             font-weight: 800;
+
             text-transform: uppercase;
         }
 
@@ -544,316 +863,102 @@
 
         .theme {
             color: var(--gold-light);
+
             font-size: .76rem;
             font-weight: 800;
+
             text-transform: uppercase;
+
             margin-bottom: 12px;
         }
 
         .month-card p {
             color: var(--muted);
+
             font-size: .88rem;
+
             margin-bottom: 18px;
         }
 
         .curriculum-resource {
             margin-bottom: 16px;
+
             padding: 11px 12px;
+
             background: rgba(217,119,6,.06);
-            border: 1px solid rgba(217,119,6,.15);
+
+            border:
+                1px solid rgba(217,119,6,.15);
+
             border-radius: 7px;
+
             color: #cbd5e1;
+
             font-size: .76rem;
+
             line-height: 1.5;
         }
 
         .curriculum-resource strong {
             display: block;
+
             margin-bottom: 3px;
+
             color: var(--gold-light);
+
             font-size: .66rem;
+
             text-transform: uppercase;
+
             letter-spacing: .5px;
         }
 
         .scripture {
             margin-top: auto;
+
             padding: 12px;
-            border-left: 3px solid var(--primary);
-            background: rgba(0,0,0,.2);
-            border-radius: 0 7px 7px 0;
+
+            border-left:
+                3px solid var(--primary);
+
+            background:
+                rgba(0,0,0,.2);
+
+            border-radius:
+                0 7px 7px 0;
+
             color: #e2e8f0;
+
             font-size: .82rem;
+
             font-style: italic;
         }
 
         .scripture strong {
             display: block;
+
             margin-top: 5px;
+
             color: #a5b4fc;
+
             font-style: normal;
         }
 
-        /* EXPECT */
+        /* =========================
+           EXPECT
+        ========================== */
+
         .expect-grid {
             display: grid;
-            grid-template-columns: repeat(4, minmax(0,1fr));
+
+            grid-template-columns:
+                repeat(4, minmax(0,1fr));
+
             gap: 18px;
         }
 
         .expect-card {
             padding: 25px 18px;
-            text-align: center;
-            background: var(--card);
-            border: 1px solid var(--border);
-            border-radius: var(--radius);
-        }
 
-        .expect-card i {
-            font-size: 2rem;
-            color: var(--gold-light);
-            margin-bottom: 15px;
-        }
-
-        .expect-card h3 {
-            font-size: 1.1rem;
-            margin-bottom: 8px;
-        }
-
-        .expect-card p {
-            color: var(--muted);
-            font-size: .85rem;
-        }
-
-        /* FOOTER */
-        footer {
-            background: #050811;
-            border-top: 1px solid var(--border);
-            padding: 40px 0;
-            text-align: center;
-            color: var(--muted);
-            font-size: .9rem;
-        }
-
-        footer p {
-            margin-bottom: 10px;
-        }
-
-        /* RESPONSIVE */
-        @media (max-width: 900px) {
-            .books-grid, .timeline-grid, .expect-grid {
-                grid-template-columns: 1fr;
-            }
-            .nav-links {
-                display: none;
-            }
-        }
-    </style>
-</head>
-<body>
-
-    <a href="#main-content" class="skip-link">Skip to main content</a>
-
-    <header>
-        <nav class="navbar container" aria-label="Main Navigation">
-            <a href="#" class="logo">
-                <img src="https://emmamodi551-glitch.github.io/ministry/assets/emmanuel.jpg" alt="Emmanuel Modi">
-                <span class="logo-text">Survive. Heal. Rise.</span>
-            </a>
-            <ul class="nav-links">
-                <li><a href="#story">Story</a></li>
-                <li><a href="#books">Books</a></li>
-                <li><a href="#series">Series</a></li>
-                <li><a href="#curriculum">Curriculum</a></li>
-                <li><a href="#expect" class="nav-cta">Get Involved</a></li>
-            </ul>
-        </nav>
-    </header>
-
-    <main id="main-content">
-        <section class="hero">
-            <div class="hero-content">
-                <span class="hero-tag">6-Month Community Series • St. Cloud, MN</span>
-                <h1>Survive. Heal. <span class="highlight">Rise.</span></h1>
-                <h2>From Trauma to Triumph. From Silence to Purpose.</h2>
-                <p>A transformative six-month community series focused on healing, resilience, faith, creativity, service, and personal growth, incorporating Emmanuel Modi's growing book collection.</p>
-                <div class="hero-buttons">
-                    <a href="#curriculum" class="btn btn-primary">Explore Curriculum <i class="fa-solid fa-arrow-right"></i></a>
-                    <a href="#books" class="btn btn-secondary">View Books</a>
-                </div>
-            </div>
-        </section>
-
-        <section id="story" class="section section-alt">
-            <div class="container">
-                <div class="section-header">
-                    <span class="section-label">The Vision</span>
-                    <h2>A Journey of Transformation</h2>
-                    <p>Rooted in lived experience, faith, and community resilience.</p>
-                </div>
-                <div class="story-content">
-                    <div class="story-text">
-                        <p><strong>Survive. Heal. Rise.</strong> is more than a series—it is a movement born out of deep resilience. Based in St. Cloud, Minnesota, this initiative offers a safe space for individuals and communities to move past trauma and step into their God-given purpose.</p>
-                        <p>Led by Emmanuel Modi, the program weaves together practical wisdom, storytelling, faith-based guidance, and creative expression to empower every participant.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="books" class="section books-section">
-            <div class="container">
-                <div class="section-header">
-                    <span class="section-label">The Literature</span>
-                    <h2>Featured Books & Resources</h2>
-                    <p>Core reading materials that ground and guide each month of the series.</p>
-                </div>
-                <div class="books-grid">
-                    <article class="book-card">
-                        <img src="https://emmamodi551-glitch.github.io/ministry/assets/book1.jpg" alt="Survive. Heal. Rise. Book Cover" class="book-cover-image">
-                        <div class="book-content">
-                            <span class="book-status available">Available Now</span>
-                            <h3>Survive. Heal. Rise.</h3>
-                            <p>The foundational memoir and guide charting the path from deep trauma to triumphant purpose.</p>
-                            <a href="#" class="btn btn-primary book-button">Get Book</a>
-                        </div>
-                    </article>
-                    <article class="book-card">
-                        <img src="https://emmamodi551-glitch.github.io/ministry/assets/book2.jpg" alt="Faith & Resilience Book Cover" class="book-cover-image">
-                        <div class="book-content">
-                            <span class="book-status coming-soon">Coming Soon</span>
-                            <h3>Faith & Resilience</h3>
-                            <p>Deepening spiritual roots to withstand life's fiercest trials and emerge unbroken.</p>
-                            <a href="#" class="btn btn-secondary book-button disabled">Coming Soon</a>
-                        </div>
-                    </article>
-                    <article class="book-card">
-                        <img src="https://emmamodi551-glitch.github.io/ministry/assets/book3.jpg" alt="Purpose in Action Book Cover" class="book-cover-image">
-                        <div class="book-content">
-                            <span class="book-status coming-soon">Coming Soon</span>
-                            <h3>Purpose in Action</h3>
-                            <p>Turning personal healing outward into powerful community service and creative leadership.</p>
-                            <a href="#" class="btn btn-secondary book-button disabled">Coming Soon</a>
-                        </div>
-                    </article>
-                </div>
-            </div>
-        </section>
-
-        <section id="series" class="section">
-            <div class="container">
-                <div class="section-header">
-                    <span class="section-label">The Structure</span>
-                    <h2>About the 6-Month Series</h2>
-                    <p>A comprehensive roadmap designed for steady, profound personal growth.</p>
-                </div>
-                <div class="series-box">
-                    <p>Each month builds intentionally on the previous one, ensuring that participants don't just process past pain, but actively build a thriving, purpose-driven future.</p>
-                    <ul class="series-list">
-                        <li>Weekly guided discussions and workshops</li>
-                        <li>Interactive community storytelling circles</li>
-                        <li>Practical resource sharing and mentorship</li>
-                    </ul>
-                </div>
-            </div>
-        </section>
-
-        <section id="curriculum" class="section section-alt">
-            <div class="container">
-                <div class="section-header">
-                    <span class="section-label">Roadmap</span>
-                    <h2>6-Month Curriculum Timeline</h2>
-                    <p>Starting strong with **October** as our foundational launch month.</p>
-                </div>
-                
-                <div class="curriculum-intro">
-                    <p>Our journey begins in <strong>October</strong>, focusing heavily on laying the groundwork for personal survival and emotional stabilization before moving into deeper healing and rise.</p>
-                </div>
-
-                <div class="timeline-grid">
-                    <div class="month-card">
-                        <span class="month-badge">Month 1</span>
-                        <h3>October</h3>
-                        <span class="theme">Foundations of Survival</span>
-                        <p>Acknowledging our stories, breaking silence, and establishing safe emotional footing.</p>
-                        <div class="curriculum-resource">
-                            <strong>Core Reading:</strong> Survive. Heal. Rise. (Part 1)
-                        </div>
-                        <div class="scripture">
-                            "The light shines in the darkness, and the darkness has not overcome it."
-                            <strong>— John 1:5</strong>
-                        </div>
-                    </div>
-
-                    <div class="month-card">
-                        <span class="month-badge">Month 2</span>
-                        <h3>November</h3>
-                        <span class="theme">The Healing Journey</span>
-                        <p>Unpacking trauma safely, processing grief, and embracing emotional restoration.</p>
-                        <div class="curriculum-resource">
-                            <strong>Core Reading:</strong> Faith & Resilience
-                        </div>
-                        <div class="scripture">
-                            "He heals the brokenhearted and binds up their wounds."
-                            <strong>— Psalm 147:3</strong>
-                        </div>
-                    </div>
-
-                    <div class="month-card">
-                        <span class="month-badge">Month 3</span>
-                        <h3>December</h3>
-                        <span class="theme">Faith & Steadfastness</span>
-                        <p>Anchoring hope during difficult seasons through spiritual discipline and community.</p>
-                        <div class="curriculum-resource">
-                            <strong>Core Reading:</strong> Faith & Resilience (Part 2)
-                        </div>
-                        <div class="scripture">
-                            "Let us not become weary in doing good..."
-                            <strong>— Galatians 6:9</strong>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="expect" class="section">
-            <div class="container">
-                <div class="section-header">
-                    <span class="section-label">Experience</span>
-                    <h2>What to Expect</h2>
-                    <p>A supportive environment designed for authentic connection and growth.</p>
-                </div>
-                <div class="expect-grid">
-                    <div class="expect-card">
-                        <i class="fa-solid fa-users"></i>
-                        <h3>Community</h3>
-                        <p>Safe, welcoming circles of support in St. Cloud, MN.</p>
-                    </div>
-                    <div class="expect-card">
-                        <i class="fa-solid fa-book-open"></i>
-                        <h3>Literature</h3>
-                        <p>Engaging book discussions and writing guides.</p>
-                    </div>
-                    <div class="expect-card">
-                        <i class="fa-solid fa-heart-pulse"></i>
-                        <h3>Healing</h3>
-                        <p>Practical tools to process trauma and build resilience.</p>
-                    </div>
-                    <div class="expect-card">
-                        <i class="fa-solid fa-seedling"></i>
-                        <h3>Growth</h3>
-                        <p>Actionable steps toward your ultimate life purpose.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <footer>
-        <div class="container">
-            <p>&copy; 2026 Emmanuel Modi &amp; Survive. Heal. Rise. All rights reserved.</p>
-            <p class="muted">St. Cloud, Minnesota</p>
-        </div>
-    </footer>
-
-</body>
-</html>
+            text-alig
+Change may to October
